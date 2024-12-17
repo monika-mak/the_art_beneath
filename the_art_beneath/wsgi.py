@@ -1,5 +1,5 @@
 """
-WSGI config for the_arth_beneath project.
+WSGI config for the_art_beneath project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_arth_beneath.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_art_beneath.settings')
 
 application = get_wsgi_application()
