@@ -1,0 +1,75 @@
+[
+    {
+      "pk": 1,
+      "model": "art.category",
+      "fields": {
+        "name": "new_arrivals",
+        "display_name": "New Arrivals"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "art.category",
+      "fields": {
+        "name": "trending",
+        "display_name": "Trending"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "art.category",
+      "fields": {
+        "name": "animals",
+        "display_name": "Animals"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "art.category",
+      "fields": {
+        "name": "nature",
+        "display_name": "Nature"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "art.category",
+      "fields": {
+        "name": "female_figures",
+        "display_name": "Female Figures"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "art.category",
+      "fields": {
+        "name": "black_gold",
+        "display_name": "Black & Gold"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "art.category",
+      "fields": {
+        "name": "abstract",
+        "display_name": "Abstract"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "art.category",
+      "fields": {
+        "name": "best_sellers",
+        "display_name": "Best Sellers"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "art.category",
+      "fields": {
+        "name": "limited_editions",
+        "display_name": "Limited Editions"
+      }
+    }
+  ]
+  
