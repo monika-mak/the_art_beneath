@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
+    # override default plural naming in admin panel
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     display_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -12,7 +16,11 @@ class Category(models.Model):
         return self.display_name
 
 class Art(models.Model):
-    Category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+
+    class Meta:
+        verbose_name_plural = 'Art'
+
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
