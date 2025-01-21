@@ -11,7 +11,7 @@ def all_art(request):
     art = Art.objects.all()
 
     context = {
-        'art' : art ,
+        'art' : art,
     }
 
     return render(request, 'art/art.html', context)
