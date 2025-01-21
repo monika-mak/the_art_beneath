@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
-
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,10 +25,13 @@ SECRET_KEY = 'django-insecure-&n$iog_hw8%+10r#ky&zvd)4)b$p*=gml%h7eo50s3vmip3a!q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net"]
+ALLOWED_HOSTS = [
+    "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
+    "the-art-beneath", "localhost", ".herokuapp.com"
+]
 
 
-# Application definition
+# Application definitionssss
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -102,12 +105,18 @@ WSGI_APPLICATION = 'the_art_beneath.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 #  adding for trusted paths ????? 
 CSRF_TRUSTED_ORIGINS = [
@@ -137,11 +146,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
+# code inspired by https://github.com/amylour/everneed/blob/main/everneed/settings.py
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
