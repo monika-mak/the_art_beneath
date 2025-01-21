@@ -1,1 +1,137 @@
-[{"pk": 1, "model": "art.art", "fields": {"sku": "pp5001340155", "name": "Graffiti giraffe", "description": "The painting 'Giraffe Graffiti' is a print on canvas representing a giraffe with sunglasses, immersed in an urban context of colorful graffiti. The giraffe is portrayed in the foreground, with a serene and charming expression, while sporting yellow sunglasses that add a touch of modernity and style.", "meaning": "This artwork combines elements of nature with the vibrant energy of urban culture. The giraffe, a symbol of elegance and height, is reinterpreted in a modern and youthful context, suggesting a message of adaptability and fusion between tradition and contemporaneity. Ideal for modern environments and creative spaces, this painting adds a touch of originality and character to any room.", "price": 249.00, "category": 3, "image_url": "", "image": "giraffe-graffiti.webp"}}]
+[
+    {
+        "pk": 1,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1001",
+            "name": "Giraffe Graffiti",
+            "description": "Giraffe Graffiti is a vibrant canvas print featuring a giraffe adorned with stylish yellow sunglasses. Set against a dynamic urban backdrop of colorful graffiti, the giraffe is portrayed in the foreground with a serene yet playful expression, blending natural elegance with modern urban flair.",
+            "meaning": "This piece merges the sophistication of nature with the lively essence of street art. The giraffe, often associated with grace and lofty perspective, is reimagined within a contemporary and youthful setting. It conveys a message of adaptability and harmony between tradition and modernity, making it a perfect fit for creative and modern spaces.",
+            "color": "The giraffe is depicted in shades of black, white, and brown, while the graffiti-filled background bursts with bright purples, blues, greens, and oranges. This juxtaposition of earthy tones and vivid colors creates a striking contrast, adding depth and energy to the artwork.",
+            "price": 300,
+            "category": "1",
+            "image_url": "",
+            "image": "giraffe.webp"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1002",
+            "name": "Four-Legged Euphoria",
+            "description": "'Four-Legged Euphoria' is a vibrant and dynamic canvas print that captures the essence of pure joy and energy. The central figure is a jubilant dog leaping through water, radiating happiness and vitality with every movement.",
+            "meaning": "This artwork portrays a moment of unrestrained delight, as the dog engages in playful splashes of water. Its open mouth and bright, expressive eyes convey a contagious sense of euphoria and life. The scattering water droplets emphasize the energy of the scene, bringing a sense of motion and realism to the composition.",
+            "color": "The color palette is a stunning mix of warm and cool tones. The blue of the water, blending with splashes of white, creates a dynamic sense of movement. In contrast, the background bursts with warm shades of yellow, orange, and pink, adding vibrancy and complementing the cool water tones.",
+            "price": 300,
+            "category": "1",
+            "image_url": "",
+            "image": "dog_euphoria.webp"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1003",
+            "name": "Fierce Elegance",
+            "description": "This artwork, titled 'Fierce Elegance,' is a mesmerizing canvas print that features the portrait of a majestic wolf. The wolf's gaze is intense and full of wisdom, capturing its wild and enigmatic essence. The artist's brushstrokes are dynamic, giving the fur a flowing, almost ethereal texture.",
+            "meaning": "The wolf symbolizes strength, independence, and a deep connection to nature. Its piercing eyes convey a sense of intelligence and resilience, representing the untamed spirit that thrives within. The abstract and artistic rendering of the fur suggests a balance between chaos and beauty.",
+            "color": "The color palette is a vibrant blend of earthy and fiery tones. Warm shades of orange, red, and amber dominate, symbolizing energy and vitality. Cool hues of teal, blue, and white add balance and depth, creating a striking contrast.",
+            "price": 300,
+            "category": "1",
+            "image_url": "",
+            "image": "wolf.webp"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1004",
+            "name": "Golden King",
+            "description": "This piece, titled 'Golden King,' is a breathtaking depiction of a majestic lion in a side profile. Rendered with remarkable detail, the lion's flowing mane and proud, regal expression radiate strength and grace.",
+            "meaning": "The golden accents symbolize nobility, power, and grandeur, while the lion itself embodies strength, courage, and beauty. The intricate gold details evoke a sense of reverence and sacredness.",
+            "color": "The artwork prominently features shades of white and gold, giving the lion a luminous and almost divine presence. These vibrant tones contrast dramatically against the dark, textured background, amplifying the lion's commanding aura.",
+            "price": 300,
+            "category": "1",
+            "image_url": "",
+            "image": "golden_lion.webp"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1005",
+            "name": "Melodic Brushstrokes",
+            "description": "This canvas print, titled 'Melodic Brushstrokes,' portrays a young woman immersed in playing the piano. The composition beautifully captures her focused expression and the graceful motion of her hands as they glide over the keys.",
+            "meaning": "The painting emanates a sense of passion and vitality, celebrating the emotional connection between the musician and her art. The blend of warm, vivid colors with soft, impressionistic brushstrokes evokes a feeling of serenity and joy.",
+            "color": "The artwork prominently features vibrant orange, with the woman’s flowing dress radiating warmth and energy. This is juxtaposed against the muted tones of the grand piano and a dynamic backdrop of abstract shades in blue, beige, and orange.",
+            "price": 370,
+            "category": "3",
+            "image_url": "",
+            "image": "female_piano.webp"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1006",
+            "name": "The Golden Tree of Life",
+            "description": "This stunning artwork, titled 'The Golden Tree of Life,' features a radiant golden tree standing prominently in a serene landscape. The tree's intricate branches spread wide, adorned with clusters of shimmering golden leaves.",
+            "meaning": "The tree symbolizes growth, strength, and interconnectedness. Its wide-reaching branches and firmly grounded roots represent the balance between reaching for aspirations and staying connected to one’s foundation.",
+            "color": "The dominant color is gold, used to highlight the tree's leaves and roots, radiating warmth and opulence. Complementary tones of bronze and deep brown accentuate the tree’s trunk and branches.",
+            "price": 300,
+            "category": "2",
+            "image_url": "",
+            "image": "golden_tree.webp"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1007",
+            "name": "Majestic Charge",
+            "description": "This powerful artwork, titled 'Majestic Charge,' portrays a sleek black horse in mid-motion, exuding strength and grace. The horse's mane flows wildly, its muscular body radiating energy and vitality.",
+            "meaning": "The black horse symbolizes freedom, strength, and determination. Its charging pose represents raw power and unrelenting drive, inspiring the viewer with themes of courage and resilience.",
+            "color": "The artwork’s palette is dominated by deep, glossy blacks that define the horse's form and exude elegance and power. Contrasting this are bursts of fiery gold and amber tones, creating a glowing, ethereal effect.",
+            "price": 330,
+            "category": "1",
+            "image_url": "",
+            "image": "black_horse.webp"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1008",
+            "name": "The Tree of Joy",
+            "description": "This vibrant artwork, titled 'The Tree of Joy,' presents a dynamic and abstract portrayal of a tree bursting with energy and life. Its slender, twisting trunk supports a canopy of explosive color.",
+            "meaning": "The tree symbolizes creativity, diversity, and the joy of self-expression. Each splash of color represents the different facets of life, emotions, and experiences, unified within the tree's form.",
+            "color": "This piece is defined by its bold and varied color palette. The canopy features vibrant reds, yellows, blues, purples, and greens, creating a striking contrast with the dark, earthy tones of the trunk and branches.",
+            "price": 300,
+            "category": "2",
+            "image_url": "",
+            "image": "tree_of_joy.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "art.art",
+        "fields": {
+            "sku": "art1009",
+            "name": "Expressions in Color",
+            "description": "This striking artwork, titled 'Expressions in Color,' portrays a stunning woman’s face as the focal point, blending hyperrealistic details with splashes of vibrant abstraction.",
+            "meaning": "The piece explores themes of individuality, self-expression, and the complexity of human emotion. The woman's serene yet intense expression contrasts with the chaotic bursts of color.",
+            "color": "The color palette is an explosive mix of bright hues, including vivid oranges, purples, pinks, and blues, which convey energy, passion, and creativity.",
+            "price": 300,
+            "category": "3",
+            "image_url": "",
+            "image": "female_colors.webp"
+        }
+    }
+]
