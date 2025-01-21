@@ -10,8 +10,8 @@
             "color": "The giraffe is depicted in shades of black, white, and brown, while the graffiti-filled background bursts with bright purples, blues, greens, and oranges. This juxtaposition of earthy tones and vivid colors creates a striking contrast, adding depth and energy to the artwork.",
             "price": 300,
             "category": "1",
-            "image_url": "",
-            "image": "giraffe.webp"
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460754/giraffe_tnojm0.webp",
+            "image": "giraffe.webp" 
         }
     },
     {
@@ -25,7 +25,7 @@
             "color": "The color palette is a stunning mix of warm and cool tones. The blue of the water, blending with splashes of white, creates a dynamic sense of movement. In contrast, the background bursts with warm shades of yellow, orange, and pink, adding vibrancy and complementing the cool water tones.",
             "price": 300,
             "category": "1",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460754/dog_euphoria_ytkhxg.webp",
             "image": "dog_euphoria.webp"
         }
     },
@@ -40,7 +40,7 @@
             "color": "The color palette is a vibrant blend of earthy and fiery tones. Warm shades of orange, red, and amber dominate, symbolizing energy and vitality. Cool hues of teal, blue, and white add balance and depth, creating a striking contrast.",
             "price": 300,
             "category": "1",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460755/wolf_bstbwj.webp",
             "image": "wolf.webp"
         }
     },
@@ -55,7 +55,7 @@
             "color": "The artwork prominently features shades of white and gold, giving the lion a luminous and almost divine presence. These vibrant tones contrast dramatically against the dark, textured background, amplifying the lion's commanding aura.",
             "price": 300,
             "category": "1",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460755/golden_lion_jvec47.webp",
             "image": "golden_lion.webp"
         }
     },
@@ -70,7 +70,7 @@
             "color": "The artwork prominently features vibrant orange, with the woman’s flowing dress radiating warmth and energy. This is juxtaposed against the muted tones of the grand piano and a dynamic backdrop of abstract shades in blue, beige, and orange.",
             "price": 370,
             "category": "3",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460754/female_piano_jnj3bt.webp",
             "image": "female_piano.webp"
         }
     },
@@ -85,8 +85,8 @@
             "color": "The dominant color is gold, used to highlight the tree's leaves and roots, radiating warmth and opulence. Complementary tones of bronze and deep brown accentuate the tree’s trunk and branches.",
             "price": 300,
             "category": "2",
-            "image_url": "",
-            "image": "golden_tree.webp"
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460754/golden_tree_dbg4pv.jpg",
+            "image": "golden_tree.jpg"
         }
     },
     {
@@ -100,7 +100,7 @@
             "color": "The artwork’s palette is dominated by deep, glossy blacks that define the horse's form and exude elegance and power. Contrasting this are bursts of fiery gold and amber tones, creating a glowing, ethereal effect.",
             "price": 330,
             "category": "1",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460753/black_horse_nheb4j.webp",
             "image": "black_horse.webp"
         }
     },
@@ -115,7 +115,7 @@
             "color": "This piece is defined by its bold and varied color palette. The canopy features vibrant reds, yellows, blues, purples, and greens, creating a striking contrast with the dark, earthy tones of the trunk and branches.",
             "price": 300,
             "category": "2",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/dutjcas0m/image/upload/v1737460754/tree_of_joy_empdrw.webp",
             "image": "tree_of_joy.webp"
         }
     },
