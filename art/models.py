@@ -26,7 +26,7 @@ class Art(models.Model):
     description = models.TextField()
     meaning = models.TextField()
     color = models.TextField()
-    price = models.IntegerField(max_length=5)
+    price = models.IntegerField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
