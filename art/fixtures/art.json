@@ -13,7 +13,9 @@
           "image_url":"",
           "image":"giraffe.webp",
           "image_2_url":"",
-          "image_2":"giraffe_2.webp"
+          "image_2":"giraffe_2.webp",
+          "orientation": "square",
+          "size": "140x140cm"
        }
     },
     {
@@ -30,7 +32,9 @@
           "image_url":"",
           "image":"dog_euphoria.webp",
           "image_2_url":"",
-          "image_2":"dog_euphoria_2.webp"
+          "image_2":"dog_euphoria_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     },
     {
@@ -47,7 +51,9 @@
           "image_url":"",
           "image":"wolf.webp",
           "image_2_url":"",
-          "image_2":"wolf_2.webp"
+          "image_2":"wolf_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     },
     {
@@ -64,7 +70,9 @@
           "image_url":"",
           "image":"golden_lion.webp",
           "image_2_url":"",
-          "image_2":"golden_lion_2.webp"
+          "image_2":"golden_lion_2.webp",
+          "orientation": "square",
+          "size": "140x140cm"
        }
     },
     {
@@ -81,7 +89,9 @@
           "image_url":"",
           "image":"female_piano.webp",
           "image_2_url":"",
-          "image_2":"female_piano_2.webp"
+          "image_2":"female_piano_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     },
     {
@@ -98,7 +108,9 @@
           "image_url":"",
           "image":"golden_tree.webp",
           "image_2_url":"",
-          "image_2":"golden_tree_2.webp"
+          "image_2":"golden_tree_2.webp",
+          "size": "100x200cm",
+          "orientation": "horizontal"
        }
     },
     {
@@ -115,7 +127,9 @@
           "image_url":"",
           "image":"black_horse.webp",
           "image_2_url":"",
-          "image_2":"black_horse_2.webp"
+          "image_2":"black_horse_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     },
     {
@@ -132,7 +146,9 @@
           "image_url":"",
           "image":"tree_of_joy.webp",
           "image_2_url":"",
-          "image_2":""
+          "image_2":"",
+          "size": "100x200cm",
+          "orientation": "horizontal"
        }
     },
     {
@@ -149,7 +165,9 @@
           "image_url":"",
           "image":"female_colors.webp",
           "image_2_url":"",
-          "image_2":"female_colors_2.webp"
+          "image_2":"female_colors_2.webp",
+          "orientation": "square",
+          "size": "140x140cm"
        }
     },
     {
@@ -166,8 +184,10 @@
           "image_url":"",
           "image":"female_colors.webp",
           "image_2_url":"",
-          "image_2":"female_colors_2.webp"
-       }
+          "image_2":"female_colors_2.webp",
+          "orientation": "vertical",
+          "size": "100x150cm"
+         }
     },
     {
        "pk":11,
@@ -183,7 +203,9 @@
           "image_url":"",
           "image":"green_tree.webp",
           "image_2_url":"",
-          "image_2":"green_tree_2.webp"
+          "image_2":"green_tree_2.webp",
+          "size": "100x200cm",
+          "orientation": "horizontal"
        }
     },
     {
@@ -200,7 +222,9 @@
           "image_url":"",
           "image":"temple.webp",
           "image_2_url":"",
-          "image_2":"temple_2.webp"
+          "image_2":"temple_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     },
     {
@@ -217,7 +241,9 @@
           "image_url":"",
           "image":"stones.webp",
           "image_2_url":"",
-          "image_2":"stones_2.webp"
+          "image_2":"stones_2.webp",
+          "size": "100x150cm",
+          "orientation": "vertical"
        }
     }
  ]
