@@ -3,6 +3,7 @@
        "pk":1,
        "model":"art.specification",
        "fields":{
+          "art":"1",
           "format":"square",
           "size":"140x140cm"
        }
@@ -11,6 +12,7 @@
        "pk":2,
        "model":"art.specification",
        "fields":{
+          "art":"2",
           "format":"vertical",
           "size":"100x150cm"
        }
@@ -19,6 +21,7 @@
        "pk":3,
        "model":"art.specification",
        "fields":{
+          "art":"3",
           "format":"vertical",
           "size":"100x150cm"
        }
@@ -27,6 +30,7 @@
        "pk":4,
        "model":"art.specification",
        "fields":{
+          "art":"4",
           "format":"square",
           "size":"140x140cm"
        }
@@ -35,6 +39,7 @@
        "pk":5,
        "model":"art.specification",
        "fields":{
+          "art":"5",
           "format":"vertical",
           "size":"100x150cm"
        }
@@ -43,6 +48,7 @@
        "pk":6,
        "model":"art.specification",
        "fields":{
+          "art":"6",
           "format":"horizontal",
           "size":"100x200cm"
        }
@@ -51,6 +57,7 @@
        "pk":7,
        "model":"art.specification",
        "fields":{
+          "art":"7",
           "format":"vertical",
           "size":"100x150cm"
        }
@@ -59,6 +66,7 @@
        "pk":8,
        "model":"art.specification",
        "fields":{
+          "art":"8",
           "format":"horizontal",
           "size":"100x200cm"
        }
@@ -67,6 +75,7 @@
        "pk":9,
        "model":"art.specification",
        "fields":{
+          "art":"9",
           "format":"square",
           "size":"140x140cm"
        }
@@ -75,6 +84,7 @@
        "pk":10,
        "model":"art.specification",
        "fields":{
+          "art":"10",
           "format":"vertical",
           "size":"100x150cm"
        }
@@ -83,6 +93,7 @@
        "pk":11,
        "model":"art.specification",
        "fields":{
+          "art":"11",
           "format":"horizontal",
           "size":"100x200cm"
        }
@@ -91,6 +102,7 @@
        "pk":12,
        "model":"art.specification",
        "fields":{
+          "art":"12",
           "format":"horizontal",
           "size":"100x200cm"
        }
@@ -99,6 +111,7 @@
        "pk":13,
        "model":"art.specification",
        "fields":{
+          "art":"13",
           "format":"vertical",
           "size":"100x150cm"
        }

@@ -22,6 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class SpecificationAdmin(admin.ModelAdmin):
     list_display = (
+        'art',
         'format',
         'size',
     )
