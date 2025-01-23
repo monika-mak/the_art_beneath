@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Art, Category
+from .models import Art, Category, Specification
 
 # Register your models here.
 
@@ -20,5 +20,12 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+class SpecificationAdmin(admin.ModelAdmin):
+    list_display = (
+        'format',
+        'size',
+    )
+
 admin.site.register(Art, ArtAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Specification, SpecificationAdmin)

@@ -11,24 +11,24 @@
     "pk": 2,
     "model": "art.category",
     "fields": {
-      "name": "trees",
-      "display_name": "Trees"
+      "name": "nature",
+      "display_name": "Nature"
     }
   },
   {
     "pk": 3,
     "model": "art.category",
     "fields": {
-      "name": "female_figurures",
-      "display_name": "Female Figures"
+      "name": "female",
+      "display_name": "Female"
     }
   },
   {
     "pk": 4,
     "model": "art.category",
     "fields": {
-      "name": "black_gold",
-      "display_name": "Black & Gold"
+      "name": "gold",
+      "display_name": "Gold"
     }
   },
   {
@@ -43,8 +43,8 @@
     "pk": 6,
     "model": "art.category",
     "fields": {
-      "name": "best_sellers",
-      "display_name": "Best Sellers"
+      "name": "last_chance",
+      "display_name": "Last Chance"
     }
   },
   {
