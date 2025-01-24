@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
     <div class ="container header-container">
         <div class ="row">
@@ -15,58 +14,25 @@
 <div class = 'overlay'></div>
 <div class ="container-fluid">
     <div class ="row">
-        <div class= "col text-center mt-3">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <div class="image-container my-5">
+            {% if art.image %}
+                <a href="{{ art.image.url }}" target="blank">
+                    <img class="card-img-top img-fluid" src="{{ art.image.url }}" alt="{{ art.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                </a>
+            {% endif %}
         </div>
-        <div class="art-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class ="row">
-                {% for art in art %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <div class="card h-100 border-0">
-                            {% if art.image %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ art.image.url }}" alt="{{ art.name }}">
-                            </a>
-                            {% else %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ art.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ art.price }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--create spaces between the rows-->
-                    {% if forloop.counter|divisibleby:1 %}
-                    <div class="col-12 d-sm-none mb-5">
-                        <hr>
-                    </div>
-                    {% endif %}                        
-                    {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="art-details-container mb-5 mt-md-5">
+                <p class="mb-0">{{ art.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">${{ art.price }}</p>
+                <p class="mt-3">{{ art.description }}</p>
+            </div>       
         </div>
     </div>
 </div>
