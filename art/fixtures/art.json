@@ -11,9 +11,9 @@
           "price":300,
           "category":"1",
           "image_url":"",
-          "image":"giraffe.webp",
+          "image":"giraffe.png",
           "image_2_url":"",
-          "image_2":"giraffe_2.webp",
+          "image_2":"giraffe_2.png",
           "orientation": "square",
           "size": "140x140cm"
        }
@@ -30,9 +30,9 @@
           "price":300,
           "category":"1",
           "image_url":"",
-          "image":"dog_euphoria.webp",
+          "image":"dog_euphoria.png",
           "image_2_url":"",
-          "image_2":"dog_euphoria_2.webp",
+          "image_2":"dog_euphoria_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }
@@ -49,9 +49,9 @@
           "price":300,
           "category":"1",
           "image_url":"",
-          "image":"wolf.webp",
+          "image":"wolf.png",
           "image_2_url":"",
-          "image_2":"wolf_2.webp",
+          "image_2":"wolf_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }
@@ -68,9 +68,9 @@
           "price":300,
           "category":"1",
           "image_url":"",
-          "image":"golden_lion.webp",
+          "image":"golden_lion.png",
           "image_2_url":"",
-          "image_2":"golden_lion_2.webp",
+          "image_2":"golden_lion_2.png",
           "orientation": "square",
           "size": "140x140cm"
        }
@@ -87,9 +87,9 @@
           "price":370,
           "category":"3",
           "image_url":"",
-          "image":"female_piano.webp",
+          "image":"female_piano.png",
           "image_2_url":"",
-          "image_2":"female_piano_2.webp",
+          "image_2":"female_piano_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }
@@ -106,9 +106,9 @@
           "price":300,
           "category":"2",
           "image_url":"",
-          "image":"golden_tree.webp",
+          "image":"golden_tree.png",
           "image_2_url":"",
-          "image_2":"golden_tree_2.webp",
+          "image_2":"golden_tree_2.png",
           "size": "100x200cm",
           "orientation": "horizontal"
        }
@@ -125,9 +125,9 @@
           "price":330,
           "category":"1",
           "image_url":"",
-          "image":"black_horse.webp",
+          "image":"black_horse.png",
           "image_2_url":"",
-          "image_2":"black_horse_2.webp",
+          "image_2":"black_horse_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }
@@ -144,7 +144,7 @@
           "price":300,
           "category":"2",
           "image_url":"",
-          "image":"tree_of_joy.webp",
+          "image":"tree_of_joy.png",
           "image_2_url":"",
           "image_2":"",
           "size": "100x200cm",
@@ -163,9 +163,9 @@
           "price":300,
           "category":"3",
           "image_url":"",
-          "image":"female_colors.webp",
+          "image":"female_colors.png",
           "image_2_url":"",
-          "image_2":"female_colors_2.webp",
+          "image_2":"female_colors_2.png",
           "orientation": "square",
           "size": "140x140cm"
        }
@@ -182,9 +182,9 @@
           "price":300,
           "category":"3",
           "image_url":"",
-          "image":"female_colors.webp",
+          "image":"female_colors.png",
           "image_2_url":"",
-          "image_2":"female_colors_2.webp",
+          "image_2":"female_colors_2.png",
           "orientation": "vertical",
           "size": "100x150cm"
          }
@@ -201,9 +201,9 @@
           "price":350,
           "category":"2",
           "image_url":"",
-          "image":"green_tree.webp",
+          "image":"green_tree.png",
           "image_2_url":"",
-          "image_2":"green_tree_2.webp",
+          "image_2":"green_tree_2.png",
           "size": "100x200cm",
           "orientation": "horizontal"
        }
@@ -220,9 +220,9 @@
           "price":350,
           "category":"2",
           "image_url":"",
-          "image":"temple.webp",
+          "image":"temple.png",
           "image_2_url":"",
-          "image_2":"temple_2.webp",
+          "image_2":"temple_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }
@@ -239,9 +239,9 @@
           "price":370,
           "category":"2",
           "image_url":"",
-          "image":"stones.webp",
+          "image":"stones.png",
           "image_2_url":"",
-          "image_2":"stones_2.webp",
+          "image_2":"stones_2.png",
           "size": "100x150cm",
           "orientation": "vertical"
        }

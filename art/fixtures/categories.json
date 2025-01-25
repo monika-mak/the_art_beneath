@@ -27,28 +27,12 @@
     "pk": 4,
     "model": "art.category",
     "fields": {
-      "name": "gold",
-      "display_name": "Gold"
-    }
-  },
-  {
-    "pk": 5,
-    "model": "art.category",
-    "fields": {
-      "name": "pop_art",
-      "display_name": "Pop Art"
-    }
-  },
-  {
-    "pk": 6,
-    "model": "art.category",
-    "fields": {
       "name": "last_chance",
       "display_name": "Last Chance"
     }
   },
   {
-    "pk": 7,
+    "pk": 5,
     "model": "art.category",
     "fields": {
       "name": "limited_editions",
