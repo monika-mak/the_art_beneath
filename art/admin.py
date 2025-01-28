@@ -11,7 +11,8 @@ class ArtAdmin(admin.ModelAdmin):
         'price',
         'image',
         'orientation',
-        'size'
+        'size',
+        'date'
     )
 
     ordering = ('sku',)

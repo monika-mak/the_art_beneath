@@ -20,3 +20,5 @@ vscode:
 ports:
     - port: 8000
       onOpen: notify
+    - port: 5432
+      onOpen: ignore

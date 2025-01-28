@@ -13,6 +13,8 @@ def all_art(request):
     art = Art.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
 
 # Cofigure search query 
@@ -24,6 +26,20 @@ def all_art(request):
             categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                art = art.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            art = art.order_by(sortkey)
+
+    if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -33,10 +49,13 @@ def all_art(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             art = art.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'art' : art,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
 
     }
 
