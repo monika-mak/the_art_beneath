@@ -19,4 +19,4 @@ vscode:
     - ms-toolsai.vscode-jupyter-slideshow
 ports:
     - port: 8000
-      onOpen: notify
+      onOpen: open-browser

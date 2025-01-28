@@ -9,7 +9,6 @@
                 <a href="" class="dropdown-item">By Category</a>
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item">By Orientation</a>
-
                 <a href="{% url 'art' %}" class="dropdown-item">All Art</a>
             </div>
         </li>
@@ -18,19 +17,19 @@
                 Subject
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="subject-link">
-                <a href="" class="dropdown-item">Animals</a>
-                <a href="" class="dropdown-item">Nature</a>
-                <a href="" class="dropdown-item">Female </a>
-                <a href="" class="dropdown-item">All Subject</a>
+                <a href="{% url 'art' %}?category=animals" class="dropdown-item">Animals</a>
+                <a href="{% url 'art' %}?category=nature" class="dropdown-item">Nature</a>
+                <a href="{% url 'art' %}?category=female" class="dropdown-item">Female </a>
+                <a href="{% url 'art' %}?category=animals,nature,female" class="dropdown-item">All Subject</a>
             </div>
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="posters-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Featured
+                Specials
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gifts-link">
-                <a href="" class="dropdown-item">Last Chance</a>
-                <a href="" class="dropdown-item">Limited Editions</a>
+                <a href="{% url 'art' %}?category=special_offer" class="dropdown-item">Special Offer</a>
+                <a href="{% url 'art' %}?category=limited_eddition" class="dropdown-item">Limited Editions</a>
             </div>
         </li>
     </ul>

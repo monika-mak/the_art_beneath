@@ -27,8 +27,8 @@
     "pk": 4,
     "model": "art.category",
     "fields": {
-      "name": "last_chance",
-      "display_name": "Last Chance"
+      "name": "special_offer",
+      "display_name": "Special Offer"
     }
   },
   {
