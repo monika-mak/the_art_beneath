@@ -38,7 +38,7 @@
                             <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="date_des" {% if current_sorting == 'date_des' %}selected{% endif %}>Newest</option>
+                            <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Newest</option>
                             <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Oldest</option>
                         </select>
                     </div>
@@ -46,7 +46,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'art' %}">art Home</a> | </span>
+                            <span class="small"><a href="{% url 'art' %}">Art Home</a> | </span>
                         {% endif %}
                         {{ art|length }} art{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
