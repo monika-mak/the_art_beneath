@@ -9,17 +9,14 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-from pathlib import Path
+# from pathlib import Path
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -31,8 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
-    "the-art-beneath-289b50439a5a.herokuapp.com", "localhost"
+    # "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
+    "the-art-beneath-289b50439a5a.herokuapp.com",
+    "127.0.0.1",
 ]
 
 
@@ -78,10 +76,11 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # `allauth` needs this from django
+                # requred for `allauth`
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'bag.contexts.bag_contents' # make bag available across all apps
+                'bag.contexts.bag_contents',  # required for `bag`
             ],
         },
     },
@@ -113,7 +112,6 @@ WSGI_APPLICATION = 'the_art_beneath.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -126,7 +124,7 @@ else:
         }
     }
 
-#  adding for trusted paths ????? 
+#  adding for trusted paths ?????
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
@@ -137,24 +135,26 @@ CSRF_TRUSTED_ORIGINS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-
-# code inspired by https://github.com/amylour/everneed/blob/main/everneed/settings.py
 
 LANGUAGE_CODE = 'en-us'
 
