@@ -27,7 +27,6 @@
                             <thead class="text-black">
                                 <tr>
                                     <th scope="col">Art Info</th>
-                                    <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
@@ -139,7 +138,7 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        let url = `remove/${itemId}/`; 
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
