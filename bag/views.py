@@ -7,10 +7,12 @@ from art.models import Art
 
 # Create your views here.
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/bag.html')
+
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified art to the shopping bag """
@@ -41,3 +43,22 @@ def adjust_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """Remove the item from the shopping bag"""
+
+    try:
+        art = get_object_or_404(Art, pk=item_id)
+        bag = request.session.get('bag', {})
+
+        # if 'art' in request.POST:
+        bag.pop(str(item_id))
+        messages.success(request, f'Removed {art.name} from your bag')
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
