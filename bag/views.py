@@ -5,9 +5,8 @@ from django.contrib import messages
 
 from art.models import Art
 
+
 # Create your views here.
-
-
 def view_bag(request):
     """ A view that renders the bag contents page """
 
