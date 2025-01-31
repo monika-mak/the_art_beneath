@@ -108,13 +108,28 @@
       <div id="delivery-banner" class="row text-center">
         <div class="col bg-black text-white">
           <h4 class="logo-font my-1">Psst... Delivery Is On Us! € {{ free_delivery_threshold }}</h4>                
-      </div>            
-    </div>
-
+        </div>            
+      </div>
     </header>
 
+    
+    <!-- https://docs.djangoproject.com/en/5.1/ref/contrib/messages/#message-levels -->
     {% if messages %}
-      <div class = "message-container"></div>
+      <div class="message-container">
+          {% for message in messages %}
+              {% with message.level as level %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                  {% include 'includes/toasts/toast_info.html' %}
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                  {% include 'includes/toasts/toast_success.html' %}
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                  {% include 'includes/toasts/toast_warning.html' %}
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                  {% include 'includes/toasts/toast_error.html' %}
+                {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
     {% endif %}
 
     {% block page_header %}
@@ -124,6 +139,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+      $('.toast').toast('show');
+    </script>
     {% endblock %}
 
     {% if user.is_authenticated %}
