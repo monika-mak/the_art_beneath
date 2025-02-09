@@ -18,6 +18,10 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+from dotenv import load_dotenv
+
+load_dotenv() 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,7 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     # "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
-    "the-art-beneath-289b50439a5a.herokuapp.com",
+    "the-art-beneath-289b50439a5a.herokuapp.com", "localhost", 
     "127.0.0.1",
 ]
 
@@ -213,4 +217,4 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET','')

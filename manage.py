@@ -3,6 +3,11 @@
 import os
 import sys
 
+try:
+    import env  # This will load your environment variables
+except ImportError:
+    print("⚠️ Warning: env.py not found, using system environment variables")
+
 
 def main():
     """Run administrative tasks."""

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Order, OrderLineItem
 from art.models import Art
 
+import stripe
 import json
 import time
 
