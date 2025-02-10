@@ -36,8 +36,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     # "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
-    "the-art-beneath-289b50439a5a.herokuapp.com", "localhost", 
-    "127.0.0.1",
+    "the-art-beneath-289b50439a5a.herokuapp.com",
+    "localhost",  # listen for stripe webhooks
+    "127.0.0.1",  # vs code preview
 ]
 
 
