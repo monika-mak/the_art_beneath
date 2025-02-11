@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Art, Category
+from .forms import ArtForm
 
 
 # Create your views here.
@@ -80,3 +81,12 @@ def art_detail(request, art_id):
 
     return render(request, 'art/art_detail.html', context)
 
+def add_art(request):
+    """ Add a art to the store """
+    form = ArtForm()
+    template = 'art/add_art.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
