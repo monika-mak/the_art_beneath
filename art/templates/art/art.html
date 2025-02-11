@@ -48,7 +48,7 @@
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small"><a href="{% url 'art' %}">Art Home</a> | </span>
                         {% endif %}
-                        {{ art|length }} Art Works{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ art|length }} Art {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>

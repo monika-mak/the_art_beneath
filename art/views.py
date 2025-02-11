@@ -81,9 +81,21 @@ def art_detail(request, art_id):
 
     return render(request, 'art/art_detail.html', context)
 
+
 def add_art(request):
     """ Add a art to the store """
-    form = ArtForm()
+
+    if request.method == 'POST':
+        form = ArtForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added art!')
+            return redirect(reverse('add_art'))
+        else:
+            messages.error(request, 'Failed to add art. Please ensure the form is valid.')
+    else:
+        form = ArtForm()
+
     template = 'art/add_art.html'
     context = {
         'form': form,
