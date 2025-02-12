@@ -11,7 +11,10 @@ class ArtForm(forms.ModelForm):
 
     image = forms.ImageField(label='Image', required=False,
                              widget=CustomClearableFileInput)
-
+    
+    image_2 = forms.ImageField(label='Image 2', required=False, 
+                               widget=CustomClearableFileInput)
+    
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
