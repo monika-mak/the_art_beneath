@@ -88,9 +88,9 @@ def add_art(request):
     if request.method == 'POST':
         form = ArtForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            art = form.save()  #redirect to the product detail after art is added
             messages.success(request, 'Successfully added art!')
-            return redirect(reverse('add_art'))
+            return redirect(reverse('art_detail', args=[art.id]))
         else:
             messages.error(request, 'Failed to add art. Please ensure the form is valid.')
     else:
@@ -110,7 +110,7 @@ def edit_art(request, art_id):
         form = ArtForm(request.POST, request.FILES, instance=art)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated art!')
+            messages.success(request, 'Updated an art piece Successfully!')
             return redirect(reverse('art_detail', args=[art.id]))
         else:
             messages.error(request, 'Failed to update art. Please ensure the form is valid.')
@@ -125,3 +125,11 @@ def edit_art(request, art_id):
     }
 
     return render(request, template, context)
+
+def delete_art(request, art_id):
+    """ Delete a art in the store """
+    art = get_object_or_404(Art, pk=art_id)
+    art.delete()
+    messages.success(request, 'Deleted an art piece Successfully!')
+
+    return redirect(reverse('art'))
