@@ -102,3 +102,26 @@ def add_art(request):
     }
 
     return render(request, template, context)
+
+def edit_art(request, art_id):
+    """ Edit a art in the store """
+    art = get_object_or_404(Art, pk=art_id)
+    if request.method == 'POST':
+        form = ArtForm(request.POST, request.FILES, instance=art)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated art!')
+            return redirect(reverse('art_detail', args=[art.id]))
+        else:
+            messages.error(request, 'Failed to update art. Please ensure the form is valid.')
+    else:
+        form = ArtForm(instance=art)
+        messages.info(request, f'You are editing {art.name}')
+
+    template = 'art/edit_art.html'
+    context = {
+        'form': form,
+        'art': art,
+    }
+
+    return render(request, template, context)
