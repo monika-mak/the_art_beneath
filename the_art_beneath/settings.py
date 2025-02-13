@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    # "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
+    "8000-monikamak-theartbeneath-dy8a95e33ev.ws.codeinstitute-ide.net",
     "the-art-beneath-289b50439a5a.herokuapp.com",
     "localhost",  # listen for stripe webhooks
     "127.0.0.1",  # vs code preview
