@@ -1,6 +1,22 @@
-<h2>Contact Us</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send Request</button>
+
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "Contact" %}{% endblock %}
+
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4">{% trans "Contact Us" %}</h2>
+<hr>
+
+<form class="signup" id="contact_form" method="post" action="{% url 'contact' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Home</a>
+  <button type="submit">{% trans "Send" %}</button>
 </form>
+
+{% endblock %}
+
