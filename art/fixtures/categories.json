@@ -22,21 +22,5 @@
       "name": "female",
       "display_name": "Female"
     }
-  },
-  {
-    "pk": 4,
-    "model": "art.category",
-    "fields": {
-      "name": "special_offer",
-      "display_name": "Special Offer"
-    }
-  },
-  {
-    "pk": 5,
-    "model": "art.category",
-    "fields": {
-      "name": "limited_editions",
-      "display_name": "Limited Editions"
-    }
   }
 ]
