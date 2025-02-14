@@ -5,6 +5,7 @@ html {
 body {
     background: url('/media/homepage_background.png') no-repeat center center fixed;
     background-size: cover;
+    /* background: linear-gradient(135deg, #ffde59, #ff914d); */
     height: calc(100vh - 160px);
     color: #555;
     font-family: 'Lato';
@@ -79,7 +80,8 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	/* background: white; */
+    background: linear-gradient(135deg, #ffde59, #ff914d);
 	z-index: -1;
 }
 
@@ -334,6 +336,9 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

@@ -1,0 +1,25 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "FAQs" %}{% endblock %}
+
+{% block inner_content %}
+
+<hr>
+<h1 class="logo-font mb-4">{% trans "FAQ" %}</h1>
+<hr>
+<div class="default-page-container">
+    <div id="faq-accordion">
+        {% for faq in faqs %}
+            <div class="faq-item">
+                <button class="faq-question">{{ faq.question }}</button>
+                <div class="faq-answer">
+                    <p>{{ faq.answer }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

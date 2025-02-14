@@ -1,3 +1,15 @@
-<h2>Thank You!</h2>
-<p>Your request has been received. We will get back to you soon.</p>
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Contact Recieved" %}{% endblock %}
+
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4">{% trans "Thank you for getting in touch" %}</h2>
+<hr>
+
+<p>{% blocktrans %}Your message has been received. We will get back to you within 24h. {% endblocktrans %}</p>
 <a href="/">Back to Home</a>
+
+{% endblock %}
