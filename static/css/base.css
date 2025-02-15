@@ -133,19 +133,6 @@ input[name='q']::placeholder {
     transform: scale(1.03);
 }
 
-.card-title {
-    font-family: "Playfair Display", serif;
-    color: #3d2c8d;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-.card-footer {
-    background: white;
-    border-top: none;
-}
-
 .image-container {
     position: relative;
 }

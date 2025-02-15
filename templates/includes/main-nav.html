@@ -7,13 +7,13 @@
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="subject" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Subject
+                Category
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="subject-link">
+            <div class="dropdown-menu border-0" aria-labelledby="category-link">
                 <a href="{% url 'art' %}?category=animals" class="dropdown-item">Animals</a>
                 <a href="{% url 'art' %}?category=nature" class="dropdown-item">Nature</a>
                 <a href="{% url 'art' %}?category=female" class="dropdown-item">Female </a>
-                <a href="{% url 'art' %}?category=animals,nature,female" class="dropdown-item">All Subjects</a>
+                <a href="{% url 'art' %}?category=animals,nature,female" class="dropdown-item">All Categories</a>
             </div>
         </li>
         <li class="nav-item dropdown">
