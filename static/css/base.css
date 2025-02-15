@@ -3,9 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background.png') no-repeat center center fixed;
-    background-size: cover;
-    /* background: linear-gradient(135deg, #ffde59, #ff914d); */
+    /* background: url('/media/homepage_background.png') no-repeat center center fixed;
+    background-size: cover; */
+    background: #25211f;
+    height: 100%;
     height: calc(100vh - 160px);
     color: #555;
     font-family: 'Lato';
@@ -107,6 +108,74 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+
+
+
+/*-------------------------------art cards*/
+.cards-row {
+    margin: 0 0.3em;
+}
+
+.card-group {
+    margin-bottom: 20px;
+}
+
+.art-card {
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.art-card:hover {
+    transform: scale(1.03);
+}
+
+.card-title {
+    font-family: "Playfair Display", serif;
+    color: #3d2c8d;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.card-footer {
+    background: white;
+    border-top: none;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    max-width: 610px;
+    height: auto;
+    border: 2px solid #ffffff;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #efeeeb5c;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.image-container img:hover {
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 12px rgba(35, 33, 33, 0.181); /* Emphasized shadow */
+    background-color: #f6f4f1;
+}
+
+/* Active (clicked) effect */
+.image-container img:active {
+    transform: translateY(2px); /* Pressed effect */
+    box-shadow: 0 2px 4px rgba(96, 92, 92, 0.23); /* Reduced shadow */
+    background-color: #a09e9c; 
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
