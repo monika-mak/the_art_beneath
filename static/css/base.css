@@ -5,7 +5,7 @@ html {
 body {
     /* background: url('/media/homepage_background.png') no-repeat center center fixed;
     background-size: cover; */
-    background: #25211f;
+    background: #121211;
     height: 100%;
     height: calc(100vh - 160px);
     color: #555;
@@ -22,8 +22,18 @@ body {
 }
 
 .logo-font {
+    font-family: "Tenor Sans", serif;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
 }
+
+.body-font {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }  
 
 .main-logo-link {
     width: fit-content;
@@ -82,7 +92,7 @@ body {
 	left: 0;
 	position: fixed;
 	/* background: white; */
-    background: linear-gradient(135deg, #ffde59, #ff914d);
+    background: #121211
 	z-index: -1;
 }
 
@@ -108,9 +118,6 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
-
-
-
 
 /*-------------------------------art cards*/
 .cards-row {
