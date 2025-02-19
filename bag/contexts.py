@@ -21,8 +21,7 @@ def bag_contents(request):
             'art': art,
         })
 
-
-    if total :
+    if total:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         # free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
