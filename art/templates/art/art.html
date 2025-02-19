@@ -16,106 +16,104 @@
     <div class ="row">
         <div class= "col text-center">
             <h2 class="logo-font title">Art Gallery</h2>
+            <hr class= "w-50 mb-1 ">
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'art' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge text-white border border-light">{{ c.display_name }}</span>
             </a>
             {% endfor %}
-
         </div>
     </div>
-    <div class ="row">
-        <div class="art-container col-10 offset-1">
-            <div class="row">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper py-3 w-50 ">
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Newest</option>
-                            <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Oldest</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted text-center text-md-left result-count py-3">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span><a href="{% url 'art' %}">All Art </a> | </span>
-                        {% endif %}
-                        Showing all {{ art|length }} results: {% if search_term %} <strong>"{{ search_term }}"</strong>{% endif %}
-                    </p>
+    <div class="art-container col-10 offset-1">
+        <div class="row">
+            <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper py-3 w-50 ">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Newest</option>
+                        <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Oldest</option>
+                    </select>
                 </div>
             </div>
-            <div class ="row g-4">
-                {% for art  in art %}
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="art-card bg-white p-3">
-                            {% if art.image %}
-                            <div class="art-image-container position-relative">
-                                <a href="{% url 'art_detail' art.id %}">
-                                    <img class="img-fluid w-100" src="{{ art.image.url }}" alt="{{ art.name }}">
-                                </a>
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted text-center text-md-left py-3">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span><a href="{% url 'art' %}">All Art </a> | </span>
+                    {% endif %}
+                    Showing all {{ art|length }} results: {% if search_term %} <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+        </div>
+        <div class ="row g-4">
+            {% for art  in art %}
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="art-card bg-white p-3">
+                        {% if art.image %}
+                        <div class="art-image-container position-relative">
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="img-fluid w-100" src="{{ art.image.url }}" alt="{{ art.name }}">
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="art-image-container position-relative py-3">
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="img-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                            </a>
+                        </div>
+                        {% endif %}
+                        <div class="art-details mt-3">
+                            <h4 class="text-center mb-2">{{ art.name }}</h4>
+                            <h4 class="text-center mb-3">€ {{ art.price }}</h4>
+                            <hr class="w-50 p-1">
+                            <div class="d-flex justify-content-center">
+                                <form action="{% url 'add_to_bag' art.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="quantity" value="1">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    
+                                    <button type="submit" class="btn btn-outline-dark add-to-cart-btn">
+                                        <i class="fas fa-shopping-bag me-2"></i> Add to Bag
+                                    </button>
+                                </form>
                             </div>
-                            {% else %}
-                            <div class="art-image-container position-relative py-3">
-                                <a href="{% url 'art_detail' art.id %}">
-                                    <img class="img-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
-                                </a>
+                            
+                            {% if request.user.is_superuser %}
+                            <div class="action-icons mt-3 d-flex justify-content-between">
+                                <a href="{% url 'edit_art' art.id %}"><i class="fas fa-edit action-icons"></i></a>
+                                <a  href="{% url 'delete_art' art.id %}"><i class="fas fa-trash action-icons"></i></a>
                             </div>
                             {% endif %}
-                            <div class="art-details mt-3">
-                                <h4 class="text-center mb-2">{{ art.name }}</h4>
-                                <h4 class="text-center mb-3">€ {{ art.price }}</h4>
-                                <hr class="w-50 p-1">
-                                <div class="d-flex justify-content-center">
-                                    <form action="{% url 'add_to_bag' art.id %}" method="POST">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="quantity" value="1">
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        
-                                        <button type="submit" class="btn btn-outline-dark add-to-cart-btn">
-                                            <i class="fas fa-shopping-bag me-2"></i> Add to Bag
-                                        </button>
-                                    </form>
-                                </div>
-                                
-                                {% if request.user.is_superuser %}
-                                <div class="action-icons mt-3 d-flex justify-content-between">
-                                    <a href="{% url 'edit_art' art.id %}"><i class="fas fa-edit action-icons"></i></a>
-                                    <a  href="{% url 'delete_art' art.id %}"><i class="fas fa-trash action-icons"></i></a>
-                                </div>
-                                {% endif %}
-                            </div>
                         </div>
                     </div>
-                    <!--create spaces between the rows-->
-                    {% if forloop.counter|divisibleby:1 %}
-                    <div class="col-12 d-sm-none mb-5">
+                </div>
+                <!--create spaces between the rows-->
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}                        
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
                         <hr>
                     </div>
-                    {% endif %}                        
-                    {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                        <hr>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
