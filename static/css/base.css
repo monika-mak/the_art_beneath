@@ -5,15 +5,18 @@ html {
 body {
     /* background: url('/media/homepage_background.png') no-repeat center center fixed;
     background-size: cover; */
-    background: #121211;
     height: 100%;
     height: calc(100vh - 160px);
-    color: #555;
+    color: #242424;
     font-family: "Raleway", serif;
     font-weight: 500;
     font-optical-sizing: auto;
 
 }
+.title  {
+    color: #dee2e6;
+}
+
 
 /* from Bulma */
 .icon {
@@ -90,7 +93,7 @@ body {
 	left: 0;
 	position: fixed;
 	/* background: white; */
-    background: #121211;
+    background: #121211eb;
 	z-index: -1;
 }
 
@@ -125,25 +128,74 @@ input[name='q']::placeholder {
 .card-group {
     margin-bottom: 20px;
 }
-
 .art-card {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 30px;
+    /* Canvas-like texture and shadow */
+    box-shadow: 
+        /* Deeper shadow at bottom for depth */
+        0 15px 25px -8px rgba(0,0,0,0.3),
+        /* Subtle side shadows */
+        8px 0 15px -8px rgba(0,0,0,0.2),
+        -8px 0 15px -8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+/* .art-card {
     box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
     background: white;
-    border-radius: 12px;
+
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+} */
+
+.art-image-container {
+    position: relative;
+    overflow: hidden;
+    /* Canvas-like texture */
+    background-image: 
+        linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 2px 2px;
 }
+
+
 
 .art-card:hover {
     transform: scale(1.03);
 }
+/*----------------------------art cards test start */
+.action-icons {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.action-icons i {
+    cursor: pointer;
+}
+
+.action-icons i:hover {
+    color: #433f3f;
+}
+/*-------------------------------art cards test end*/
+
+
 
 .image-container {
     position: relative;
 }
 
-.image-container img {
-    max-width: 610px;
+.art-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Subtle shadow for depth */
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.2);
+}
+
+/* .image-container img {
+    max-width: 600px;
     height: auto;
     border: 2px solid #ffffff;
     padding: 3px;
@@ -152,7 +204,7 @@ input[name='q']::placeholder {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
-}
+} */
 
 /* Hover effect */
 .image-container img:hover {
@@ -306,6 +358,8 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+
 
 /*accordion Faq*/
 .collapse {

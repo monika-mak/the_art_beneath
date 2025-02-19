@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
     <div class ="container header-container">
         <div class ="row">
@@ -15,7 +16,7 @@
 <div class ="container-fluid">
     <div class ="row">
         <div class= "col text-center mt-3">
-            <h2 class="logo-font title mt-4">Art</h2>
+            <h2 class="logo-font">Art</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'art' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.display_name }}</span>
@@ -45,52 +46,47 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span><a href="{% url 'art' %}">Art Home</a> | </span>
+                            <span class="small"><a href="{% url 'art' %}">Art Home</a> | </span>
                         {% endif %}
                         Showing all {{ art|length }} results: {% if search_term %} <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
-            
-            <div class ="row g-4">
-                {% for art  in art %}
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="art-card bg-white p-3">
+            <div class ="row">
+                {% for art in art %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card h-100 border-0">
                             {% if art.image %}
-                            <div class="art-image-container position-relative">
-                                <a href="{% url 'art_detail' art.id %}">
-                                    <img class="img-fluid w-100" src="{{ art.image.url }}" alt="{{ art.name }}">
-                                </a>
-                            </div>
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="card-img-top img-fluid" src="{{ art.image.url }}" alt="{{ art.name }}">
+                            </a>
                             {% else %}
-                            <div class="art-image-container position-relative">
-                                <a href="{% url 'art_detail' art.id %}">
-                                    <img class="img-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
-                                </a>
-                            </div>
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                            </a>
                             {% endif %}
-                            <div class="art-details mt-3">
-                                <h4 class="text-center mb-2">{{ art.name }}</h4>
-                                <h4 class="text-center mb-3">€ {{ art.price }}</h4>
-                                <hr class="w-50 p-1">
-                                <div class="d-flex justify-content-center">
-                                    <form action="{% url 'add_to_bag' art.id %}" method="POST">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="quantity" value="1">
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        
-                                        <button type="submit" class="btn btn-outline-dark add-to-cart-btn">
-                                            <i class="fas fa-shopping-bag me-2"></i> Add to Bag
-                                        </button>
-                                    </form>
+                            <div class="card-body pb-0">
+                                <p class="mb-0">{{ art.name }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">€ {{ art.price }}</p>
+                                        {% if art.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'art' %}?category={{ art.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ art.category.display_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_art' art.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_art' art.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
+                                    </div>
                                 </div>
-                                
-                                {% if request.user.is_superuser %}
-                                <div class="action-icons mt-3 d-flex justify-content-between">
-                                    <a href="{% url 'edit_art' art.id %}"><i class="fas fa-edit action-icons"></i></a>
-                                    <a  href="{% url 'delete_art' art.id %}"><i class="fas fa-trash action-icons"></i></a>
-                                </div>
-                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -158,3 +154,58 @@
         })
     </script>
 {% endblock %}
+
+
+
+
+
+
+
+<!-----test---------------------------------------------------------->
+
+<div class="art-gallery-container bg-dark py-5">
+    <h1 class="text-white text-center mb-4">ART GALLERY</h1>
+    <div class="container">
+        <div class="d-flex justify-content-end mb-3">
+            <div class="dropdown">
+                <button class="btn btn-white dropdown-toggle" type="button">
+                    Search by ▼
+                </button>
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for art in art %}
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="art-card bg-white p-3">
+                        {% if art.image %}
+                        <div class="art-image-container position-relative">
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="img-fluid w-100" src="{{ art.image.url }}" alt="{{ art.name }}">
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="art-image-container position-relative">
+                            <a href="{% url 'art_detail' art.id %}">
+                                <img class="img-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                            </a>
+                        </div>
+                        {% endif %}
+                        <div class="art-details mt-3">
+                            <h5 class="text-center mb-2">{{ art.name }}</h5>
+                            <p class="text-center mb-3">€ {{ art.price }}</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-outline-dark add-to-cart-btn">
+                                    <i class="fas fa-shopping-bag me-2"></i>Add to cart
+                                </button>
+                            </div>
+                            <div class="action-icons mt-3 d-flex justify-content-between">
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
