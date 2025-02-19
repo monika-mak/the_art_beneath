@@ -14,21 +14,21 @@
 <div class = 'overlay'></div>
 <div class ="container-fluid">
     <div class ="row">
-        <div class= "col text-center mt-3">
-            <h2 class="logo-font title mt-4">Art</h2>
+        <div class= "col text-center">
+            <h2 class="logo-font title">Art Gallery</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'art' %}?category={{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.display_name }}</span>
+                <span class="p-2 mt-2 badge text-white border border-light">{{ c.display_name }}</span>
             </a>
             {% endfor %}
-            <hr class="w-50 mb-1">
+
         </div>
     </div>
     <div class ="row">
         <div class="art-container col-10 offset-1">
-            <div class="row mt-1 mb-2">
+            <div class="row">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper w-50">
+                    <div class="sort-select-wrapper py-3 w-50 ">
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
@@ -43,15 +43,14 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left">
+                    <p class="text-muted text-center text-md-left result-count py-3">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span><a href="{% url 'art' %}">Art Home</a> | </span>
+                            <span><a href="{% url 'art' %}">All Art </a> | </span>
                         {% endif %}
                         Showing all {{ art|length }} results: {% if search_term %} <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
-            
             <div class ="row g-4">
                 {% for art  in art %}
                     <div class="col-sm-6 col-md-6 col-lg-4">
@@ -63,7 +62,7 @@
                                 </a>
                             </div>
                             {% else %}
-                            <div class="art-image-container position-relative">
+                            <div class="art-image-container position-relative py-3">
                                 <a href="{% url 'art_detail' art.id %}">
                                     <img class="img-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
                                 </a>
@@ -120,9 +119,9 @@
         </div>
     </div>
 </div>
-<div class="btt-button shadow-sm rounded-0 border border-black">
+<div class="btt-button shadow-sm rounded-0 border border-white">
     <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>	
 </div>
 {% endblock %}
