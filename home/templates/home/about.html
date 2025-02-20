@@ -23,7 +23,7 @@
         <!-- Details Column -->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="art-details-container text-center text-md-left mb-5 mt-md-5">
-                <div class="detail-section mb-4">
+                <div class="mb-4">
                     <h4 class="section-title">James Stanislaw</h4>
                     <p>{{ artist_description|linebreaks }}</p> <!-- Display text from views.py -->
                 </div>
@@ -34,32 +34,6 @@
         </div>
     </div>
 </div>
-
-<style>
-    /* Ensure a consistent image layout */
-    .main-image-container {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-
-    .about-main-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-        .main-image-container {
-            max-width: 100%;
-        }
-    }
-</style>
 
 <script>
     function toggleDetails() {

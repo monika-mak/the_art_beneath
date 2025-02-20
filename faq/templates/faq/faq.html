@@ -1,44 +1,66 @@
-{% extends "account/base.html" %}
-
+{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block head_title %}{% trans "FAQs" %}{% endblock %}
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid art-detail-container text-white py-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font title">{% trans "FAQ" %}</h2>
+        </div>
+    </div>
 
-{% block inner_content %}
-<hr>
-<h1 class="logo-font mb-4">{% trans "FAQ" %}</h1>
-<hr>
-
-<div class="accordion" id="accordionExample">
-    {% for faq in faqs %}
-        <div class="card">
-            <div class="card-header" id="heading{{ forloop.counter }}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link {% if not forloop.first %}collapsed{% endif %}" 
-                            type="button" data-toggle="collapse" 
-                            data-target="#collapse{{ forloop.counter }}" 
-                            aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" 
-                            aria-controls="collapse{{ forloop.counter }}">
-                        {{ faq.question }}
-                    </button>
-                </h2>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="accordion w-75 mx-auto" id="accordionExample">
+                {% for faq in faqs %}
+                    <div class="card mb-3">
+                        <div class="card-header bg-white" id="heading{{ forloop.counter }}">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-bold text-dark w-100 text-left text-decoration-none {% if not forloop.first %}collapsed{% endif %}" 
+                                        type="button" 
+                                        data-toggle="collapse" 
+                                        data-target="#collapse{{ forloop.counter }}" 
+                                        aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" 
+                                        aria-controls="collapse{{ forloop.counter }}">
+                                    {{ faq.question }}
+                                    <i class="fas fa-chevron-down float-right"></i>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse{{ forloop.counter }}" 
+                             class="collapse {% if forloop.first %}show{% endif %}" 
+                             aria-labelledby="heading{{ forloop.counter }}" 
+                             data-parent="#accordionExample">
+                            <div class="card-body text-dark">
+                                {{ faq.answer }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div id="collapse{{ forloop.counter }}" class="collapse {% if forloop.first %}show{% endif %}" 
-                 aria-labelledby="heading{{ forloop.counter }}" 
-                 data-parent="#accordionExample">
-                <div class="card-body">
-                    {{ faq.answer }}
+
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <a href="{% url 'home' %}" class="btn btn-outline-dark">
+                        <i class="fas fa-home me-2"></i> Back to Home
+                    </a>
                 </div>
             </div>
         </div>
-    {% endfor %}
+    </div>
 </div>
+
 {% endblock %}
 
-            <!-- <div class="faq-item">
-                <button class="faq-question">{{ faq.question }}</button>
-                <div class="faq-answer">
-                    <p>{{ faq.answer }}</p>
-                </div>
-            </div> -->
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    // Add animation for chevron icon rotation
+    $('.btn-link').click(function() {
+        $(this).find('i').toggleClass('fa-rotate-180');
+    });
+</script>
+{% endblock %}
