@@ -142,7 +142,7 @@ body {
 }
 
 .bg-main {
-    background-color: #433f3f !important;
+    background-color: #1a1818 !important;
 }
 
 /* .text-muted {
@@ -401,7 +401,6 @@ input[name='q']::placeholder {
         max-width: 350px;
         margin: 0 auto;
         overflow: hidden;
-        border-radius: 10px;
     }
 
     .about-main-image {

@@ -14,19 +14,24 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if art.image %}
-                <div class="main-image-container mb-3">
-                    <img id="mainImage" class="art-main-image" src="{{ art.image.url }}" alt="{{ art.name }}">
-                </div>
-                <div class="thumbnail-container">
-                    <img class="art-thumbnail active" src="{{ art.image.url }}" alt="{{ art.name }}" onclick="updateMainImage(this.src)">
-                </div>
+                    <div class="main-image-container mb-3">
+                        <img id="mainImage" class="art-main-image" src="{{ art.image.url }}" alt="{{ art.name }}">
+                    </div>
+                    <div class="thumbnail-container d-flex gap-2">
+                        {% if art.image %}
+                            <img class="art-thumbnail active" src="{{ art.image.url }}" alt="{{ art.name }}" onclick="swapImages(this)">
+                        {% endif %}
+                        {% if art.image_2 %}
+                            <img class="art-thumbnail" src="{{ art.image_2.url }}" alt="{{ art.name }}" onclick="swapImages(this)">
+                        {% endif %}
+                    </div>
                 {% else %}
-                <div class="main-image-container mb-3">
-                    <img id="mainImage" class="art-main-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
-                </div>
-                <div class="thumbnail-container">
-                    <img class="art-thumbnail" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}" onclick="updateMainImage(this.src)">
-                </div>
+                    <div class="main-image-container mb-3">
+                        <img id="mainImage" class="art-main-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img class="art-thumbnail" src="{{ MEDIA_URL }}noimage.png" alt="{{ art.name }}">
+                    </div>
                 {% endif %}
             </div>
         </div>
@@ -102,35 +107,9 @@
     </div>
 </div>
 
+
+
 <style>
-/* Image Styling */
-.art-main-image {
-    width: 100%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.thumbnail-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.art-thumbnail {
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: 0.3s;
-}
-
-.art-thumbnail.active {
-    border-color: #fff;
-}
-
-.art-thumbnail:hover {
-    transform: translateY(-2px);
-}
-
 /* Details Styling */
 .more-details-header {
     cursor: pointer;
@@ -198,13 +177,53 @@
     border-color: #fff;
 }
 
+.art-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.art-thumbnail.active {
+    border-color: #000;
+}
+
+.art-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+}
+
 </style>
 
 <script>
-function updateMainImage(imgElement) {
-    document.getElementById('mainImage').src = imgElement.src;
-    document.querySelectorAll('.art-thumbnail').forEach(thumb => thumb.classList.remove('active'));
-    imgElement.classList.add('active');
+function swapImages(clickedThumbnail) {
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.art-thumbnail');
+    
+    // Store the current main image source
+    const tempSrc = mainImage.src;
+    
+    // Update main image with clicked thumbnail
+    mainImage.src = clickedThumbnail.src;
+    
+    // Find the previously active thumbnail and update its source
+    thumbnails.forEach(thumb => {
+        if (thumb.classList.contains('active')) {
+            thumb.src = tempSrc;
+            thumb.classList.remove('active');
+        }
+    });
+    
+    // Make clicked thumbnail active
+    clickedThumbnail.classList.add('active');
 }
 
 function toggleDetails() {
@@ -212,9 +231,5 @@ function toggleDetails() {
     document.getElementById('details-chevron').classList.toggle('rotate-chevron');
 }
 </script>
-{% endblock %}
 
-{% block postloadjs %}
-    {{ block.super }}
-    {% include 'art/includes/quantity_input_script.html' %}
 {% endblock %}

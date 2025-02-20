@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -30,23 +31,13 @@
                             {% for field in form %}
                                 {% if field.name != 'image' and field.name != 'image_2' %}
                                     <tr>
-                                        <th class="w-25">{{ field.label_tag }}</th>
-                                        <td>
-                                            {{ field }}
-                                            {% if field.help_text %}
-                                                <small class="form-text text-muted">{{ field.help_text }}</small>
-                                            {% endif %}
-                                            {% if field.errors %}
-                                                {% for error in field.errors %}
-                                                    <span class="text-danger">{{ error }}</span>
-                                                {% endfor %}
-                                            {% endif %}
+                                        <td colspan="2">
+                                            {{ field | as_crispy_field }}
                                         </td>
                                     </tr>
                                 {% else %}
                                     <tr>
-                                        <th class="w-25">{{ field.label_tag }}</th>
-                                        <td>
+                                        <td colspan="2">
                                             {{ field }}
                                             <p class="text-muted" id="{% if field.name == 'image' %}filename{% else %}filename-2{% endif %}"></p>
                                         </td>
@@ -63,8 +54,6 @@
             </div>            
         </div>
     </div>
-
-
 {% endblock %}
 
 {% block postloadjs %}
