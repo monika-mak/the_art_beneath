@@ -5,9 +5,7 @@ def index(request):
     return render(request, 'home/index.html')
 
 def about(request):
-    return render(request, 'home/about.html')
-
-def artist_detail(request):
+    
     """ A view to return the artist detail page """
     artist_description = """
         James Stanisław's artistic journey is an exploration of the unseen—the layers beneath the surface, both in the world around us and within ourselves. 
@@ -28,4 +26,4 @@ def artist_detail(request):
         but what lies beneath.
     """
     
-    return render(request, 'home/artist_detail.html', {'artist_description': artist_description})
+    return render(request, 'home/about.html', {'artist_description': artist_description})
