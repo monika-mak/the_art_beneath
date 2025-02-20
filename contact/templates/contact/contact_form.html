@@ -1,21 +1,27 @@
-{% extends "account/base.html" %}
 
+{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block head_title %}{% trans "Contact" %}{% endblock %}
-
-{% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Contact Us" %}</h2>
-<hr>
-
-<form class="signup" id="contact_form" method="post" action="{% url 'contact' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Home</a>
-  <button type="submit">{% trans "Send" %}</button>
-</form>
-
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid art-detail-container text-white py-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font title">Contact Us</h2>
+        </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center allauth-form-inner-content">
+      <form class="signup" id="contact_form" method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Home</a>
+        <button type="submit">{% trans "Send" %}</button>
+      </form>      
+    </div>
+</div>
 {% endblock %}
+
+
 
