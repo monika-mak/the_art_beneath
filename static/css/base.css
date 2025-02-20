@@ -352,9 +352,20 @@ input[name='q']::placeholder {
 } */
 
 
+/*Add art table--------------------------------*/
 
+.table th {
+    vertical-align: middle;
+}
 
-
+.table td {
+    vertical-align: middle;
+}
+.table input,
+.table select,
+.table textarea {
+    width: 100%;
+}
 
 /* Art Form */
 

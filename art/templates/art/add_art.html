@@ -13,7 +13,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
                 <hr>
                 <h2 class="logo-font mb-4">Art Management</h2>
                 <h5 class="text-muted">Add Art</h5>
@@ -22,17 +22,40 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
                 <form method="POST" action="{% url 'add_art' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' and field.name != 'image_2' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
+                    <table class="table table-borderless">
+                        <tbody>
+                            {% for field in form %}
+                                {% if field.name != 'image' and field.name != 'image_2' %}
+                                    <tr>
+                                        <th class="w-25">{{ field.label_tag }}</th>
+                                        <td>
+                                            {{ field }}
+                                            {% if field.help_text %}
+                                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                                            {% endif %}
+                                            {% if field.errors %}
+                                                {% for error in field.errors %}
+                                                    <span class="text-danger">{{ error }}</span>
+                                                {% endfor %}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th class="w-25">{{ field.label_tag }}</th>
+                                        <td>
+                                            {{ field }}
+                                            <p class="text-muted" id="{% if field.name == 'image' %}filename{% else %}filename-2{% endif %}"></p>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="text-right mt-4">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'art' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Art</button>
                     </div>
@@ -40,7 +63,10 @@
             </div>            
         </div>
     </div>
+
+
 {% endblock %}
+
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
