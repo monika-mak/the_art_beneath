@@ -11,15 +11,6 @@
     </div>
 
     <div class="row d-flex align-items-center justify-content-center">
-        <!-- Image Column -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="image-container text-center my-4">
-                <div class="main-image-container">
-                    <img id="mainImage" class="about-main-image" src="{% static 'media/artist.png' %}" alt="About Artist">
-                </div>
-            </div>
-        </div>
-
         <!-- Details Column -->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="art-details-container text-center text-md-left mb-5 mt-md-5">
@@ -29,6 +20,14 @@
                 </div>
                 <div class="action-buttons">
                     <a href="{% url 'home' %}" class="btn keep-shopping-btn border-light">Home</a>
+                </div>
+            </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="image-container text-center my-4">
+                <div class="main-image-container">
+                    <img id="mainImage" class="about-main-image" src="{% static 'media/artist.png' %}" alt="About Artist">
                 </div>
             </div>
         </div>

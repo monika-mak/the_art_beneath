@@ -10,12 +10,13 @@
           "color":"The giraffe is depicted in shades of black, white, and brown, while the graffiti-filled background bursts with bright purples, blues, greens, and oranges. This juxtaposition of earthy tones and vivid colors creates a striking contrast, adding depth and energy to the artwork.",
           "price":300,
           "category":"1",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178699/giraffe_nv8vfe.png",
           "image":"giraffe.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/giraffe_2_fst6fz.png",
           "image_2":"giraffe_2.png",
-          "orientation": "square",
-          "size": "140x140cm"
+          "orientation": "Square",
+          "size": "140x140cm",
+          "date":"2025-01-28"
        }
     },
     {
@@ -29,12 +30,13 @@
           "color":"The color palette is a stunning mix of warm and cool tones. The blue of the water, blending with splashes of white, creates a dynamic sense of movement. In contrast, the background bursts with warm shades of yellow, orange, and pink, adding vibrancy and complementing the cool water tones.",
           "price":300,
           "category":"1",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178703/dog_euphoria_qmfisp.png",
           "image":"dog_euphoria.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178703/dog_euphoria_2_nhvq5f.png",
           "image_2":"dog_euphoria_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2025-01-28"
        }
     },
     {
@@ -48,12 +50,13 @@
           "color":"The color palette is a vibrant blend of earthy and fiery tones. Warm shades of orange, red, and amber dominate, symbolizing energy and vitality. Cool hues of teal, blue, and white add balance and depth, creating a striking contrast.",
           "price":300,
           "category":"1",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178702/wolf_ozbiy2.png",
           "image":"wolf.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178702/wolf_2_zuvkza.png",
           "image_2":"wolf_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2025-02-05"
        }
     },
     {
@@ -67,12 +70,13 @@
           "color":"The artwork prominently features shades of white and gold, giving the lion a luminous and almost divine presence. These vibrant tones contrast dramatically against the dark, textured background, amplifying the lion's commanding aura.",
           "price":300,
           "category":"1",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178701/golden_lion_cfnqfz.png",
           "image":"golden_lion.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/golden_lion_2_bksduj.png",
           "image_2":"golden_lion_2.png",
-          "orientation": "square",
-          "size": "140x140cm"
+          "orientation": "Square",
+          "size": "140x140cm",
+          "date":"2025-02-05"
        }
     },
     {
@@ -86,12 +90,13 @@
           "color":"The artwork prominently features vibrant orange, with the woman’s flowing dress radiating warmth and energy. This is juxtaposed against the muted tones of the grand piano and a dynamic backdrop of abstract shades in blue, beige, and orange.",
           "price":370,
           "category":"3",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740181160/female_piano_kzazen.png",
           "image":"female_piano.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740181160/female_piano_2_g7ecrc.png",
           "image_2":"female_piano_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2025-02-05"
        }
     },
     {
@@ -105,12 +110,13 @@
           "color":"The dominant color is gold, used to highlight the tree's leaves and roots, radiating warmth and opulence. Complementary tones of bronze and deep brown accentuate the tree’s trunk and branches.",
           "price":300,
           "category":"2",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/golden_tree_ib35bi.png",
           "image":"golden_tree.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/golden_tree_2_oblivj.png",
           "image_2":"golden_tree_2.png",
           "size": "100x200cm",
-          "orientation": "horizontal"
+          "orientation": "Horizontal",
+          "date":"2023-02-05"
        }
     },
     {
@@ -124,12 +130,13 @@
           "color":"The artwork’s palette is dominated by deep, glossy blacks that define the horse's form and exude elegance and power. Contrasting this are bursts of fiery gold and amber tones, creating a glowing, ethereal effect.",
           "price":330,
           "category":"1",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178702/black_horse_ywxl1g.png",
           "image":"black_horse.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178703/black_horse_2_urvqux.png",
           "image_2":"black_horse_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2024-01-08"
        }
     },
     {
@@ -143,12 +150,13 @@
           "color":"This piece is defined by its bold and varied color palette. The canopy features vibrant reds, yellows, blues, purples, and greens, creating a striking contrast with the dark, earthy tones of the trunk and branches.",
           "price":300,
           "category":"2",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178702/tree_of_joy_tj7q6c.png",
           "image":"tree_of_joy.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178702/tree_of_joy_2_spextb.png",
           "image_2":"",
           "size": "100x200cm",
-          "orientation": "horizontal"
+          "orientation": "Horizontal",
+          "date":"2023-01-08"
        }
     },
     {
@@ -166,8 +174,9 @@
           "image":"female_colors.png",
           "image_2_url":"",
           "image_2":"female_colors_2.png",
-          "orientation": "square",
-          "size": "140x140cm"
+          "orientation": "Square",
+          "size": "140x140cm",
+          "date":"2025-01-08"
        }
     },
     {
@@ -181,12 +190,13 @@
           "color":"The predominant colors in this work are black and gold. The black background creates a dramatic contrast that highlights the brilliant gold leaves. The woman's eyes and lips are accented with touches of gold and black, creating a hypnotic and mesmerizing visual effect.",
           "price":300,
           "category":"3",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178703/female_colors_kvbusl.png",
           "image":"female_colors.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178703/female_colors_2_dymyly.png",
           "image_2":"female_colors_2.png",
-          "orientation": "vertical",
-          "size": "100x150cm"
+          "orientation": "Vertical",
+          "size": "100x150cm",
+          "date":"2024-01-08"
          }
     },
     {
@@ -200,12 +210,13 @@
           "color":"The predominant colors are various shades of green, ranging from the dark green of the more mature leaves to the light green of the young leaves. The tree trunk is rendered in shades of brown ranging from chocolate to sienna, adding realism and warmth to the work. The background is a mix of greens and whites, which creates a harmonious contrast with the tree canopy and gives a sense of depth and space.",
           "price":350,
           "category":"2",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178701/tree_green_cu908s.png",
           "image":"green_tree.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178701/tree_green_2_t4scet.png",
           "image_2":"green_tree_2.png",
           "size": "100x200cm",
-          "orientation": "horizontal"
+          "orientation": "Horizontal",
+          "date":"2023-01-08"
        }
     },
     {
@@ -219,12 +230,13 @@
           "color":"The colors used in this work are bright and harmonious. The pink of the cherry blossoms contrasts beautifully with the deep blue of the sky and the brilliant white of the snow on Mount Fuji. The golden and orange hues of dawn add a touch of warmth and brightness to the composition.",
           "price":350,
           "category":"2",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178701/temple_mifglv.png",
           "image":"temple.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178701/temple_2_mds8m9.png",
           "image_2":"temple_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2024-01-28"
        }
     },
     {
@@ -238,12 +250,13 @@
           "color":"The predominant colors in this painting are black and gold. The black stones, with their smooth and shiny surfaces, offer a solid and stable base. The golden stones add a touch of luxury and sophistication, creating a stunning visual effect against the dark background.",
           "price":370,
           "category":"2",
-          "image_url":"",
+          "image_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/stones_pebzja.png",
           "image":"stones.png",
-          "image_2_url":"",
+          "image_2_url":"https://res.cloudinary.com/dutjcas0m/image/upload/v1740178700/stones_2_iuamdx.png",
           "image_2":"stones_2.png",
           "size": "100x150cm",
-          "orientation": "vertical"
+          "orientation": "Vertical",
+          "date":"2024-01-28"
        }
     }
  ]

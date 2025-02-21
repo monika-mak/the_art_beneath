@@ -22,9 +22,9 @@ class Art(models.Model):
 
     # code used from https://docs.djangoproject.com/en/5.1/ref/models/fields/#choices
     ORIENTATION_CHOICES = [
-        ('horizontal', 'Horizontal'),
-        ('vertical', 'Vertical'),
-        ('square', 'Square'),
+        ('Horizontal', 'Horizontal'),
+        ('Vertical', 'Vertical'),
+        ('Square', 'Square'),
     ]
 
     SIZE_CHOICES = [
@@ -40,14 +40,14 @@ class Art(models.Model):
     meaning = models.TextField()
     color = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     image_2_url= models.URLField(max_length=1024, null=True, blank=True)
     image_2 = models.ImageField(null=True, blank=True)
     orientation = models.CharField(
         max_length=25,
-        choices=ORIENTATION_CHOICES, default='square')
+        choices=ORIENTATION_CHOICES, default='Square')
     size = models.CharField(
         max_length=25,
         choices=SIZE_CHOICES, default='140x140cm'
