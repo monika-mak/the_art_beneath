@@ -5,13 +5,13 @@
 {% block content %}
 <!--ovrlay to cover the  background img-->
 <div class = 'overlay bg-main'></div>
-<div class ="container-fluid art-detail-container text-white py-5">
+<div class ="container-fluid art-detail-container py-5">
     <div class ="row">
         <div class= "col text-center">
             <h2 class="logo-font title">Art Gallery</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'art' %}?category={{ c.name }}">
-                <span class="p-2 mt-2 badge text-white border border-light">{{ c.display_name }}</span>
+                <span class="p-2 mt-2 badge border border-light">{{ c.display_name }}</span>
             </a>
             {% endfor %}
         </div>
