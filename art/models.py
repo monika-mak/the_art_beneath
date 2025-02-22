@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
@@ -42,9 +43,9 @@ class Art(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=0)
     date = models.DateField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
-    image_2_url= models.URLField(max_length=1024, null=True, blank=True)
-    image_2 = models.ImageField(null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True)
+    image_2_url = models.URLField(max_length=1024, null=True, blank=True)
+    image_2 = CloudinaryField('image', null=True, blank=True)
     orientation = models.CharField(
         max_length=25,
         choices=ORIENTATION_CHOICES, default='Square')
