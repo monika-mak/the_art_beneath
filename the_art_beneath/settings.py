@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'contact',
     'faq',
     'crispy_forms',
+    'cloudinary_storage',
+    'cloudinary',
 
     
     # 'storages',
