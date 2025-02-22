@@ -196,15 +196,22 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Cloudinary settings
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
+}
+
+# Media files
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# # Stripe
-# STRIPE_CURRENCY = 'eur'
-# STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-# STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-# STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 # Default primary key field type
