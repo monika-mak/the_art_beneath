@@ -115,6 +115,52 @@ body {
     color: white;
 }
 
+/*---------buttons art detail---- remove doubles-----*/
+/* Buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.custom-quantity-input {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.keep-shopping-btn, .add-to-bag-btn {
+    /* padding: 12px 24px; */
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.keep-shopping-btn {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.add-to-bag-btn {
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.keep-shopping-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.add-to-bag-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+/*---------buttons art detail---- remove doubles-end----*/
+
+
 .text-black {
     color: #000 !important;
 }
@@ -182,6 +228,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -245,7 +292,6 @@ input[name='q']::placeholder {
 }
 /*-------------------------------art cards test end*/
 
-
 .image-container {
     margin:0 2em;
     position: relative;
@@ -282,7 +328,6 @@ input[name='q']::placeholder {
 .toast-capper {
     height: 2px;
 }
-
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -335,10 +380,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-
-
 /*accordion Faq*/
-
 .collapse:not(.show) {
     display: none;
 }
@@ -349,15 +391,8 @@ input[name='q']::placeholder {
     @include transition($transition-collapse);
   }
 
-/* .accordion-button:not(.collapsed) {
-    color: #000;
-    background-color: #fff;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-} */
-
 
 /*Add art table--------------------------------*/
-
 .table th {
     vertical-align: middle;
 }
@@ -372,7 +407,6 @@ input[name='q']::placeholder {
 }
 
 /* Art Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -399,21 +433,67 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-    /* About -------------------------------------------- */
-    .main-image-container {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
+/* About -------------------------------------------- */
+.main-image-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.about-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
 
-    .about-main-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
+.art-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.art-thumbnail.active {
+    border-color: #000;
+}
+
+.art-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* Art Details Styling */
+.more-details-header {
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.more-details-header:hover {
+    opacity: 0.8;
+}
+
+.additional-details {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#details-chevron {
+    transition: transform 0.3s;
+}
+
+.rotate-chevron {
+    transform: rotate(180deg);
+}
 
 /* Allauth form formatting */
 

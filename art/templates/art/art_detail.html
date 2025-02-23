@@ -96,8 +96,8 @@
                     </div>
                     
                     <div class="action-buttons">
+                        <button type="submit" class="btn add-to-bag-btn"><i class="fas fa-shopping-bag"></i> ADD TO BAG</button>
                         <a href="{% url 'art' %}" class="btn keep-shopping-btn">KEEP SHOPPING</a>
-                        <button type="submit" class="btn add-to-bag-btn">ADD TO BAG</button>
                     </div>
 
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -107,31 +107,7 @@
     </div>
 </div>
 
-
-
 <style>
-/* Details Styling */
-.more-details-header {
-    cursor: pointer;
-    padding: 10px 0;
-}
-
-.more-details-header:hover {
-    opacity: 0.8;
-}
-
-.additional-details {
-    padding: 15px 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-#details-chevron {
-    transition: transform 0.3s;
-}
-
-.rotate-chevron {
-    transform: rotate(180deg);
-}
 
 /* Buttons */
 .action-buttons {
@@ -147,7 +123,6 @@
     border: 1px solid #333;
     overflow: hidden;
 }
-
 
 .keep-shopping-btn, .add-to-bag-btn {
     /* padding: 12px 24px; */
@@ -175,30 +150,6 @@
     background: #fff;
     color: #000;
     border-color: #fff;
-}
-
-.art-thumbnail {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.art-thumbnail.active {
-    border-color: #000;
-}
-
-.art-main-image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.thumbnail-container {
-    display: flex;
-    gap: 10px;
 }
 
 </style>

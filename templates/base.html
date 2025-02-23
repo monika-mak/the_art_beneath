@@ -139,17 +139,17 @@
 
     {% block content %}
     {% endblock %}
-
+        
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg ">
-      <!--code modeled from https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#now-->
-      <p class="m-0 text-center text-white pr-1">Webiste Created for Educational Purposes Only</p>
+    <footer class="footer mt-auto py-3 dark-bg">
+      <p class="m-0 text-center text-white pr-1">Website Created for Educational Purposes Only</p>
       <p class="m-0 text-center text-white">Monika Mak &copy; {% now "Y" %}</p>
+    </footer>
+
         <!-- <a href="https://github.com/monika-mak" target="_blank" rel="noopener"
             aria-label="Visit us on (opens in new tab)">
             <i class="text-white nav-link fa-brands fa-github"></i>
         </a> -->
-    </footer>
     {% block postloadjs %}
     <script type="text/javascript">
       $('.toast').toast('show');
