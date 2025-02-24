@@ -139,36 +139,39 @@ function toggleDetails() {
 <script>
     $(document).ready(function() {
         $('.qty_input').each(function() {
-            var input = $(this);
-            var itemId = input.data('item_id');
-            var decrementBtn = $('.decrement-qty[data-item_id="' + itemId + '"]');
-            var incrementBtn = $('.increment-qty[data-item_id="' + itemId + '"]');
+            let input = $(this);
+            let itemId = input.data('item_id');
+            let decrementBtn = $('.decrement-qty[data-item_id="' + itemId + '"]');
+            let incrementBtn = $('.increment-qty[data-item_id="' + itemId + '"]');
 
             function updateButtonState() {
-                let currentValue = Number(input.val()); // Ensure correct integer handling
+                let currentValue = parseInt(input.val(), 10) || 1; // Ensure it's an integer
+                input.val(currentValue); // Prevent invalid input
                 decrementBtn.prop('disabled', currentValue <= 1);
             }
 
-            updateButtonState(); // Run once on page load
+            updateButtonState(); // Ensure correct state on load
 
-            decrementBtn.click(function(e) {
+            decrementBtn.off('click').on('click', function(e) {
                 e.preventDefault();
-                let currentValue = Number(input.val());
+                let currentValue = parseInt(input.val(), 10) || 1;
                 if (currentValue > 1) {
-                    input.val(currentValue - 1).trigger('change'); // Ensure smooth update
+                    input.val(currentValue - 1).trigger('input'); // Ensure UI updates smoothly
                 }
+                updateButtonState();
             });
 
-            incrementBtn.click(function(e) {
+            incrementBtn.off('click').on('click', function(e) {
                 e.preventDefault();
-                let currentValue = Number(input.val());
+                let currentValue = parseInt(input.val(), 10) || 1;
                 if (currentValue < 99) {
-                    input.val(currentValue + 1).trigger('change'); // Ensure smooth update
+                    input.val(currentValue + 1).trigger('input'); // Ensure UI updates smoothly
                 }
+                updateButtonState();
             });
 
-            input.on('input change', function() {
-                let currentValue = Number(input.val());
+            input.off('input change').on('input change', function() {
+                let currentValue = parseInt(input.val(), 10);
                 if (isNaN(currentValue) || currentValue < 1) {
                     input.val(1);
                 } else if (currentValue > 99) {
