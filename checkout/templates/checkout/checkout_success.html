@@ -21,6 +21,16 @@
                 <hr>
                 <h2 class="logo-font mb-4">Thank You </h2>
                 <hr>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="artist-note-container text-center text-md-left mb-5 mt-md-5">
+                        <div class="mb-4">
+                            <h4 class="section-title">A Note from James Stanislaw</h4>
+                            <p>Thank you for supporting my art. Your purchase not only brings beauty into your space, but it also inspires me to continue creating art with passion and heart. I hope this piece fills your home with joy and inspiration every day.</p>
+                            <p>If you have any questions or just want to say hello, feel free to reach out <a href="{% url 'contact' %}"class="contact-link">here.</a></p>
+                            <p>James Stanislaw</p>
+                        </div>
+                    </div>
+                </div>
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
@@ -199,11 +209,11 @@
                     <span class="text-uppercase">Back to Profile</span>
                 </a>
                 {% else %}
-				<a href="{% url 'art' %}?category=special_offer" class="btn btn-black rounded-0 my-2">
+				<a href="{% url 'art' %}" class="btn btn-black rounded-0 my-2">
 					<span class="icon mr-2">
 						<i class="fas fa-gifts"></i>
 					</span>
-					<span class="text-uppercase">Now check out the latest deals!</span>
+					<span class="text-uppercase">Continue Browsing</span>
 				</a>
                 {% endif %}
 			</div>

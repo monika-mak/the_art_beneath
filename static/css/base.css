@@ -1,7 +1,11 @@
+/*google style import */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Tenor+Sans&display=swap');
+
+
 html {
     height: 100%;
 }
-
 
 body {
     background: url('https://res.cloudinary.com/dutjcas0m/image/upload/v1740191886/xpgnqrkbqd3qslbojlpj.png') no-repeat center center fixed;
@@ -77,6 +81,8 @@ body {
     width: fit-content;
 }
 
+/* Buttons */
+
 .shop-now-button {
     background: black;
     color: white;
@@ -115,14 +121,6 @@ body {
     color: white;
 }
 
-/*---------buttons art detail---- remove doubles-----*/
-/* Buttons */
-.action-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
 .custom-quantity-input {
     display: flex;
     align-items: center;
@@ -131,8 +129,7 @@ body {
     overflow: hidden;
 }
 
-.keep-shopping-btn, .add-to-bag-btn {
-    /* padding: 12px 24px; */
+.keep-shopping-btn {
     text-transform: uppercase;
     transition: 0.3s;
 }
@@ -142,24 +139,10 @@ body {
     color: #fff;
 }
 
-.add-to-bag-btn {
-    background: #000;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
 .keep-shopping-btn:hover {
     background: #fff;
     color: #000;
 }
-
-.add-to-bag-btn:hover {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
-}
-/*---------buttons art detail---- remove doubles-end----*/
-
 
 .text-black {
     color: #000 !important;
@@ -182,7 +165,6 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	/* background: white; */
     background: #bdcbbe;
 	z-index: -1;
 }
@@ -190,10 +172,6 @@ body {
 .bg-main {
     background-color: #1a1818 !important;
 }
-
-/* .text-muted {
-    color: #dee2e6e8 !important;
-} */
 
 a {
     color: #6c757d !important;
@@ -264,20 +242,10 @@ input[name='q']::placeholder {
     transition: all 0.3s ease-in-out;
 }
 
-.art-image-container {
-    position: relative;
-    overflow: hidden;
-    /* Canvas-like texture */
-    background-image: 
-        linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-    background-size: 2px 2px;
-}
-
 .art-card:hover {
     transform: scale(1.03);
 }
-/*----------------------------art cards test start */
+
 .action-icons {
     color: #666;
     font-size: 1.1rem;
@@ -290,7 +258,16 @@ input[name='q']::placeholder {
 .action-icons i:hover {
     color: #433f3f;
 }
-/*-------------------------------art cards test end*/
+
+.art-image-container {
+    position: relative;
+    overflow: hidden;
+    /* Canvas-like texture */
+    background-image: 
+        linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 2px 2px;
+}
 
 .image-container {
     margin:0 2em;
@@ -310,7 +287,6 @@ input[name='q']::placeholder {
     box-shadow: 0 2px 4px rgba(96, 92, 92, 0.23); /* Reduced shadow */
     background-color: #a09e9c; 
 }
-
 
 /* ------------------------------- bootstrap toasts */
 
@@ -392,7 +368,7 @@ input[name='q']::placeholder {
   }
 
 
-/*Add art table--------------------------------*/
+/*-------------------------------- Add art table*/
 .table th {
     vertical-align: middle;
 }
@@ -406,7 +382,7 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
-/* Art Form */
+/*-------------------------------- Art Form */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -433,7 +409,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* About -------------------------------------------- */
+/* -------------------------------- About */
 .main-image-container {
     width: 100%;
     max-width: 350px;
@@ -472,7 +448,7 @@ input[name='q']::placeholder {
     gap: 10px;
 }
 
-/* Art Details Styling */
+/*-------------------------------- Art Details Styling */
 .more-details-header {
     cursor: pointer;
     padding: 10px 0;
@@ -495,7 +471,7 @@ input[name='q']::placeholder {
     transform: rotate(180deg);
 }
 
-/* Allauth form formatting */
+/* --------------------------------Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -549,7 +525,7 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/*----------Footer--------------------------------*/
+/*----------------------------------- Footer*/
 
 footer {
     background-color: #000000;

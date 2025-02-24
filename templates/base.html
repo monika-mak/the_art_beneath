@@ -6,7 +6,9 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="shortcut icon" type="img/png" href="{% static 'img/favicon.png' %}">
+      <meta name="description" content="Discover modern pop art prints and exclusive contemporary art pieces to transform your home decor. Shop stylish designs and urban artwork online for a trendy, minimalist aesthetic.">
+      <meta name="keywords" content="modern pop art prints, contemporary art, stylish limited edition art prints, urban art, minimalist art decor, modern art gallery">
+      <!--meta tags-->
       {% endblock %}
 
     {% block extra_meta %}
@@ -19,6 +21,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Tenor+Sans&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link rel="shortcut icon" type="img/png" href="{% static 'img/favicon.png' %}">
     {% endblock %}
     
 
@@ -142,14 +145,17 @@
         
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-      <p class="m-0 text-center text-white pr-1">Website Created for Educational Purposes Only</p>
-      <p class="m-0 text-center text-white">Monika Mak &copy; {% now "Y" %}</p>
+      <div class="container text-center">
+        <div class="mt-2 mb-2">
+          <a href="https://www.facebook.com/profile.php?id=100087180224255" target="_blank" rel="noopener"
+              aria-label="Visit us on Facebook" title="Visit us on Facebook" class="text-white">
+              <span class="ml-2">Visit us on Facebook</span>
+          </a>
+        </div>
+          <p class="m-0 text-white pr-1">Website Created for Educational Purposes Only</p>
+          <p class="m-0 text-white">Monika Mak &copy; {% now "Y" %}</p>
+      </div>
     </footer>
-
-        <!-- <a href="https://github.com/monika-mak" target="_blank" rel="noopener"
-            aria-label="Visit us on (opens in new tab)">
-            <i class="text-white nav-link fa-brands fa-github"></i>
-        </a> -->
     {% block postloadjs %}
     <script type="text/javascript">
       $('.toast').toast('show');
