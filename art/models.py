@@ -12,16 +12,18 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_display_name(self):
         return self.display_name
+
 
 class Art(models.Model):
 
     class Meta:
         verbose_name_plural = 'Art'
 
-    # code used from https://docs.djangoproject.com/en/5.1/ref/models/fields/#choices
+    # code modeled from:
+    # https://docs.djangoproject.com/en/5.1/ref/models/fields/#choices
     ORIENTATION_CHOICES = [
         ('Horizontal', 'Horizontal'),
         ('Vertical', 'Vertical'),
@@ -34,7 +36,9 @@ class Art(models.Model):
         ('100x150cm', '100x150cm'),
     ]
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL
+        )
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -54,8 +58,3 @@ class Art(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
-
-

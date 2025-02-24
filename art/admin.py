@@ -3,6 +3,7 @@ from .models import Art, Category
 
 # Register your models here.
 
+
 class ArtAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -17,11 +18,13 @@ class ArtAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'display_name',
         'name',
     )
+
 
 admin.site.register(Art, ArtAdmin)
 admin.site.register(Category, CategoryAdmin)
