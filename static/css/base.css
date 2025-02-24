@@ -131,16 +131,13 @@ body {
 .keep-shopping-btn {
     text-transform: uppercase;
     transition: 0.3s;
-}
-
-.keep-shopping-btn {
     border: 1px solid #fff;
-    color: #fff;
+    color: #fff !important;
 }
 
 .keep-shopping-btn:hover {
     background: #fff;
-    color: #000;
+    color: #000 !important;
 }
 
 .text-black {

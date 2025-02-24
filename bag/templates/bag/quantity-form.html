@@ -4,19 +4,18 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}">
                     <span>
                         <i class="fas fa-minus"></i>
                     </span>
                 </button>
             </div>
             <input class="form-control form-control-sm qty_input" type="number"
-                name="quantity" value="{{ item.quantity}}" min="1" max="99"
-                data-item_id="{{ item.item_id }}"
-                id="id_qty_{{ item.item_id }}">
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-black rounded-0"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}">
                     <span>
                         <i class="fas fa-plus"></i>
                     </span>
@@ -24,6 +23,6 @@
             </div>
         </div>
     </div>
-    </form>
-    <a class="update-link text-info"><small><i class="fas fa-edit"></i></small></a>
-    <a class="remove-item float-right text-danger" id="remove_{{ item.item_id }}"><small><i class="fas fa-trash"></i></small></a>
+</form>
+<a class="update-link text-info"><small><i class="fas fa-edit"></i></small></a>
+<a class="remove-item float-right text-danger" id="remove_{{ item.item_id }}"><small><i class="fas fa-trash"></i></small></a>
