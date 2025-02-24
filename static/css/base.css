@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: url('https://res.cloudinary.com/dutjcas0m/image/upload/v1740191886/xpgnqrkbqd3qslbojlpj.png') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/dutjcas0m/image/upload/v1740397180/hero_image_b37nmk.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 116px);
     color: #242424;
@@ -36,13 +36,12 @@ body {
 .title::after {
     content: "";
     display: block;
-    width: 7em;              /* Adjust this value to make the line shorter */
-    height: 2px;             /* Thickness of the underline */
-    background-color: #ffffff; /* Color of the underline */
+    width: 7em;          
+    background-color: #ffffff; 
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centers the underline */
+    transform: translateX(-50%); 
 }
 
 .detail-section p {

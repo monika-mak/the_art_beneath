@@ -42,5 +42,7 @@ if settings.DEBUG:
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT
     )
-
+#  error handlers
+handler403 = 'the_art_beneath.views.handler403'
 handler404 = 'the_art_beneath.views.handler404'
+handler500 = 'the_art_beneath.views.handler500'

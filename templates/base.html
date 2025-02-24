@@ -121,21 +121,21 @@
     </header>
     <!-- https://docs.djangoproject.com/en/5.1/ref/contrib/messages/#message-levels -->
     {% if messages %}
-      <div class="message-container">
-          {% for message in messages %}
-              {% with message.level as level %}
-                {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
-                  {% include 'includes/toasts/toast_info.html' %}
-                {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-                  {% include 'includes/toasts/toast_success.html' %}
-                {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-                  {% include 'includes/toasts/toast_error.html' %}
-                {% endif %}
-              {% endwith %}
-          {% endfor %}
-      </div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+              {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                {% include 'includes/toasts/toast_info.html' %}
+              {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                {% include 'includes/toasts/toast_success.html' %}
+              {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                {% include 'includes/toasts/toast_warning.html' %}
+              {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                {% include 'includes/toasts/toast_error.html' %}
+              {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -144,7 +144,6 @@
     {% block content %}
     {% endblock %}
     
-  
   <!-- Footer -->
   <footer class="footer mt-auto py-5 dark-bg">
     <div class="container">
@@ -213,9 +212,7 @@
       </div>
     </div>
   </footer>
-
     {% block postloadjs %}
-
     <!-- Mailchimp scripts-->
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">
