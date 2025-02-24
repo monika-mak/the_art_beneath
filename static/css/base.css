@@ -527,7 +527,6 @@ input[name='q']::placeholder {
 
 /*----------------------------------- Footer*/
 
-
 .footer {
     background-color: #000000;
     margin-top: 2rem;
@@ -535,7 +534,7 @@ input[name='q']::placeholder {
 
 .subscription-form {
     background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
 }
 
