@@ -527,10 +527,51 @@ input[name='q']::placeholder {
 
 /*----------------------------------- Footer*/
 
-footer {
+
+.footer {
     background-color: #000000;
-    margin-top: 2em;
+    margin-top: 2rem;
 }
+
+.subscription-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.subscription-form .form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 0.8rem;
+}
+
+.subscription-form .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.subscription-form .btn-outline-light {
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.subscription-form .btn-outline-light:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.social-links a {
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+
+
+
 
 /* -------------------------------- Media Queries */
 

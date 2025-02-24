@@ -22,6 +22,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Tenor+Sans&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
       <link rel="shortcut icon" type="img/png" href="{% static 'img/favicon.png' %}">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
     
 
@@ -142,26 +143,105 @@
 
     {% block content %}
     {% endblock %}
-        
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-      <div class="container text-center">
-        <div class="mt-2 mb-2">
-          <a href="https://www.facebook.com/profile.php?id=100087180224255" target="_blank" rel="noopener"
-              aria-label="Visit us on Facebook" title="Visit us on Facebook" class="text-white">
-              <span class="ml-2">Visit us on Facebook</span>
+    
+  
+<!-- Footer -->
+<footer class="footer mt-auto py-5 dark-bg">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <!-- Left Column - Subscribe Text -->
+      <div class="col-12 col-md-4 text-light text-center text-md-start">
+        <h2 class="h3 mb-3">Subscribe!</h2>
+        <p class="mb-4">Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
+        <div class="social-links mb-4 mb-md-0">
+          <a href="https://www.facebook.com/profile.php?id=61573209371296" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="Visit us on Facebook" 
+             class="text-white text-decoration-none">
+             <i class="fab fa-facebook me-2"></i>
+             <span>Visit us on Facebook</span>
           </a>
         </div>
-          <p class="m-0 text-white pr-1">Website Created for Educational Purposes Only</p>
-          <p class="m-0 text-white">Monika Mak &copy; {% now "Y" %}</p>
       </div>
-    </footer>
+      <!-- Right Column - Subscribe Form -->
+      <div class="col-12 col-md-8 text-light">
+        <div id="mc_embed_signup" class="subscription-form">
+          <form action="https://herokuapp.us13.list-manage.com/subscribe/post?u=37850ec476ff3b6e5c33de576&amp;id=a821105b02&amp;f_id=003fc2e1f0" 
+                method="post" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                class="validate" 
+                target="_blank">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="mce-EMAIL" class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" 
+                         name="EMAIL" 
+                         class="form-control" 
+                         id="mce-EMAIL" 
+                         required>
+                </div>
+              </div>
+              <div class="col-12">
+                <!-- Hidden field for bot protection -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" 
+                         name="b_37850ec476ff3b6e5c33de576_a821105b02" 
+                         tabindex="-1" 
+                         value="">
+                </div>
+                <button type="submit" 
+                        name="subscribe" 
+                        id="mc-embedded-subscribe" 
+                        class="btn btn-outline-light">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="row mt-4 pt-3 border-top border-secondary">
+      <div class="col-12 text-center">
+        <p class="m-0 text-white">Website Created for Educational Purposes Only</p>
+        <p class="m-0 text-white">Monika Mak &copy; {% now "Y" %}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
     {% block postloadjs %}
     <script type="text/javascript">
       $('.toast').toast('show');
     </script>
+    <!-- Mailchimp scripts-->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';
+        ftypes[0]='email';
+        fnames[1]='FNAME';
+        ftypes[1]='text';
+        fnames[2]='LNAME';
+        ftypes[2]='text';
+        fnames[3]='ADDRESS';
+        ftypes[3]='address';
+        fnames[4]='PHONE';
+        ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';
+        ftypes[5]='birthday';
+        fnames[6]='COMPANY';  // Added the missing COMPANY field
+        ftypes[6]='text';     // Added its corresponding type
+      }(jQuery));
+      var $mcj = jQuery.noConflict(true);
+      </script>
     {% endblock %}
-
     {% if user.is_authenticated %}
     {% endif %}
   </body>
