@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -16,46 +16,32 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Wishlist</h2>
+                <h2 class="logo-font mb-4 text-center">{{ request.user.username }}'s Wishlist</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                {% if bag_items %}
-                    <div class="d-block d-md-none">
-                        <div class="btt-button shadow-sm rounded-0 border border-white">
-                            <a class="btt-link d-flex h-100">
-                                <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+            {% for art in wishlist.items.all %}
+                <div class="col-md-3 mb-4">
+                    <div class="art-card bg-white p-2 border">
+                        {% if art.image %}
+                            <img src="{{ art.image.url }}" alt="{{ art.name }}" class="img-fluid" style="max-height: 200px; object-fit: cover;">
+                        {% else %}
+                            <p class="text-center">No image available</p>
+                        {% endif %}
+                        <div class="mt-2 d-flex justify-content-between align-items-center">
+                            <span>{{ art.name }}</span>
+                            <a href="{% url 'remove_from_wishlist' art.id %}" class="text-danger">
+                                <i class="fas fa-trash action-icons"></i>
                             </a>
-                        </div>	
+                        </div>
                     </div>
-                    <div class="table-responsive rounded rounded d-none d-md-block">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Art Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                </tr>
-                            </thead>
-                            {% for item in bag_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        {% include "bag/art-image.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        {% include "bag/art-info.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.art.price }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                {% endif %}
-            </div>
+                </div>
+            {% empty %}
+                <div class="col">
+                    <p>Your wishlist is empty!</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
