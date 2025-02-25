@@ -123,48 +123,73 @@
 </script>
 {% include 'art/includes/quantity_input_script.html' %}
 
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('art_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'art_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 <script>
     $(document).ready(function() {
         $('.qty_input').each(function() {
-            var input = $(this);
-            var itemId = input.data('item_id');
-            var decrementBtn = $('.decrement-qty[data-item_id="' + itemId + '"]');
-            var incrementBtn = $('.increment-qty[data-item_id="' + itemId + '"]');
+            let input = $(this);
+            let itemId = input.data('item_id');
+            let decrementBtn = $('.decrement-qty[data-item_id="' + itemId + '"]');
+            let incrementBtn = $('.increment-qty[data-item_id="' + itemId + '"]');
 
             function updateButtonState() {
-                if (parseInt(input.val()) <= 1) {
-                    decrementBtn.prop('disabled', true);
-                } else {
-                    decrementBtn.prop('disabled', false);
-                }
+                let currentValue = parseInt(input.val(), 10) || 1; // Ensure it's an integer
+                input.val(currentValue); // Prevent invalid input
+                decrementBtn.prop('disabled', currentValue <= 1);
             }
 
-            updateButtonState(); // Run once on page load
+            updateButtonState(); // Ensure correct state on load
 
-            decrementBtn.click(function(e) {
+            decrementBtn.off('click').on('click', function(e) {
                 e.preventDefault();
-                let currentValue = parseInt(input.val());
+                let currentValue = parseInt(input.val(), 10) || 1;
                 if (currentValue > 1) {
-                    input.val(currentValue - 1);
-                    updateButtonState();
+                    input.val(currentValue - 1).trigger('input'); // Ensure UI updates smoothly
                 }
+                updateButtonState();
             });
 
-            incrementBtn.click(function(e) {
+            incrementBtn.off('click').on('click', function(e) {
                 e.preventDefault();
-                let currentValue = parseInt(input.val());
+                let currentValue = parseInt(input.val(), 10) || 1;
                 if (currentValue < 99) {
-                    input.val(currentValue + 1);
-                    updateButtonState();
+                    input.val(currentValue + 1).trigger('input'); // Ensure UI updates smoothly
                 }
+                updateButtonState();
             });
 
-            input.on('input', function() {
+            input.off('input change').on('input change', function() {
+                let currentValue = parseInt(input.val(), 10);
+                if (isNaN(currentValue) || currentValue < 1) {
+                    input.val(1);
+                } else if (currentValue > 99) {
+                    input.val(99);
+                }
                 updateButtonState();
             });
         });
     });
 </script>
-
 
 {% endblock %}
