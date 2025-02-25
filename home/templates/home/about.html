@@ -33,7 +33,7 @@
             <div class="art-details-container text-center text-md-left mb-5 mt-md-5">
                 <div class="mb-4">
                     <h4 class="section-title">James Stanislaw</h4>
-                    <p>{{ artist_description|linebreaks }}</p> <!-- Display text from views.py -->
+                    {{ artist_description|linebreaks }} <!-- Display text from views.py -->
                 </div>
                 <div class="action-buttons">
                     <a href="{% url 'home' %}" class="btn keep-shopping-btn border-light">Home</a>
