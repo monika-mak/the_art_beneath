@@ -31,7 +31,10 @@
                         {% endif %}
                         <div class="mt-2 d-flex justify-content-between align-items-center">
                             <span>{{ art.name }}</span>
-                            <a href="{% url 'remove_from_wishlist' art.id %}" class="text-danger">
+                            <!-- <a href="{% url 'remove_from_wishlist' art.id %}" class="text-danger">
+                                <i class="fas fa-trash action-icons"></i>
+                            </a> -->
+                            <a href="#" class="delete-btn" data-url="{% url 'remove_from_wishlist' art.id %}" role="button">
                                 <i class="fas fa-trash action-icons"></i>
                             </a>
                         </div>

@@ -87,7 +87,9 @@
                             {% if request.user.is_superuser %}
                             <div class="action-icons mt-3 d-flex justify-content-between">
                                 <a href="{% url 'edit_art' art.id %}"><i class="fas fa-edit action-icons"></i></a>
-                                <a  href="{% url 'delete_art' art.id %}"><i class="fas fa-trash action-icons"></i></a>
+                                <a href="#" class="delete-btn" data-url="{% url 'delete_art' art.id %}" role="button">
+                                    <i class="fas fa-trash action-icons"></i>
+                                </a>
                             </div>
                             {% endif %}
                         </div>
