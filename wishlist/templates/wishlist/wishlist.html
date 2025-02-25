@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container py-5 mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Wishlist</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="d-block d-md-none">
+                        <div class="btt-button shadow-sm rounded-0 border border-white">
+                            <a class="btt-link d-flex h-100">
+                                <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+                            </a>
+                        </div>	
+                    </div>
+                    <div class="table-responsive rounded rounded d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Art Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            {% for item in bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        {% include "bag/art-image.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        {% include "bag/art-info.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€{{ item.art.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

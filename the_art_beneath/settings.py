@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'profiles',
     'contact',
     'faq',
+    'wishlist',
     'crispy_forms',
     'cloudinary_storage',
     'cloudinary',

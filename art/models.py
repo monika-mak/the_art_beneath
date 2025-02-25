@@ -3,6 +3,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
+    '''
+    Category model for each art piece 
+    '''
     # override default plural naming in admin panel
     class Meta:
         verbose_name_plural = 'Categories'
@@ -18,6 +21,9 @@ class Category(models.Model):
 
 
 class Art(models.Model):
+    '''
+    Art model for each art piece with related fields
+    '''
 
     class Meta:
         verbose_name_plural = 'Art'
