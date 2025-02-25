@@ -88,7 +88,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Page | Screenshot | Errors | Warnings |
 | ---- | ---------- | ------ | -------- |
 | Home | ![js from Home page](docs/testing_images/home_script.png) | none | none |
-| Article | ![js from Article section](docs/testing_images/article_js_valid.png) | none | none |
+| FAQ| ![js from Article section](docs/testing_images/article_js_valid.png) | none | none |
 | Bag - Quantity Script | ![js from Bag page](docs/testing_images/quantity_input_validation.png) | none | none |
 | Stripe JS | ![js from Stripe elements](docs/testing_images/stripe_js.png) | none | none |
 | Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none (code has been highlighted red at the top of the code block but no errors returned from JSHint and code functions as intended. I could not get a definitive answer on why JSHint colours these lines red.) | none |
@@ -101,11 +101,11 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 | Feature | admin | forms | models | urls | views | extra |
 |---------|----------|----------|-----------|---------|----------|-------|
-| Article | none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) | n/a |
+| FAQ| none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) | n/a |
 | Bag  | n/a | n/a | n/a | none | none ![python validation](docs/testing_images/b_views.png) | contexts ![python validation](docs/testing_images/b_contexts.png) |
 | Checkout | none ![python validation](docs/testing_images/c_admin.png) | none ![python validation](docs/testing_images/c_forms.png) | none ![python validation](docs/testing_images/c_models.png) | none | none ![python validation](docs/testing_images/c_views.png) | none ![python validation](docs/testing_images/c_webh.png) | n/a |
 | Home | none | none | none | none | none ![python validation](docs/testing_images/h_views.png) | n/a |
-| Products | none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
+| Art| none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
 | Profiles | none | none ![python validation](docs/testing_images/pro_forms.png) | none ![python validation](docs/testing_images/pro_models.png) | none | none ![python validation](docs/testing_images/pro_views.png) | n/a |
 | Wishlist | none | none | none | none | none ![python validation](docs/testing_images/wish_views.png) | none |
 

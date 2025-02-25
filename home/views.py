@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
+
 def index(request):
     """ A view to return the index page """
     return render(request, 'home/index.html')
 
+
 def about(request):
-    
+
     """ A view to return the artist detail page """
+
     artist_description = """
         James Stanisław's artistic journey is an exploration of the unseen—the layers beneath the surface, both in the world around us and within ourselves. 
         Inspired by his father’s mastery of revealing the hidden beauty in wood and stone, James expanded this philosophy into his own evolving body of work, 
@@ -23,7 +26,6 @@ def about(request):
 
         Through The Art Beneath, James challenges us to see beyond the surface—to recognize that art, much like people, carries layers of history, passion, and meaning. 
         His work is not static; it breathes, shifts, and grows, just as he has. Each piece is a window into a moment in time, an invitation to explore not just what is seen, 
-        but what lies beneath.
-    """
-    
+        but what lies beneath."""
+
     return render(request, 'home/about.html', {'artist_description': artist_description})
