@@ -9,7 +9,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-3" href="#" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Category
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="category-link">
+            <div class="dropdown-menu border-0" aria-label="category">
                 <a href="{% url 'art' %}?category=animals" class="dropdown-item">Animals</a>
                 <a href="{% url 'art' %}?category=nature" class="dropdown-item">Nature</a>
                 <a href="{% url 'art' %}?category=female" class="dropdown-item">Female </a>
@@ -20,7 +20,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-3" href="#" id= "filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filter
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="filter-link">
+            <div class="dropdown-menu border-0" aria-label="filter">
                 <a href="{% url 'art' %}?sort=date&direction=desc" class="dropdown-item">By New</a>
                 <a href="{% url 'art' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'art' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
@@ -37,7 +37,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-3" href="#" id="contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="contact-link">
+            <div class="dropdown-menu border-0" aria-label="contact">
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
                 <a href="{% url 'faq' %}"  class="dropdown-item">FAQ</a>
             </div>
