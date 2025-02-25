@@ -9,7 +9,6 @@
             <h2 class="logo-font detail-title title ">{{ art.name }}</h2>
         </div>
     </div>
-    
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -35,7 +34,6 @@
                 {% endif %}
             </div>
         </div>
-
         <!-- Details Column -->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="art-details-container mb-5 mt-md-5">
@@ -43,12 +41,10 @@
                     <h4 class="section-title">Description:</h4>
                     <p>{{ art.description }}</p>
                 </div>
-
                 <div class="detail-section mb-4">
                     <h4 class="section-title">Meaning and Interpretation:</h4>
                     <p>{{ art.meaning }}</p>
                 </div>
-
                 <div class="detail-section mb-4">
                     <div class="more-details-header" onclick="toggleDetails()">
                         <h4 class="section-title d-flex justify-content-between align-items-center">
@@ -106,7 +102,6 @@
         </div>
     </div>
 </div>
-
 <script>
 function swapImages(clickedThumbnail) {
     const mainImage = document.getElementById('mainImage');
