@@ -421,11 +421,12 @@ input[name='q']::placeholder {
 }
 
 .art-thumbnail {
+
     width: 100px;
     height: 100px;
     object-fit: cover;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
@@ -434,6 +435,7 @@ input[name='q']::placeholder {
 }
 
 .art-main-image {
+    border: solid 6px white;
     width: 100%;
     height: auto;
     object-fit: contain;
