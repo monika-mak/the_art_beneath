@@ -122,6 +122,29 @@
 	})
 </script>
 {% include 'art/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('art_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'art_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 <script>
     $(document).ready(function() {
         $('.qty_input').each(function() {
@@ -168,48 +191,5 @@
         });
     });
 </script>
-<!-- <script>
-    $(document).ready(function() {
-        $('.qty_input').each(function() {
-            var input = $(this);
-            var itemId = input.data('item_id');
-            var decrementBtn = $('.decrement-qty[data-item_id="' + itemId + '"]');
-            var incrementBtn = $('.increment-qty[data-item_id="' + itemId + '"]');
-
-            function updateButtonState() {
-                if (parseInt(input.val()) <= 1) {
-                    decrementBtn.prop('disabled', true);
-                } else {
-                    decrementBtn.prop('disabled', false);
-                }
-            }
-
-            updateButtonState(); // Run once on page load
-
-            decrementBtn.click(function(e) {
-                e.preventDefault();
-                let currentValue = parseInt(input.val());
-                if (currentValue > 1) {
-                    input.val(currentValue - 1);
-                    updateButtonState();
-                }
-            });
-
-            incrementBtn.click(function(e) {
-                e.preventDefault();
-                let currentValue = parseInt(input.val());
-                if (currentValue < 99) {
-                    input.val(currentValue + 1);
-                    updateButtonState();
-                }
-            });
-
-            input.on('input', function() {
-                updateButtonState();
-            });
-        });
-    });
-</script> -->
-
 
 {% endblock %}
