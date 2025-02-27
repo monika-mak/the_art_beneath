@@ -94,7 +94,7 @@ Lighthouse testing was carried out in Incognito mode to achieve the best result.
 | Page | Lighthouse Scores - Mobile | Notes |
 | ---- | ----------------- | -------- |
 | Home |  ![lighthouse home](docs/testing_images/home_moblh.png) | ![performance errors](docs/testing_images/home_perform_mob_er.png)|
-| All  | ![lighthouse all products mobile](docs/testing_images/all_moblh.png)   | As before  |
+| All  | ![lighthouse all art mobile](docs/testing_images/all_moblh.png)   | As before  |
 | Read |  ![lighthouse article mobile](docs/testing_images/read_moblh.png) |  As before  |
 | Account | ![lighthouse account mobile](docs/testing_images/account_moblh.png)   |  As before  |
 | Wishlist | ![lighthouse wishlist mobile](docs/testing_images/wishlist_moblh.png)  | As before   |
@@ -109,32 +109,30 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 | Feature                    | Tested?  | User Input Required | User Feedback Provided     | Pass/Fail | Fix |
 |----------------------------|----------|---------------------|----------------------------|-----------|-----|
 | Navbar Logo and Icons      | Yes      | Click Links bring user to correct destination    | Text Colour Change/Icon Animation/Dropdowns | Pass | N/A |
-| Home Page                  | Yes      | Hover/Click interactive features | Carousel moves, Accordion FAQ section | Pass | N/A |
+| Home Page                  | Yes      | Hover/Click interactive features | Accordion FAQ section | Pass | N/A |
 | Register Page              | Yes      | Text Input/Click Links | Form field highlight/Font weight change on hover/Toast message | Pass | N/A |
 | Email Validate             | Yes      | Click Links | Button animation/Toast message | Pass | N/A |
-| Forgot Password             | Yes     | Text Input/Click Links | Form field highlight/Button animation/Toast message | Pass | N/A |
+| Forgot Password            | Yes      | Text Input/Click Links | Form field highlight/Button animation/Toast message | Pass | N/A |
 | Log In Page                | Yes      | Text Input/Click Links | Form field highlight/Font weight on hover/Toast message | Pass | N/A |
 | Log Out Page               | Yes      | Click Links bring user to correct destination | Button animation/Font color change/Toast message | Pass | N/A |
 | Account - Edit Address     | Yes      | Text Input/Click to Save | Form field highlight/Button animation/Toast message | Pass | N/A |
 | Search                     | Yes      | Text Input/Click to Search | Pop up Modal/Form field highlight/Button Animation | Pass | N/A |
-| Contact Us Form            | Yes      | Text Input/Click to Save | Pop up Modal/Form field highlight/Button animation | Pass | N/A |
-| Newsletter Sign Up         | Yes      | Text Input/ Click to Subscribe | Button animation/New tab subscription confirmation | Pass | N/A |
+| Contact Us Form            | Yes      | Text Input/Click to Send | Pop up Modal/Form field highlight/Button animation | Pass | N/A |
+| Newsletter Sign Up         | Yes      | Text Input/ Click to Subscribe | Button animation/New pop up, subscription confirmation | Pass | N/A |
 | Admin Dashboard            | Yes      | Click Links brings user to correct URL | Button animation on hover | Pass | N/A |
-| Products                   | Yes      | Click product brings user to product description | Pointer change on hover of products | Pass | N/A |
-| Add Product                | Yes      | Navigated to Admin Dashboard, clicked 'Add Product', Completed form, Form submits correctly to display the product. | Form field highlight/Button animation/Toast message, new product uploaded. | Pass | N/A |
-| Edit Product               | Yes      | Navigated to Admin Dashboard, clicked 'Edit Product', Completed form, Form submits correctly to display the edited product. | Form field highlight/Button animation/Toast message, product updated. | Pass | N/a |
-| View Article               | Yes      | Click link for article | Article card border change on hover | Pass | N/A |
-| Add Article                | Yes      | Navigated to Admin Dashboard, clicked 'Add Article', Completed form, Form submits correctly to display the article. | Form field highlight/Button animation/Toast message, new article uploaded. | Pass | N/A |
-| Edit Article               | Yes      | Navigated to Admin Dashboard, clicked 'Edit Article', Completed form, Form submits correctly to display the edited article. | Form field highlight/Button animation/Toast message, article edited and uploaded. | Pass | N/A |
-| Product Quantity           | Yes      | Click increment/decrement | Colour change on hover/product quantity successfully changed | Pass | N/A |
-| Product Sizes              | Yes      | Click dropdown/Click to select | Form field highlight/Size highlight | Pass | N/A |
-| Checkout                   | Yes      | Click 'Secure Checkout', correct products in bag, entered delivery and payment details, submitted form to process payment. | Form field highlight/Button animation/Toast message, Loading spinner when processing order, order processed saved to account and email sent. | Pass | N/A |
-| Footer                     | Yes      | Click Link brings user to FAQ section on Home Page | Font colour change on hover | Pass | N/A |
+| Art                        | Yes      | Click art brings user to art description | Pointer change on hover of art , image lifts| Pass | N/A |
+| Add Art                    | Yes      | Navigated to Admin Dashboard, clicked 'Art Managament', Completed form, Form submits correctly to display the art. | Form field highlight/Button animation/Toast message, new art uploaded. | Pass | N/A |
+| Edit Art               | Yes      | Navigated to Admin Dashboard, clicked 'Edit Art', Completed form, Form submits correctly to display the edited art. | Form field highlight/Button animation/Toast message, art updated. | Pass | N/a |
+| View Art               | Yes      | Click  image | Article card border change on hover | Pass | N/A |
+| Art Quantity           | Yes      | Click increment/decrement | Colour change on hover/art quantity successfully changed | Pass | N/A |
+| Art Sizes              | Yes      | Click dropdown/Click to select | Form field highlight/Size highlight | Pass | N/A |
+| Checkout                   | Yes      | Click 'Secure Checkout', correct art in bag, entered delivery and payment details, submitted form to process payment. | Form field highlight/Button animation/Toast message, Loading spinner when processing order, order processed saved to account and email sent. | Pass | N/A |
+| Footer                     | Yes      | Click FB Link brings user to faceboock page   | Font colour change on hover | Pass | N/A |
 
 
 ### Browser Compatibility
 
-Everneed was tested on the following browsers, purchases were made, article/products added/edited/deleted, error pages, all features were accessible and working as intended:
+Everneed was tested on the following browsers, purchases were made, article/art added/edited/deleted, error pages, all features were accessible and working as intended:
 
 - Chrome v117.0.5938.92
 - Firefox v114.0.2
@@ -150,13 +148,13 @@ Everneed was tested on the following browsers, purchases were made, article/prod
 
 ### Responsiveness
 
-Using the Bootstrap framework allowed a more rapid development of a responsive website. Starting with mobile first, Everneed was created to ensure the customer has an unhindered, positive experience when shopping. Everneed was regularly tested during development using Dev Tools to check for display issues on iPhone4 -> iPhone 12/Samsung Galaxy S20, iPad/iPad Pro and laptop/desktop screen sizes. Once deployed to Heroku, Everneed was tested on real world devices. No major issues were detected, changes were made to the checkout view to remove the product image on smaller screens and only display important product information. There were no major differences between desktop and tablet views thanks to the Bootstrap Grid system of columns. A selection of the screen size view differences are displayed below:
+Using the Bootstrap framework allowed a more rapid development of a responsive website. Starting with mobile first, Everneed was created to ensure the customer has an unhindered, positive experience when shopping. Everneed was regularly tested during development using Dev Tools to check for display issues on iPhone4 -> iPhone 12/Samsung Galaxy S20, iPad/iPad Pro and laptop/desktop screen sizes. Once deployed to Heroku, Everneed was tested on real world devices. No major issues were detected, changes were made to the checkout view to remove the art image on smaller screens and only display important art information. There were no major differences between desktop and tablet views thanks to the Bootstrap Grid system of columns. A selection of the screen size view differences are displayed below:
 
 ![Everneed Desktop/Mobile Home](docs/testing_images/dt_mob_home_resp.png)  
 *Everneed Desktop/Mobile Home Responsive Views*
 
-![Everneed Desktop/Mobile Products](docs/testing_images/dt_mob_prod_resp.png)  
-*Everneed Desktop/Mobile Products Responsive Views*
+![Everneed Desktop/Mobile Arts](docs/testing_images/dt_mob_prod_resp.png)  
+*Everneed Desktop/Mobile Arts Responsive Views*
 
 ![Everneed Desktop/Mobile Articles](docs/testing_images/dt_mob_art_resp.png)  
 *Everneed Desktop/Mobile Articles Responsive Views*
@@ -193,7 +191,7 @@ User Stories are documented in The Art Beneath [GitHub Projects Board](https://g
 | As a **shopper**, I can **filter and sort within a specific category** so that I can **refine my selection**. | Yes | Yes | Category filtering and sorting options work as expected. | Pass | n/a |
 | As a **shopper**, I can **search for art pieces using keywords** so that I can **quickly find specific items**. | Yes | Yes | Search bar returns relevant results based on name or description. | Pass | n/a |
 | As a **store owner**, I can **add new art pieces to the store** so that I can **increase my inventory**. | Yes | Yes | 'Add Art' form allows new entries, with error handling for missing fields. | Pass | n/a |
-| As a **store owner**, I can **edit/update an art piece** so that I can **keep listings accurate**. | Yes | Yes | Product management panel allows edits, which update immediately. | Pass | n/a |
+| As a **store owner**, I can **edit/update an art piece** so that I can **keep listings accurate**. | Yes | Yes | Art management panel allows edits, which update immediately. | Pass | n/a |
 | As a **store owner**, I can **delete an art piece** so that I can **remove unavailable items**. | Yes | Yes | Delete option includes confirmation prompt and removes item from store view. | Pass | n/a |
 | As a **shopper**, I can **save art pieces to my wishlist** so that I can **easily revisit and purchase them later**. | Yes | Yes | 'Save to Wishlist' button adds item for logged-in users, accessible from account section. | Pass | n/a |
 
@@ -228,11 +226,11 @@ Responsiveness testing was carried out using Google Dev Tools on the devices det
 | No. | Bug | Solved | Fix | Solution Credit | Commit no. |
 | --- | ---------------- | ---- | ------------- | -------------- | ------------|
 | 1   | JavaScript dropdown menu fix | Yes | moving the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue, This did not fix it, 2nd fix was to update to Bootstrap 4.6 and add 'ease' to menu hover transitions. Currently working consistently, 'pb-2' added to'all' fully fixed it | Investigating the CSS myself | e27b7a5/2aab065 |
-| 2   | UnboundLocalError:Local variable 'categories' referenced before assignment & navbar active item styling. 'All' products option not displaying due to category = None when it was necessary for it to be categories. | Yes | Changed to categories = [] to initialize as empty list and added 'not request.GET.category' to 'all' nav-item li tag to remove bold styling when other product categories selected. | Stackoverflow <https://tinyurl.com/26a5ksrd> & CareerKarma <https://tinyurl.com/yc847kb7> | 76e8ef8 |
+| 2   | UnboundLocalError:Local variable 'categories' referenced before assignment & navbar active item styling. 'All' art option not displaying due to category = None when it was necessary for it to be categories. | Yes | Changed to categories = [] to initialize as empty list and added 'not request.GET.category' to 'all' nav-item li tag to remove bold styling when other art categories selected. | Stackoverflow <https://tinyurl.com/26a5ksrd> & CareerKarma <https://tinyurl.com/yc847kb7> | 76e8ef8 |
 | 3   | Checkout form info not saving to Profile/Account form on checkout success. The 'save_info' section of checkout_success did not save the changed user info to the user's profile. | Yes | I considered that I may have caused an issue with my Wishlist app signals/contexts but after debugging there was no issue. Debugging with print statements to the terminal showed that the checkout form data was not being saved. I tried several fixes. First was to clear the site data via Dev Tools->Application->Clear Site Data and restart the server. No positive fix. I then backtracked to some earlier commits and removed the 'full_name' field that I had added to my UserProfile models and changed the '_' in checkout.html name='save_info' to name='save-info'. Tested my code with superuser and created a new user to find the issue resolved and no issue with Wishlist app. | Fix credit -> Gemma from Tutor Support for helping me to confirm my debugging process was correct and the 'Clear SiteData' tip, and a strong coffee for the second pass at spotting and fixing the bug. | 7659ada |
 | 4  | Email Confirmation for order displaying multiple zeros at the end of the totals. | Yes | Fixed with 'floatformat:2' in confirmation_email.txt | Fixed by developer | 5774e14 |
-| 5  | Bag 'Remove' removes all items with same id but different sizes, if I wanted to remove a medium black tshirt and leave the small black tshirt, code was removing both black tshirts. | Yes | Fixed in quantity_update_script, removed `'size':size` and replaced with `'product_size`:size as per the product models. | Fixed by developer | 3115569 |
-| 6 | Sizes not showing in Checkout Success/Order History | Yes | Fixed by changing products.size to products_size | Fixed by developer, typo | b5f04cb |
+| 5  | Bag 'Remove' removes all items with same id but different sizes, if I wanted to remove a medium black tshirt and leave the small black tshirt, code was removing both black tshirts. | Yes | Fixed in quantity_update_script, removed `'size':size` and replaced with `'product_size`:size as per the art models. | Fixed by developer | 3115569 |
+| 6 | Sizes not showing in Checkout Success/Order History | Yes | Fixed by changing art.size to products_size | Fixed by developer, typo | b5f04cb |
 
 
 ### Unresolved/Known Bugs

@@ -1,5 +1,6 @@
 Hello {{ order.full_name }}!
 
+
 This is a confirmation of your order at The Art Beneath. Your order information is below:
 
 Order Number: {{ order.order_number }}
