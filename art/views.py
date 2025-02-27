@@ -70,6 +70,7 @@ def all_art(request):
     return render(request, "art/art.html", context)
 
 
+@login_required
 def art_detail(request, art_id):
     """
     A view to show individual art pieces detail.
