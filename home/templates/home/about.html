@@ -21,7 +21,7 @@
     </div>
     <div class="row d-flex justify-content-center">
         <!-- Image Column -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <div>
             <div class="image-container text-center my-5">
                 <div class="main-image-container">
                     <img id="mainImage" class="about-main-image" src="{% static 'img/artist.png' %}" alt="About Artist">
@@ -29,10 +29,10 @@
             </div>
         </div>
     <!-- Details Column -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <div>
             <div class="art-details-container text-center text-md-left mb-5 mt-md-5">
                 <div class="mb-4">
-                    <h4 class="section-title">James Stanislaw</h4>
+                    <h3 class="section-title text-center mb-3">James Stanislaw</h3>
                     {{ artist_description|linebreaks }} <!-- Display text from views.py -->
                 </div>
                 <div class="action-buttons">

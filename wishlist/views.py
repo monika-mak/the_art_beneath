@@ -4,11 +4,13 @@ from django.contrib import messages
 from .models import Wishlist
 from art.models import Art
 
+
 @login_required
 def wishlist_view(request):
     # Get or create the wishlist for the current user
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     return render(request, 'wishlist/wishlist.html', {'wishlist': wishlist})
+
 
 @login_required
 def add_to_wishlist(request, art_id):
@@ -17,7 +19,6 @@ def add_to_wishlist(request, art_id):
     messages.info(request, f'Added {art.name} to your wishlist')
     wishlist.items.add(art)
     return redirect('wishlist')
-
 
 
 @login_required

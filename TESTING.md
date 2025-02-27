@@ -73,21 +73,21 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | countryfield.js | ![screenshot](documentation/js_countryfield.png) | Pass: No Errors |
 
 
-
-
 ### Python Validation
 
-[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below. none = no issues present.
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented, and line lengths were double-checked. No errors were found.
 
 | Feature | admin | forms | models | urls | views | extra |
 |---------|----------|----------|-----------|---------|----------|-------|
-| FAQ| none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) | n/a |
-| Bag  | n/a | n/a | n/a | none | none ![python validation](docs/testing_images/b_views.png) | contexts ![python validation](docs/testing_images/b_contexts.png) |
-| Checkout | none ![python validation](docs/testing_images/c_admin.png) | none ![python validation](docs/testing_images/c_forms.png) | none ![python validation](docs/testing_images/c_models.png) | none | none ![python validation](docs/testing_images/c_views.png) | none ![python validation](docs/testing_images/c_webh.png) | n/a |
-| Home | none | none | none | none | none ![python validation](docs/testing_images/h_views.png) | n/a |
-| Art| none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
-| Profiles | none | none ![python validation](docs/testing_images/pro_forms.png) | none ![python validation](docs/testing_images/pro_models.png) | none | none ![python validation](docs/testing_images/pro_views.png) | n/a |
-| Wishlist | none | none | none | none | none ![python validation](docs/testing_images/wish_views.png) | none |
+| Root the_art_beneath | no errors | no errors | no errors | no errors | no errors | no errors |
+| Art | no errors | no errors | no errors | no errors | no errors | n/a |
+| Bag | n/a | n/a | n/a | no errors | no errors | no errors |
+| Checkout | no errors | no errors | no errors | no errors | no errors | no errors | n/a |
+| Contact | no errors | no errors | no errors | no errors | no errors | no errors |
+| FAQ | no errors | no errors | no errors | no errors | no errors | n/a |
+| Home | no errors | no errors | no errors | no errors | no errors | no errors |
+| Profiles | no errors | no errors | no errors | no errors | no errors | n/a |
+| Wishlist | no errors | no errors | no errors | no errors | no errors | no errors |
 
 
 ### Lighthouse Scores
