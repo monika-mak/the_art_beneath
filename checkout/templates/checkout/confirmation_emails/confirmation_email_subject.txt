@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+The Art Beneath for Order Number {{ order.order_number }}
