@@ -5,7 +5,7 @@ Here is a link to the live project: [The Art Beneath](https://the-art-beneath-28
 
 
 
-![responsive](/documentation/display.png)
+![responsive](/documentation/the_art_beneath.png)
 
 ## Contents
 
@@ -53,7 +53,7 @@ The platform is designed to cater to art lovers who appreciate fine art, providi
 
 The inspiration for "The Art Beneath" comes from the idea that every artwork has layers of meaning and depth that go beyond the surface. The platform serves as a space to explore the unique and thought-provoking pieces created by James Stanislaw.
 
-![Responsive Mockup](PLACEHOLDER_FOR_IMAGE)
+![The Art Beneath ]()
 
 ---
 
@@ -65,45 +65,44 @@ AI Heroes visitors are individuals curious about AI, eager to explore its applic
 
 A list of user stories grouped into epics for better structure and clarity.
 
-### EPIC | User Experience and Interface
-- As a visitor, I want the website to be visually appealing and easy to navigate so that I have an enjoyable experience while exploring AI tools.
-- As a visitor, I want to view the homepage so that I can learn about the website and the AI tools it features.
-- As a visitor, I can navigate the website with ease so that I have an enjoyable experience exploring AI tools.
-- As a user, I want to see tools in paginated format so that I don’t have to scroll through a long list of tools.
-- As a visitor, I want to receive feedback (success/error messages) after completing actions so that I understand the outcome of my interaction.
-- As a visitor, I want to access an error page with an option to navigate back to the homepage.
-- As a visitor, I want to see social media links to follow the project and its author online. 
+### EPIC | Browsing and Viewing Art
+- As a shopper, I want to browse through a collection of art pieces so that I can pick some to buy.
+- As a shopper, I want to access detailed information about an art piece so that I can learn its price, description, and other relevant details.
+- As a shopper, I want to be able to easily find an art piece that belongs to a certain category so that I can quickly find a piece that I am interested in, without searching through all the art pieces.
 
-### EPIC | Content Management
-- As an admin, I want to create, read, update, and delete posts so that I can easily manage my page content.
-- As a Site Admin, I can approve or disapprove comments so that I can only display relevant topics.
-- As a Site User, I can modify or delete my comment on a post so that I can be involved in the conversation.
-- As a Site Admin, I can create draft posts so that I can finish writing the content later.
-- As a Site Admin, I can create, update, or delete the about page content so that it is available on the site.
+### EPIC | Managing Cart and Purchases
+- As a shopper, I want to quickly see the total cost of my selected items so that I can manage my budget.
+- As a shopper, I want to choose the size and quantity of an art piece so that I purchase exactly what I need.
+- As a shopper, I want to review the contents of my shopping bag so that I know what I’m about to purchase.
+- As a shopper, I want to modify the quantity of items in my bag so that I can finalize my purchase without mistakes.
+- As a shopper, I want to provide payment details securely so that I can complete my purchase confidently.
+- As a shopper, I want to trust that my payment information is secure so that I feel safe making purchases online.
+- As a shopper, I want to see a confirmation after I complete checkout so that I can verify the order details.
+- As a shopper, I want to receive a confirmation email after buying so that I have a record of my purchase.
 
-### EPIC | User Interaction and Engagement
-- As a Site User, I am able to leave comments on a post so that I can share my opinion on the topic.
-- As a user, I can view the comments so that I can be up to date with the recent engagement.
-- As a Site User, I am able to click on the About link so that I can read the content of the site.
-- As a user, I want to be able to send a message to the site owner so that I can address my query to the relevant people.
-- As an admin, I can read the message sent by the user so that I can have a better understanding of their inquiries, needs, or feedback.
+### EPIC | User Account Management
+- As a site user, I want to sign up for an account easily so that I can access my personal profile and order details.
+- As a site user, I want to log in and out of my account effortlessly so that I can access my information securely.
+- As a site user, I want to recover my password if forgotten so that I can regain access to my account.
+- As a site user, I want to receive an email confirming my registration so that I know my account setup was successful.
+- As a site user, I want to access a personalized profile so that I can view my order history and save payment methods securely.
 
-### EPIC | Voting and AI Tools Ranking
-- As a visitor, I want to see the AI tools ranked by popularity based on votes so that I can easily identify the top-rated tools.
-- As a user, I want to vote for an AI tool so that I can express my fascination and interest.
-- As an admin, I want to monitor votes to prevent misuse and ensure fair voting.
-- As a user, I want to see tools in a paginated format so that I don’t have to scroll through a long list of tools.
+### EPIC | Search and Sort Features
+- As a shopper, I want to sort through the available art pieces so that I can find items that suit my preferences or budget.
+- As a shopper, I want to arrange art pieces within a specific category so that I can discover items by price, name, or other criteria.
+- As a shopper, I want to combine filters with categories so that I can view a refined list of art pieces matching my preferences.
+- As a shopper, I want to search for art pieces using keywords so that I can quickly find specific items.
+- As a shopper, I want to see my search terms and the number of matching results so that I can gauge whether the desired item is available.
 
-### EPIC | User Accounts and Authentication
-- As a user, I want to log in using my email and password so that I can access personalized features.
-- As a user, I want to register an account using my email and password so that I can interact more deeply with the website.
+### EPIC | Store Management
+- As a store owner, I want to add new art pieces to the store so that customers can see and purchase them.
+- As a store owner, I want to update details of existing art pieces so that I can keep the listings accurate and up-to-date.
+- As a store owner, I want to remove art pieces that are no longer available so that the store listings stay current.
+- As a shopper, I want to save art pieces to my wishlist so that I can easily revisit and purchase them later.
 
-### EPIC | Deployment and Testing
-- As an admin, I want to deploy the website successfully so that it is accessible to users and can be included in my portfolio.
+![user_story_1](documentation/user_stories.png)
 
-
-   ![user_story_1](documentation/user_story_1.png)
-   ![user_story_2](documentation/user_story_2.png)
+<!---------- done up to now------------------------------>
 
 [Back to top ⇧](#the-art-beneath)
 
@@ -145,7 +144,7 @@ A list of user stories grouped into epics for better structure and clarity.
 
 ### Database Schema 
 
-![Database Schemas](/documentation/erd_schema.png)
+![Database Schemas](/documentation/erd.png)
 
 [Back to top ⇧](#the-art-beneath)
 
@@ -153,6 +152,7 @@ A list of user stories grouped into epics for better structure and clarity.
 This section outlines the core functionalities of the platform.
 
 #### __Navigation Bar__
+![Footer ](/documentation/logged_in_lrg_home.jpeg)
 - A fully responsive navigation bar available across all pages, providing access to:
   - Home Page (via logo)
   - Gallery
@@ -494,11 +494,6 @@ This section outlines the core functionalities of the platform.
 
 
 <!---- more examples here      -------------------------------------------------------->
-
-
-
-
-
 ---
 
 ## Ecommerce Business Model
@@ -548,14 +543,8 @@ Inside, I've included the default settings:
 ```
 User-agent: *
 Disallow:
-Sitemap: https://web-piano-academy-16cd779294ab.herokuapp.com/sitemap.xml
+Sitemap: https://https://the-art-beneath-289b50439a5a.herokuapp.com/sitemap.xml
 ```
-
-Further links for future implementation:
-- [Google search console](https://search.google.com/search-console)
-- [Creating and submitting a sitemap](https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap)
-- [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
-- [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
 ### Social Media Marketing
 
@@ -574,7 +563,6 @@ I have incorporated a newsletter sign-up form on my application, to allow users 
 email address if they are interested in learning more. 
 
 Users can also unsubscribe from the newsletter by following the link in their subscription confirmation email.
-
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap;
@@ -649,7 +637,6 @@ Comprehensive testing has been conducted to ensure a smooth user experience.
 ---
 
 ## Deployment
-
 
 The live deployed application can be found deployed on [Heroku](https://the-art-beneath-289b50439a5a.herokuapp.com).
 
@@ -814,12 +801,7 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-
 ## Credits
-
-
-
-
 
 ---
 
@@ -833,3 +815,5 @@ You can fork this repository by using the following steps:
 - Icons sourced from [Font Awesome](https://fontawesome.com/).
 
 ---
+
+### Acknowledgements
