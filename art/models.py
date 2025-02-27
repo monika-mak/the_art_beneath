@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
     '''
-    Category model for each art piece 
+    Category model for each art piece
     '''
     # override default plural naming in admin panel
     class Meta:

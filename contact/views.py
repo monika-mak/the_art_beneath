@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ContactRequestForm
 
+
 def contact_view(request):
     if request.method == "POST":
         form = ContactRequestForm(request.POST)
@@ -11,6 +12,7 @@ def contact_view(request):
         form = ContactRequestForm()
 
     return render(request, "contact/contact_form.html", {"form": form})
+
 
 def contact_success(request):
     return render(request, "contact/contact_success.html")
