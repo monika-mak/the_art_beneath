@@ -59,9 +59,9 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| style.css | ![screenshot](documentation/css/style.png) | Pass: No Errors |
-| checkout.css |![screenshot](documentation/css/checkout.png) | Pass: No Errors |
-| profile.css | ![screenshot](documentation/css/profile.png) | Pass: No Err### JavaScript
+| base.css | ![screenshot](documentation/base_css.png) | Pass: No Errors |
+| checkout.css | ![screenshot](documentation/checkout_css.png) | Pass: No Errors |
+| profile.css | ![screenshot](documentation/profile_css.png) | Pass: No Errors |
 
 ### JS
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files. Needed for testing at the top of the file: (/* jshint esversion: 11, jquery: true */)
@@ -77,18 +77,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented, and line lengths were double-checked. No errors were found.
 
-| Feature | admin | forms | models | urls | views | extra |
-|---------|----------|----------|-----------|---------|----------|-------|
-| Root the_art_beneath | no errors | no errors | no errors | no errors | no errors | no errors |
-| Art | no errors | no errors | no errors | no errors | no errors | n/a |
-| Bag | n/a | n/a | n/a | no errors | no errors | no errors |
-| Checkout | no errors | no errors | no errors | no errors | no errors | no errors | n/a |
-| Contact | no errors | no errors | no errors | no errors | no errors | no errors |
-| FAQ | no errors | no errors | no errors | no errors | no errors | n/a |
-| Home | no errors | no errors | no errors | no errors | no errors | no errors |
-| Profiles | no errors | no errors | no errors | no errors | no errors | n/a |
-| Wishlist | no errors | no errors | no errors | no errors | no errors | no errors |
-
+![screenshot](documentation/python_linter.png)
 
 ### Lighthouse Scores
 
