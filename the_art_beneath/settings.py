@@ -15,7 +15,7 @@ import dj_database_url
 
 
 if os.path.isfile('env.py'):
-    import env
+    import env  # noqa
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -213,7 +213,6 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 
 # Default primary key field type

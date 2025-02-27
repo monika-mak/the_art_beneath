@@ -1,5 +1,4 @@
 /*google style import */
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Tenor+Sans&display=swap');
 
 
@@ -357,12 +356,11 @@ input[name='q']::placeholder {
     display: none;
 }
 
-  .collapsing {
-    height: 0;
-    overflow: hidden;
-    @include transition($transition-collapse);
-  }
-
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
 
 /*-------------------------------- Add art table*/
 .table th {
@@ -401,7 +399,7 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border-color: #aa4852;
     border-radius: 0;
 }
 
@@ -516,7 +514,7 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
-    border-color: #222;
+    border-color: #353535;
 }
 
 .allauth-form-inner-content a {

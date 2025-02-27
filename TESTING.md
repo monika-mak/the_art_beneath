@@ -27,65 +27,53 @@ Return back to the [README.md](README.md) file.
 
 ## Validation
 
-### HTML Validation
+### HTML
 
-For my HTML files I have used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files via url.
+- *please note when validating via url , both art details and sign up throw an error, but once validating via direct input, all is good* 
+art_detail error [screenshot](documentation/w3c_art_detail_url_error.png)
+signup_url error [screenshot](documentation/w3c_signup_url_error.png)
 
-I have had to follow a different approach for validating my HTML for this project as the majority of my pages are developed using Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication. The HTML validator will throw errors if I were to use my website's URL so I have had to follow the below approach for every page:
+---
 
-- Via the deployed Heroku app link, I have navigated to each individual page.
-- Right clicking on the screen/CTRL+U/⌘+U on Mac, allows a menu to appear, giving me the option to 'View page source'.
-- The complete HTML code for the deployed page will appear, allowing you to select the entire code using CTRL+A/⌘+A on Mac.
-- Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
-- Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
+| Page           | Screenshot                                     | Notes              |
+|----------------|------------------------------------------------|--------------------|
+| about          | ![screenshot](documentation/w3c_about.png) | Pass: No Errors   |
+| art_detail     | ![screenshot](documentation/w3c_art_detail.png) | Pass: No Errors * |
+| art_managament | ![screenshot](documentation/w3c_art_managament.png) | Pass: No Errors   |
+| contact        | ![screenshot](documentation/w3c_contact.png) | Pass: No Errors   |
+| faq            | ![screenshot](documentation/w3c_faq.png) | Pass: No Errors   |
+| filter         | ![screenshot](documentation/w3c_filter.png) | Pass: No Errors   |
+| gallery        | ![screenshot](documentation/w3c_gallery.png) | Pass: No Errors   |
+| home           | ![screenshot](documentation/w3c_home.png) | Pass: No Errors   |
+| login          | ![screenshot](documentation/w3c_login.png) | Pass: No Errors   |
+| logout         | ![screenshot](documentation/w3c_logout.png) | Pass: No Errors   |
+| profile        | ![screenshot](documentation/w3c_profile.png) | Pass: No Errors   |
+| signup         | ![screenshot](documentation/w3c_signup.png) | Pass: No Errors *  |
+| wishlist       | ![screenshot](documentation/w3c_wishlist.png) | Pass: No Errors   |
 
-![html validation](docs/testing_images/html_validation.png)  
 
-All HTML pages were validated and received a 'No errors or warning to show' for code that I had written, result as shown above.
+### CSS
 
-| HTML Source Code/Page | Errors | Warnings |
-| ---- | ------ | -------- |
-| Home | 0 | 0 |
-| Log In | 0 | 0 |
-| Register | 0 | 0 |
-| Account | 0 | 0 |
-| Wishlist | 0 | 0 |
-| Admin Dashboard | 0 | 0 |
-| Admin Article List | 0 | 0 |
-| Admin Add Article | 0 | 0 |
-| Admin Edit Article | 0 | 0 |
-| Admin Delete Article | 0 | 0 |
-| Admin Product List | 0 | 0 |
-| Admin Product Detail | 0 | 0 |
-| Admin Add Product | ID error -> Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The name ID from the contact form html within the base.html is clashing with the name ID from the add product html. These ID elements are embedded within the Bootstrap forms and are inaccessible to me without breaking my code up and reconfiguring the code. This is the same for the `<p>` and `<strong>` error. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down as long as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/add_prod_er.png) | As before |
-| Admin Edit Product | 0 | 0 |
-| Admin Delete Product | 0 | 0 |
-| All Products | 0 | 0 |
-| User Article List | 0 | 0 |
-| Bag - Empty | 0 | 0 |
-| Bag - Products | 0 | 0 |
-| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The name/email ID from the contact form html within the base.html is clashing with the name/email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are inaccessible to me without breaking my code up and reconfiguring the code. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down as long as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
-| Profile/Account | 0 | 0 |
-| Order History | 0 | 0 |
-| Wishlist | 0 | 0 |
-| Forgot Password | 0 | 0 |
-| Error 403 | 0 | 0 |
-| Error 404 | 0 | 0 |
-| Error 500 | 0  | 0 |
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-### JavaScript Validation
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| style.css | ![screenshot](documentation/css/style.png) | Pass: No Errors |
+| checkout.css |![screenshot](documentation/css/checkout.png) | Pass: No Errors |
+| profile.css | ![screenshot](documentation/css/profile.png) | Pass: No Err### JavaScript
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript code added to the project. External JS, for Bootstrap, jQuery and Fontawesome purposes were not validated through JSHint.
+### JS
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files. Needed for testing at the top of the file: (/* jshint esversion: 11, jquery: true */)
 
-| Page | Screenshot | Errors | Warnings |
-| ---- | ---------- | ------ | -------- |
-| Home | ![js from Home page](docs/testing_images/home_script.png) | none | none |
-| FAQ| ![js from Article section](docs/testing_images/article_js_valid.png) | none | none |
-| Bag - Quantity Script | ![js from Bag page](docs/testing_images/quantity_input_validation.png) | none | none |
-| Stripe JS | ![js from Stripe elements](docs/testing_images/stripe_js.png) | none | none |
-| Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none (code has been highlighted red at the top of the code block but no errors returned from JSHint and code functions as intended. I could not get a definitive answer on why JSHint colours these lines red.) | none |
-| Products Script | ![js from product script](docs/testing_images/product_script.png) | none | none |
-| Base Script | ![js from base script](docs/testing_images/base_script_valid.png) | none | none |
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| stripe_elements.js | ![screenshot](documentation/js_stripe_elements.png) | No Errors |
+| countryfield.js | ![screenshot](documentation/js_countryfield.png) | Pass: No Errors |
+
+
+
 
 ### Python Validation
 
@@ -101,20 +89,6 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Profiles | none | none ![python validation](docs/testing_images/pro_forms.png) | none ![python validation](docs/testing_images/pro_models.png) | none | none ![python validation](docs/testing_images/pro_views.png) | n/a |
 | Wishlist | none | none | none | none | none ![python validation](docs/testing_images/wish_views.png) | none |
 
-### CSS Validation
-
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
-
-To keep my document concise I have not included every screenshot of the CSS validations, as they are all the same, but the results are as follows.
-![css validation](docs/testing_images/css_validation.png)
-
-| CSS File | Errors | Warnings |
-| ---- | ------ | -------- |
-| Article | 0 | 0 |
-| Checkout | 0 | 0 |
-| Admin Products | 0 | 0 |
-| Profiles/Accounts | 0 | 0 |
-| Base CSS | 0 | 0 |
 
 ### Lighthouse Scores
 
