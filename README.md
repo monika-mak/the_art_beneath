@@ -58,13 +58,50 @@ The inspiration for "The Art Beneath" comes from the idea that every artwork has
 # User Experience (UX)  
 The website is designed to provide an intuitive and visually appealing way for users to browse and purchase artwork. The primary goal is to create a seamless shopping experience that highlights the artistic details of each piece while maintaining an efficient e-commerce functionality.
 
-## User Stories Overview
-The user experience is guided by clearly defined user stories, ensuring that every feature meets the needs of potential buyers. Some key user stories include:  
-- Browsing and filtering art pieces by category and theme  
-- Viewing detailed descriptions, including color meanings and size specifications  
-- Adding items to a shopping cart with quantity selection and dynamic price updates  
-- Secure checkout with multiple payment options  
-- Account management with order history and wishlist functionality  
+## User Stories
+
+A list of user stories grouped into epics for better structure and clarity.
+
+### EPIC | Browsing and Viewing Art
+- As a shopper, I want to browse through a collection of art pieces so that I can pick some to buy.
+- As a shopper, I want to access detailed information about an art piece so that I can learn its price, description, and other relevant details.
+- As a shopper, I want to be able to easily find an art piece that belongs to a certain category so that I can quickly find a piece that I am interested in, without searching through all the art pieces.
+
+### EPIC | Managing Cart and Purchases
+- As a shopper, I want to quickly see the total cost of my selected items so that I can manage my budget.
+- As a shopper, I want to choose the size and quantity of an art piece so that I purchase exactly what I need.
+- As a shopper, I want to review the contents of my shopping bag so that I know what I’m about to purchase.
+- As a shopper, I want to modify the quantity of items in my bag so that I can finalize my purchase without mistakes.
+- As a shopper, I want to provide payment details securely so that I can complete my purchase confidently.
+- As a shopper, I want to trust that my payment information is secure so that I feel safe making purchases online.
+- As a shopper, I want to see a confirmation after I complete checkout so that I can verify the order details.
+- As a shopper, I want to receive a confirmation email after buying so that I have a record of my purchase.
+
+### EPIC | User Account Management
+- As a site user, I want to sign up for an account easily so that I can access my personal profile and order details.
+- As a site user, I want to log in and out of my account effortlessly so that I can access my information securely.
+- As a site user, I want to recover my password if forgotten so that I can regain access to my account.
+- As a site user, I want to receive an email confirming my registration so that I know my account setup was successful.
+- As a site user, I want to access a personalized profile so that I can view my order history and save payment methods securely.
+
+### EPIC | Search and Sort Features
+- As a shopper, I want to sort through the available art pieces so that I can find items that suit my preferences or budget.
+- As a shopper, I want to arrange art pieces within a specific category so that I can discover items by price, name, or other criteria.
+- As a shopper, I want to combine filters with categories so that I can view a refined list of art pieces matching my preferences.
+- As a shopper, I want to search for art pieces using keywords so that I can quickly find specific items.
+- As a shopper, I want to see my search terms and the number of matching results so that I can gauge whether the desired item is available.
+
+### EPIC | Store Management
+- As a store owner, I want to add new art pieces to the store so that customers can see and purchase them.
+- As a store owner, I want to update details of existing art pieces so that I can keep the listings accurate and up-to-date.
+- As a store owner, I want to remove art pieces that are no longer available so that the store listings stay current.
+- As a shopper, I want to save art pieces to my wishlist so that I can easily revisit and purchase them later.
+
+![user_story_1](documentation/user_stories.png)
+
+<!---------- done up to now------------------------------>
+
+[Back to top ⇧](#the-art-beneath)
 
 ## Navigation & Accessibility
 - A well-organized navigation menu allows users to easily access categories, shopping cart, and account settings.  
@@ -72,16 +109,12 @@ The user experience is guided by clearly defined user stories, ensuring that eve
 - The website supports intuitive browsing with an efficient search and sorting system.
 
 ---
-![user-story-1](documentation/user_stories.png)
-
-<!---------- done up to now------------------------------>
-
-[Back to top ⇧](#the-art-beneath)
 
 ## Design
 
 # Colors Used  
 The color scheme follows a **modern, dark-themed aesthetic**, providing a sophisticated and artistic feel.
+![colors](documentation/colors.png)
 
 - **Primary Color:** `#1D1D1E` – Forms the deep, rich background, creating a sleek and immersive atmosphere.  
 - **Secondary Color:** `#333333` – Used for contrast and subtle UI elements, ensuring a modern, balanced composition.  
@@ -281,7 +314,6 @@ Example of an optimized product description:
 - [ YouTube](https://www.youtube.com/) 
   - For tutorials and other learnigs. 
 
-[Back to top ⇧](#ai-heroes)
 ---
 
 ## Testing
