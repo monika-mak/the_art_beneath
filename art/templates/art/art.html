@@ -56,8 +56,8 @@
                         {% else %}
                         <div class="art-image-container position-relative">
                             <a href="{% url 'art_detail' art.id %}">
-                                <img class="img-fluid w-100" src="{{ art.image.url|default:'/media/noimage.png' }}" alt="{{ art.name }}">
-                            </a>
+                                <img class="img-fluid w-100" src="https://res.cloudinary.com/dutjcas0m/image/upload/v1740754864/noimage_jjqyc7.png" alt="{{ art.name }}">
+                            </a> 
                         </div>
                         {% endif %}
                         <div class="art-details mt-3">
