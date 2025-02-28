@@ -1,5 +1,5 @@
 from django import forms
-from .models import ContactRequest  # Import Art model
+from .models import ContactRequest
 
 
 class ContactRequestForm(forms.ModelForm):

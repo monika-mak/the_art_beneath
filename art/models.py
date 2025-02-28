@@ -51,7 +51,7 @@ class Art(models.Model):
     meaning = models.TextField()
     color = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
-    date = models.DateField()
+    date = models.DateField(help_text="Format: YYYY-MM-DD")
     image = CloudinaryField('image', null=True, blank=True)
     image_2 = CloudinaryField('image', null=True, blank=True)
     orientation = models.CharField(
