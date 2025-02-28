@@ -56,7 +56,7 @@
                         {% else %}
                         <div class="art-image-container position-relative py-3">
                             <a href="{% url 'art_detail' art.id %}">
-                                <img class="img-fluid w-100" src="{% static 'images/noimage.png' %}" alt="{{ art.name }}">
+                                <img class="img-fluid w-100" src="{{ art.image.url|default:'/media/noimage.png' }}" alt="{{ art.name }}">
                             </a>
                         </div>
                         {% endif %}
