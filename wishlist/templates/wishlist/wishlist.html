@@ -22,7 +22,7 @@
         <div class="row">
             {% for art in wishlist.items.all %}
                 <div class="col-md-3 mb-4">
-                    <div class="art-card bg-white p-2 border">
+                    <div class="art-card bg-white p-1 border">
                         {% if art.image %}
                             <a href="{% url 'art_detail' art.id %}">
                                 <img class="img-fluid w-100" src="{{ art.image.url }}" alt="{{ art.name }}">

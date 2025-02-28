@@ -46,7 +46,7 @@
         <div class ="row g-4">
             {% for art  in art %}
                 <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="art-card bg-white p-3">
+                    <div class="art-card bg-white p-2">
                         {% if art.image %}
                         <div class="art-image-container position-relative">
                             <a href="{% url 'art_detail' art.id %}">

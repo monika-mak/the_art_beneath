@@ -10,12 +10,11 @@ Return back to the [README.md](README.md) file.
   - [Testing Contents](#testing-contents)
   - [Validation](#validation)
     - [HTML Validation](#html-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Python Validation](#python-validation)
     - [CSS Validation](#css-validation)
+    - [JavaScript Validation](#java-script-validation)
+    - [Python Validation](#python-validation)
     - [Lighthouse Scores](#lighthouse-scores)
   - [Manual Testing](#manual-testing)
-   
     - [Browser Compatibility](#browser-compatibility)
     - [Responsiveness](#responsiveness)
     - [Testing User Stories](#testing-user-stories)
@@ -25,7 +24,7 @@ Return back to the [README.md](README.md) file.
 
 ## Validation
 
-### HTML
+### HTML Validation
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files via url.
 *please note when validating via url , both art details and sign up throw an error:*
@@ -52,7 +51,7 @@ signup_url error ![screenshot](documentation/w3c_signup_url_error.png)
 | wishlist       | ![screenshot](documentation/w3c_wishlist.png) | Pass: No Errors   |
 
 
-### CSS
+### CSS Validation
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
@@ -62,7 +61,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | checkout.css | ![screenshot](documentation/checkout_css.png) | Pass: No Errors |
 | profile.css | ![screenshot](documentation/profile_css.png) | Pass: No Errors |
 
-### JS
+### Java Script Validation
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files. Needed for testing at the top of the file: (/* jshint esversion: 11, jquery: true */)
 
 
@@ -73,7 +72,6 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 
 ### Python Validation
-
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No errors were found. Due to extensive amount of screenshots I had chosen to include the table instead that I had validates one by one, but to backup my findings I also ran code via Flake8 (code made by me have no erros that I am in control of); 
 
 ![flake](documentation/flake.png)
@@ -81,25 +79,25 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 ![pep8results](documentation/python_linter.png)
 
 ### Lighthouse Scores
-
 Lighthouse testing was carried out in Incognito mode to achieve the best result. Images used in the site's design were saved in png format, and compressed using [tinypng](https://tinypng.com/) to offer the best chance for a decent performance score. I am not happy with the results of the testing as they seem to be very low. My aim is to have a very high quality , large images so I will need to work around it to ensure that wont affect loading time and overall health of the website.  I will carry additional improvements in the fututre to acheive minimum of 85% for the best experience. 
 
+## Manual Testing
 
 ### **Home Page**
-- **Desktop:** ![Home Page - Desktop](documents/lh_home_desktop.png)
-- **Mobile:** ![Home Page - Mobile](documents/lh_home_mobile.png)
+- **Desktop:** ![Home Page - Desktop](documentation/lh_home_desktop.png)
+- **Mobile:** ![Home Page - Mobile](documentation/lh_home_mobile.png)
 
 ### **Art Listing Page**
-- **Desktop:** ![Gallery - Desktop](documents/lh_gallery_desktop.png)
-- **Mobile:** ![Gallery - Mobile](documents/lh_gallery_mobile.png)
+- **Desktop:** ![Gallery - Desktop](documentation/lh_gallery_desktop.png)
+- **Mobile:** ![Gallery - Mobile](documentation/lh_gallery_mobile.png)
 
 ### **Individual Art Detail Page**
-- **Desktop:** ![Art Detail - Desktop](documents/lh_art_detail_desktop.png)
-- **Mobile:** ![Art Detail - Mobile](documents/lh_art_detail_mobile.png)
+- **Desktop:** ![Art Detail - Desktop](documentation/lh_art_detail_desktop.png)
+- **Mobile:** ![Art Detail - Mobile](documentation/lh_art_detail_mobile.png)
 
 ### **Login/Register Pages**
-- **Desktop:** ![Login Page - Desktop](documents/lh_login_desktop.png)
-- **Mobile:** ![Login Page - Mobile](documents/lh_login_mobile.png)
+- **Desktop:** ![Login Page - Desktop](documentation/lh_login_desktop.png)
+- **Mobile:** ![Login Page - Mobile](documentation/lh_login_mobile.png)
 
 
 ### Browser Compatibility
@@ -113,22 +111,22 @@ Website was tested  on various different devices, including listed below, featur
 # Responsiveness Test Results
 
 ## **Home Page**
-![Home Page](documents/res_home.png)
+![Home Page](documentation/res_home.png)
 
 
 ## **Art Detail Page**
-![Art Detail](documents/res_art_detail.png)
+![Art Detail](documentation/res_art_detail.png)
 
 
 ## **Gallery Page**
-![Gallery](documents/res_gallery.png)
+![Gallery](documentation/res_gallery.png)
 
 
 ## **Shopping Bag Page**
-![Shopping Bag](documents/res_shopping_bag.png)
+![Shopping Bag](documentation/res_shopping_bag.png)
 
 ## **About Page**
-![About](documents/res_about.png)
+![About](documentation/res_about.png)
 
 
 ### Testing User Stories
@@ -166,7 +164,6 @@ Wishlist came as a late addition as it was not originally planned. I am glad i h
 
 All user stories have been tested to ensure they meet the expected criteria.
 
-## Manual Testing
 
 ### User Input/Form Validation
 
@@ -195,10 +192,9 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 | Footer                     | Yes      | Click FB Link brings user to faceboock page   | Font colour change on hover | Pass | N/A |
 
 
-### Unresolved/Known Bugs
-
-Some adjsutemnt needed in About section,  Image is too small on desktop; 
+### Unresolved/Known Bugs 
 Shopping cart footer needs to be pushed down. I had spend quite a lot of time fixing it only to findout it affected  other impotant aspects. 
-Similary had a huge issue with images on my detail page. Sicne i decided to use multiple images and have the ones not displaying being placed underneath of main image I did ot manage to do it without a warning coming up due to double id. The fact is that in the detail page, the main image will always have a copy underneath. This  
-Since a lot of time was involved to getting it right I had decided to let it go back to it with a fresh, rested mind once all is done. 
-![id_warning](documents/id_warning.png)
+Similary had a huge issue with images on my detail page. Sicne I decided to use multiple images and have the ones not displaying being placed underneath of main image I did not manage to execute the function without and error, although I somehow trust it just need to be dissmissed as one of the thumbnail images will always be the same as the main image.
+Since a lot of time was involved to getting these aspects right I had decided to let it go back to it with a fresh, rested mind once all is done. 
+![id_warning](documentation/id_warning.png)
+The name on profile page is not saving, all the other details are saved to the database. Will be looking into the relationship as something is not linking correctly. 

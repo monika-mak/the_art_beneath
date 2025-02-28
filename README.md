@@ -4,41 +4,30 @@
 Live website can be accessed here: [The Art Beneath](https://the-art-beneath-289b50439a5a.herokuapp.com)
 
 
-
 ![responsive](/documentation/the_art_beneath.png)
 
 ## Contents
-
 - [Overview](#overview)
 - [User Experience (UX)](#user-experience-ux)
    * [User Stories](#user-stories)
-
 - [Design](#design)
-   * [Colour Scheme](#colour-scheme)
+   * [Design & Inspiration](#design-&-inspiration)
+   * [Color Scheme](#colour-scheme)
    * [Typography](#typography)
    * [Imagery](#imagery)
    * [Wireframes](#wireframes)
    * [Database Schema](#database-schema)
-
 - [Features](#features)
-   * [Home Page](#home-page)
-   * [AI Tools Page](#ai-tools-page)
-   * [Voting and Ranking](#voting-and-ranking)
-   * [About Page](#about-page)
-   * [Contact Page](#contact-page)
-   * [Features to Add](#features-to-add)
-
+   * [Core Functionalities](#features) 
+   * [Future Features](#future-features)
 - [Technologies](#technologies)
    * [Languages Used](#languages-used)
    * [Libraries & Programs Used](#libraries-and-programs-used)
-
 - [Testing](#testing)
-
 - [Deployment](#deployment)
    * [Deployment Process](#deployment-process)
    * [Forking](#forking)
    * [Clone](#clone)
-
 - [Credits](#credits)
    * [Code](#code)
    * [Media](#media)
@@ -46,7 +35,7 @@ Live website can be accessed here: [The Art Beneath](https://the-art-beneath-289
 ---
 
 
-## Overview
+# Overview
 The Art Beneath is a modern e-commerce platform dedicated to showcasing and selling contemporary art created by an artist, James Stanislaw. Inspired by my partner, an artist himself, this project aims to provide a seamless experience for art enthusiasts to browse, explore, and purchase unique pieces. 
 
 The platform is designed to cater to art lovers who appreciate fine art, providing a secure and efficient way to connect with the work of James Stanislaw.
@@ -58,8 +47,8 @@ The inspiration for "The Art Beneath" comes from the idea that every artwork has
 # User Experience (UX)  
 The website is designed to provide an intuitive and visually appealing way for users to browse and purchase artwork. The primary goal is to create a seamless shopping experience that highlights the artistic details of each piece while maintaining an efficient e-commerce functionality.
 
-## User Stories
 
+## User Stories
 A list of user stories grouped into epics for better structure and clarity.
 
 ### EPIC | Browsing and Viewing Art
@@ -98,21 +87,26 @@ A list of user stories grouped into epics for better structure and clarity.
 - As a shopper, I want to save art pieces to my wishlist so that I can easily revisit and purchase them later.
 
 ![user_story_1](documentation/user_stories.png)
-
-<!---------- done up to now------------------------------>
+ 
 
 [Back to top ⇧](#the-art-beneath)
 
-## Navigation & Accessibility
-- A well-organized navigation menu allows users to easily access categories, shopping cart, and account settings.  
-- The design follows modern accessibility standards, ensuring clarity and readability across devices.  
-- The website supports intuitive browsing with an efficient search and sorting system.
-
 ---
 
-## Design
+# Design
 
-# Colors Used  
+## Design & Inspiration  
+The visual concept of the website is inspired by **The Code Institute’s Boutique Ado walkthrough**, but with a **personalized artistic touch** to reflect a modern dark-themed gallery. The layout balances artistic presentation with functional e-commerce usability.
+
+- **Artistic Modern Design** – A minimalist dark theme highlights artwork without distractions.  
+- **Enhanced User Flow** – Users can easily explore, filter, and purchase artworks in a smooth, engaging manner.  
+- **E-commerce Optimization** – Clear calls-to-action and a structured checkout process ensure conversion efficiency.
+
+---
+## Logo 
+![logo](documentation/logo.png)
+
+## Color Scheme  
 The color scheme follows a **modern, dark-themed aesthetic**, providing a sophisticated and artistic feel.
 ![colors](documentation/colors.png)
 
@@ -126,20 +120,11 @@ These colors work together to create a **sophisticated and elegant** shopping ex
 
 ---
 
-# Typography  
+## Typography  
 A combination of two elegant and readable fonts ensures a sophisticated yet modern look.
 
 - **Logo & Key Headings:** *Tenor Sans* – Used for elements like “Shop Now” and main page text to convey a refined, artistic style.  
 - **Navigation Bar & Descriptive Text:** *Raleway* – A clean, modern sans-serif font for improved readability in product descriptions and navigation.
-
----
-
-# Design & Inspiration  
-The visual concept of the website is inspired by **The Code Institute’s Boutique Ado walkthrough**, but with a **personalized artistic touch** to reflect a modern dark-themed gallery. The layout balances artistic presentation with functional e-commerce usability.
-
-- **Artistic Modern Design** – A minimalist dark theme highlights artwork without distractions.  
-- **Enhanced User Flow** – Users can easily explore, filter, and purchase artworks in a smooth, engaging manner.  
-- **E-commerce Optimization** – Clear calls-to-action and a structured checkout process ensure conversion efficiency.
 
 ---
 
@@ -168,70 +153,69 @@ The imagery selection focuses on **high-quality, visually rich representations o
 
 [Back to top ⇧](#the-art-beneath)
 
-## Features  
+# Features  
 This section outlines the **core functionalities** of the platform.
 
-### __Home Page__  
+## __Home Page__  
 ![Home-Page](/documentation/feat_home.png)  
   -  A visually striking hero section welcomes users with a title and a brief message that evokes curiosity. 
   - A "Shop Now" button is available for users to interact with from the start. **"Shop Now"** button.  
 - **Navigation Bar**: Access to Home, Gallery, Categories, Search, Cart, Wishlist, Profile, and Admin controls (if applicable).  
 
-### __Gallery__  
+## __Gallery__  
 ![Gallery](/documentation/feat_gallery.jpeg)  
 - Displays **art pieces with images, names, prices**, and purchase options.  
 - Logged-in users can view detailed descriptions and add items to their cart or wishlist.  
 - **Admin controls**: Edit or delete art pieces.
 
-### __Art Details Page__  
+## __Art Details Page__  
 ![Art-Details](/documentation/feat_art_details.png)  
 - **Comprehensive view** of artwork, including price, description, size, and color details.  
 - **Logged-in users** can add items to the cart.  
 
-### __Category & Filter-Based Browsing__   
+## __Category & Filter-Based Browsing__   
 - Users can **browse by category** (e.g., Nature, Female, Animals).  
 - **Filters** allow sorting by **price, orientation, or new arrivals**.  
 
-### __Shopping Bag & Secure Checkout__  
+## __Shopping Bag & Secure Checkout__  
 ![Shopping Bag](/documentation/feat_shopping_bag.png)  
 - View selected items, adjust quantity, and see total cost dynamically.
 - when item is added to the basket, bad changes color to reflect it.   
 - **Secure payment options** including credit/debit cards and PayPal.  
 - Encrypted transactions with **HTTPS/SSL** protection.  
 
-### __Order Confirmation & Notifications__  
+## __Order Confirmation & Notifications__  
 ![Order Confirmation](/documentation/feat_order_confirmation.png)  
 - Order confirmation with a **personalized message from the artist**.  
 - **Email notifications** with purchase details and estimated delivery.  
 
-### __Wishlist Feature__  
+## __Wishlist Feature__  
 ![Wishlist](/documentation/feat_wishlist.png)  
 - **Logged-in users** can save and revisit their favorite art pieces.
 
-### __User Account Management__  
+## __User Account Management__  
 - **Single access point** for **Login, Register, Logout, Add Art(admin)**.  
 - Password reset and profile updates available.  
 - Users can **track order history**.  
 
-### __Contact & FAQ__  
+## __Contact & FAQ__  
 - **Contact Form**: Users can reach out to the site owner (pre-filled for logged-in users).  
 - **FAQ Section**: Answers common queries about products and services.  
 
-### __Footer__  
+## __Footer__  
 - **Links to social media, newsletter subscription, and copyright information.**  
 ---
 
-### __Newsletter Subscription__
+## __Newsletter Subscription__
 - Users can subscribe to receive updates and offers.
 
 ---
-### Features Left to Implement
+### Future Features
 - User reviews and ratings for art pieces
 - Social media sharing options
 - AI-powered art recommendations based on browsing history
 
 ---
-
 
 # The Art Beneath – SEO & Marketing Strategy  
 
@@ -243,10 +227,11 @@ The platform allows users to **browse, purchase, and engage** with contemporary 
 A strong **social media presence** and **search engine optimization (SEO)** strategy will help build an engaged community and drive potential buyers to the site.  
 
 ---
+[Back to top ⇧](#the-art-beneath)
 
 ## **Search Engine Optimization (SEO) Strategy**  
 
-### **1. Keyword Research & Optimization**  
+  ### **1. Keyword Research & Optimization**  
 
 To improve search engine rankings and increase visibility, we focused on:  
 
@@ -256,7 +241,11 @@ To improve search engine rankings and increase visibility, we focused on:
 Example of an optimized product description:  
 🚀 *"Transform your space with this luxurious **gold and black abstract art piece** – a contemporary blend of elegance and artistic depth."*  
 
+### FacebookPage  
+A fictional page was created for purpose of this project, it can be accessed here[facebook page](https://www.facebook.com/profile.php?id=61573209371296)
+
 ![facebook](documentation/fb_1.png)
+
 ![facebook](documentation/fb_2.png)
 
 
@@ -297,6 +286,8 @@ Example of an optimized product description:
   - Used to validate CSS code.
 - [Pep8](http://pep8online.com/)
   - Used to validate Python code.
+- [Flake8]
+  - Used to validate Python code.
 - [JSHint](https://jshint.com/)
   - Used to validate JS code.
 - [Tinyjpg](https://tinyjpg.com/)
@@ -306,13 +297,13 @@ Example of an optimized product description:
 - [Stripe](https://stripe.com/)
   - for payment integartion
 - [Canva](https://canva.com/)
-  - Used for robot and  background images as well as wireframes and inspiration
+  - used to create a mockup(wireframes)
 - [ChatGPT](https://chatgpt.com/)
   - Used for general queries and quick help.
+    - [Dalee]
+      - used to generate logo.
 - [Claude3.5](https://claude.ai/)
   - For insightful explanations of topic. 
-- [ YouTube](https://www.youtube.com/) 
-  - For tutorials and other learnigs. 
 
 ---
 
@@ -324,11 +315,9 @@ Return back to the [TESTING.md](TESTING.md)
 ---
 
 ## Deployment
-
 The live deployed application can be found deployed on [Heroku](https://the-art-beneath-289b50439a5a.herokuapp.com).
 
 ### ElephantSQL Database
-
 This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
 
 To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
@@ -340,8 +329,8 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
 
+[Back to top ⇧](#the-art-beneath)
 ### Gmail API
-
 This project uses [Gmail](https://mail.google.com) to handle sending emails to users for account verification and purchase order confirmations.
 
 Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
@@ -363,7 +352,6 @@ Once you've created a Gmail (Google) account and logged-in, follow these series 
 	- `EMAIL_HOST_USER` = user's own personal Gmail email address
 
 ### Heroku Deployment
-
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
@@ -417,7 +405,6 @@ Or:
 The project should now be connected and deployed to Heroku!
 
 ### Local Deployment
-
 This project can be cloned or forked in order to make a local copy on your own system.
 
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
@@ -460,7 +447,6 @@ If you'd like to backup your database models, use the following command for each
 - *repeat this action for each model you wish to backup*
 
 #### Cloning
-
 You can clone the repository by following these steps:
 
 1. Go to the [GitHub repository](https://github.com/LewisMDillon/web-piano-academy) 
@@ -498,11 +484,22 @@ You can fork this repository by using the following steps:
 - all images and details were modeled from [Cupido Design](https://cupidodesign.com/en)
 - Images created as part of the fictional artist’s collection.
 - Icons sourced from [Font Awesome](https://fontawesome.com/).
-- Code styel ,inspiration and support:
+- Code,README, inspiration and support:
   - [Chrono](https://organicthemes.com/demo/chrono/)
+  - [Three Oaks](https://bonsai-shop.up.railway.app/accounts/login/)
   - [Piano Academy](https://github.com/LewisMDillon/web-piano-academy)
   - [Everneed](https://github.com/amylour/everneed/tree/main)
-  - [Three Oaks](https://bonsai-shop.up.railway.app/accounts/login/)
+
+
 ---
 
-### Acknowledgements
+### Acknowledgments:
+A massive thank you to my course colegue **Peter**, it was great to have such a support knowing im not by myself. 
+
+My mentor **Femi** for guiding me through the process and sharing great tips. 
+My cohort facilitator **Lewis** for insights and advices throughout the course. 
+
+CI tutor support for being a massive help in times of being lost and confused. especially Rebecca. 
+The list can be endless but i can not type anymore , so **Thank you all form the bottom of my heart**. 
+
+[Back to top ⇧](#the-art-beneath)
