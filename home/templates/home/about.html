@@ -24,7 +24,7 @@
         <div>
             <div class="image-container text-center my-5">
                 <div class="main-image-container">
-                    <img id="mainImage" class="about-main-image" src="{% static 'img/artist.png' %}" alt="About Artist">
+                    <img id="aboutMainImage" class="about-main-image" src="{% static 'img/artist.png' %}" alt="About Artist">
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     {{ artist_description|linebreaks }} <!-- Display text from views.py -->
                 </div>
                 <div class="action-buttons">
-                    <a href="{% url 'home' %}" class="btn keep-shopping-btn border-light">Home</a>
+                    <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
                 </div>
             </div>
         </div>

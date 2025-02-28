@@ -62,8 +62,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'cloudinary_storage',
     'cloudinary',
-
-    # 'storages',
 ]
 
 MIDDLEWARE = [
@@ -215,7 +213,9 @@ STATICFILES_STORAGE = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+# Convert Windows-style paths to Unix-style for Cloudinary
+if os.name == 'nt':  # Windows
+    STATIC_URL = STATIC_URL.replace("\\", "/")
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
