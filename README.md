@@ -1,7 +1,7 @@
 # The Art Beneath
 
 
-Here is a link to the live project: [The Art Beneath](https://the-art-beneath-289b50439a5a.herokuapp.com)
+Live website can be accessed here: [The Art Beneath](https://the-art-beneath-289b50439a5a.herokuapp.com)
 
 
 
@@ -53,54 +53,26 @@ The platform is designed to cater to art lovers who appreciate fine art, providi
 
 The inspiration for "The Art Beneath" comes from the idea that every artwork has layers of meaning and depth that go beyond the surface. The platform serves as a space to explore the unique and thought-provoking pieces created by James Stanislaw.
 
-![The Art Beneath ]()
-
 ---
 
-## User Experience (UX)
+# User Experience (UX)  
+The website is designed to provide an intuitive and visually appealing way for users to browse and purchase artwork. The primary goal is to create a seamless shopping experience that highlights the artistic details of each piece while maintaining an efficient e-commerce functionality.
 
-AI Heroes visitors are individuals curious about AI, eager to explore its applications through straightforward examples and easy-to-understand explanations. They are looking for insights and guidance into the best AI tools available.
+## User Stories Overview
+The user experience is guided by clearly defined user stories, ensuring that every feature meets the needs of potential buyers. Some key user stories include:  
+- Browsing and filtering art pieces by category and theme  
+- Viewing detailed descriptions, including color meanings and size specifications  
+- Adding items to a shopping cart with quantity selection and dynamic price updates  
+- Secure checkout with multiple payment options  
+- Account management with order history and wishlist functionality  
 
-## User Stories
+## Navigation & Accessibility
+- A well-organized navigation menu allows users to easily access categories, shopping cart, and account settings.  
+- The design follows modern accessibility standards, ensuring clarity and readability across devices.  
+- The website supports intuitive browsing with an efficient search and sorting system.
 
-A list of user stories grouped into epics for better structure and clarity.
-
-### EPIC | Browsing and Viewing Art
-- As a shopper, I want to browse through a collection of art pieces so that I can pick some to buy.
-- As a shopper, I want to access detailed information about an art piece so that I can learn its price, description, and other relevant details.
-- As a shopper, I want to be able to easily find an art piece that belongs to a certain category so that I can quickly find a piece that I am interested in, without searching through all the art pieces.
-
-### EPIC | Managing Cart and Purchases
-- As a shopper, I want to quickly see the total cost of my selected items so that I can manage my budget.
-- As a shopper, I want to choose the size and quantity of an art piece so that I purchase exactly what I need.
-- As a shopper, I want to review the contents of my shopping bag so that I know what I’m about to purchase.
-- As a shopper, I want to modify the quantity of items in my bag so that I can finalize my purchase without mistakes.
-- As a shopper, I want to provide payment details securely so that I can complete my purchase confidently.
-- As a shopper, I want to trust that my payment information is secure so that I feel safe making purchases online.
-- As a shopper, I want to see a confirmation after I complete checkout so that I can verify the order details.
-- As a shopper, I want to receive a confirmation email after buying so that I have a record of my purchase.
-
-### EPIC | User Account Management
-- As a site user, I want to sign up for an account easily so that I can access my personal profile and order details.
-- As a site user, I want to log in and out of my account effortlessly so that I can access my information securely.
-- As a site user, I want to recover my password if forgotten so that I can regain access to my account.
-- As a site user, I want to receive an email confirming my registration so that I know my account setup was successful.
-- As a site user, I want to access a personalized profile so that I can view my order history and save payment methods securely.
-
-### EPIC | Search and Sort Features
-- As a shopper, I want to sort through the available art pieces so that I can find items that suit my preferences or budget.
-- As a shopper, I want to arrange art pieces within a specific category so that I can discover items by price, name, or other criteria.
-- As a shopper, I want to combine filters with categories so that I can view a refined list of art pieces matching my preferences.
-- As a shopper, I want to search for art pieces using keywords so that I can quickly find specific items.
-- As a shopper, I want to see my search terms and the number of matching results so that I can gauge whether the desired item is available.
-
-### EPIC | Store Management
-- As a store owner, I want to add new art pieces to the store so that customers can see and purchase them.
-- As a store owner, I want to update details of existing art pieces so that I can keep the listings accurate and up-to-date.
-- As a store owner, I want to remove art pieces that are no longer available so that the store listings stay current.
-- As a shopper, I want to save art pieces to my wishlist so that I can easily revisit and purchase them later.
-
-![user_story_1](documentation/user_stories.png)
+---
+![user-story-1](documentation/user_stories.png)
 
 <!---------- done up to now------------------------------>
 
@@ -108,368 +80,116 @@ A list of user stories grouped into epics for better structure and clarity.
 
 ## Design
 
-- The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as canva's  AI template.
+# Colors Used  
+The color scheme follows a **modern, dark-themed aesthetic**, providing a sophisticated and artistic feel.
 
-    ![canva template](documentation/canva_template.png)
+- **Primary Color:** `#1D1D1E` – Forms the deep, rich background, creating a sleek and immersive atmosphere.  
+- **Secondary Color:** `#333333` – Used for contrast and subtle UI elements, ensuring a modern, balanced composition.  
+- **Accent Color:** `#242424` – Applied to interactive elements and sections, enhancing depth and visual hierarchy.  
+- **Typography Color:** Light Gray (`#E0E0E0`) – Ensures high readability on dark backgrounds.  
+- **Highlight Color:** Gold (`#FFD700`) – Used for key actions and to add a premium artistic touch.
 
-### Color Scheme
+These colors work together to create a **sophisticated and elegant** shopping experience, ensuring both functionality and visual appeal.
 
-- **Primary Colors**:  
-  The website uses a futuristic combination of deep blues, purple and  grey on a white background to create a clean and modern aesthetic. These colors reflect the technological theme while maintaining readability and simplicity.
+---
 
-- **Accent Colors**:  
-  Bright accents like orange and purple are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
+# Typography  
+A combination of two elegant and readable fonts ensures a sophisticated yet modern look.
 
-  ![Design Colors](documentation/design_colors.png)
+- **Logo & Key Headings:** *Tenor Sans* – Used for elements like “Shop Now” and main page text to convey a refined, artistic style.  
+- **Navigation Bar & Descriptive Text:** *Raleway* – A clean, modern sans-serif font for improved readability in product descriptions and navigation.
 
+---
 
-### Typography
-- The **Audiowide** font is used as the primary typeface, chosen for its retro style that complements the futuristic and technological concept of AI Heroes. It gives the site a unique personality while remaining readable and visually appealing
+# Design & Inspiration  
+The visual concept of the website is inspired by **The Code Institute’s Boutique Ado walkthrough**, but with a **personalized artistic touch** to reflect a modern dark-themed gallery. The layout balances artistic presentation with functional e-commerce usability.
 
-    ![Fonts](documentation/font.png)
+- **Artistic Modern Design** – A minimalist dark theme highlights artwork without distractions.  
+- **Enhanced User Flow** – Users can easily explore, filter, and purchase artworks in a smooth, engaging manner.  
+- **E-commerce Optimization** – Clear calls-to-action and a structured checkout process ensure conversion efficiency.
 
-### Imagery
-- The **main image** features a matrix-style blue background with a superhero robot flying across, representing the fusion of futuristic ideas and AI technology.
-![Main Image](documentation/main_hero_bg.png)
+---
 
-### Wireframes
+## Imagery  
+The imagery selection focuses on **high-quality, visually rich representations of artwork** to immerse users in the artistic experience. Detailed descriptions help users understand each piece's meaning, colors, and artistic intent.
 
-![Home Page](/documentation/wireframes/home_wireframe.png)
-![Leaderboard](/documentation/wireframes/leaderboard_wireframe.png)
-![About& Contact](/documentation/wireframes/about_contact_wireframe.png)
-![Post Detail](/documentation/wireframes/detail_wireframe.png)
-![Login](/documentation/wireframes/login_wireframe.png)
-![Register](/documentation/wireframes/register_wireframe.png)
+## Wireframes
+- **Home**: 
+![Home](/documentation/wireframes_home.png)
+- **Gallery**: 
+![Gallery](/documentation/wireframes_gallery.png)
+- **About**: 
+![About](/documentation/wireframes_about.png)
+- **Art Detail**: 
+![Art-Detail](/documentation/wireframes_art_detail.png)
+- **FAQ**: 
+![FAQ](/documentation/wireframes_faq.png)
+- **Contact**: 
+![Contact](/documentation/wireframes_contact.png)
 
+---
 
-### Database Schema 
+## Database Schema 
 
 ![Database Schemas](/documentation/erd.png)
 
 [Back to top ⇧](#the-art-beneath)
 
-## Features
-This section outlines the core functionalities of the platform.
-
-#### __Navigation Bar__
-![Footer ](/documentation/logged_in_lrg_home.jpeg)
-- A fully responsive navigation bar available across all pages, providing access to:
-  - Home Page (via logo)
-  - Gallery
-  - Categories
-  - Filter
-  - About
-  - Contact
-  - Search 
-  - Shopping Cart
-  - Wishlist
-  - User Profile (if logged in)
-  - Art Managament (if superuser)
-  - Login/Sign up /Logout options
-- Ensures intuitive navigation for users across different devices.
-
-#### __Footer__
-![Footer ](/documentation/logged_in_lrg_home.jpeg)
-
-- The footer rests at the bottom of each page it includes :
- - link to Facebook page .Clicking the links in the footer opens a separate browser to avoid pulling the user away from the site.
- - invitation to subscribe to a newsletter with form to enter email adress; 
- - copyright messag for clarity and purpose of the website; 
-
-### __Home Page__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- **Hero Section**:  
-  A visually striking hero section welcomes users with a title and a brief message that evokes curiosity. 
-  - shop now button available for users to interact with from the get go
-
-
-#### __Art Listings Page__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Displays all available art pieces with:
-  - Large, spacious image (for logged users it links to detail page when clicked ) 
-  - Art name
-  - Price
-  - Add to bag option 
-  - Add to wishlist
-- Users can click on an art piece to view more details, they can also add the piect into the shopping bag or their personalised wishlist.
-- For admin, additional functions appear when logged in:
-  - Delete art
-  - Edit art 
-
-#### __Individual Art Details Page__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Provides detailed information about each piece, including:
-  - Name
-  - Price
-  - Description
-  - Image gallery
-  - Size information
-  - Color meaning details
-- Includes an "Add to Cart" button (visible for logged-in users only).
-
-#### __Category-Based Browsing__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can filter art pieces by categories such as:
-  - Nature
-  - Female
-  - Animals
-  - All Categories
-- Improves discoverability of relevant art.
-
-#### __Filter-Based Browsing__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can filter art pieces by :
-  - New
-  - Category
-  - Price
-  - Orientation
-  - All Art
-- Improves discoverability of relevant art.
-
-#### __Contact Us__
-![Contact Us ](/documentation/logged_in_lrg_home.jpeg)
-- Allows any visitor to contact site owner :
-  - Contact Page. Users can contact the site owner using the contact form. If the user is logged in, their email is pre-filled in the email input field. If the query is related to particular art owrk or desired size, users can select from the list of available pieces along with dedicated space for custom size to make the context more targeted. 
-
-- Improves communication, feedback.
-
-#### __FAQ__
-![FAQ ](/documentation/logged_in_lrg_home.jpeg)
-- Displays the most frequently asked questions about the site.
-  - Provides users with essential information and quells worries that they may have about the site and its products.
-
-
-#### __Shopping Bag__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Allows users to:
-  - View selected items
-  - See total cost (including delivery fees)
-  - Adjust quantity
-  - Remove unwanted items
-  - View a dynamic price update when changes are made
-
-#### __Secure Checkout__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Features include:
-  - Secure payment form supporting credit/debit cards, PayPal, and other methods
-  - Validation of payment fields
-  - Encrypted transactions using HTTPS/SSL
-
-#### __Order Confirmation & Email Notifications__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- After successful checkout:
-  - A confirmation page displays order details as well as personalised message from the artist. 
-  - Users receive an email receipt with purchase details and estimated delivery date
-
-#### __Search & Sorting__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Search for art by name or description
-  - Sort listings by price (low to high/high to low)
-  - Filter results based on categories
-
-#### __Wishlist Feature__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Logged-in users can:
-  - Save art pieces for future purchases
-  - Access their wishlist anytime
-
-#### __Store Management__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Administrators can:
-  - Add new art pieces by James Stanislaw with detailed information
-  - Edit/update existing listings
-  - Delete unavailable art pieces
-
-#### __User Account Management__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Register an account
-  - Log in/out securely
-  - Reset forgotten passwords
-  - View order history in their profile
-
-#### __Login Page__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Register an account
-
-#### __Register__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Register an account
-
-#### __Logout__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Register an account
-
-
-#### __Secure Checkout Page__
-![Home Page ](/documentation/logged_in_lrg_home.jpeg)
-- Users can:
-  - Register an account
-
-- **Add Product Page - Admin Only**
-
-    - Add Product Page. Admins can use this form to add new products to the site. User-friendly form inputs allow product objects to be created simply and quickly.
-
-![screenshot](documentation/features/sitepages/add-product.png)
-
-- **Edit Product Page - Admin Only**
-
-    - Edit Product Page. Admins can use this form to add edit products to the site. User-friendly form inputs allow product objects to be edited simply and quickly. A message at the top of the page informs the admin which product they are editing.
-
-![screenshot](documentation/features/sitepages/edit-product.png)
-
-### User Features
-
-- **User Registration**
-
-    - Users can register for an account using a front-end form. This creates a user object in the database and automatically secures the user's sensitive information.
-
-![screenshot](documentation/features/user/register.png)
-
-- **User Login**
-
-    - Users who have made an account can quickly and easily log in to their account in order to access the login-required functionality of the site.
-
-![screenshot](documentation/features/user/login.png)
-
-- **User Logout**
-
-    - Users who are logged in can easily log out in order to stop access to their account-based information and functionality.
-
-![screenshot](documentation/features/user/logout.png)
-
-- **User Password Recovery**
-
-    - Users who have forgotten their password can recover their password via the forgot password link on the login page. Users will enter their email and get a password reset link sent to their account email which they can use to set a new password.
-
-![screenshot](documentation/features/user/password-recover.png)
-
-- **Toasts**
-
-    - Users see helpful popup messages when performing actions on the site. These messages inform the user of the success or failure of their actions, as well as providing information about an action taken, or steps that the user must take in order to correct an action.
-
-![screenshot](documentation/features/user/toast1.png)
-![screenshot](documentation/features/user/toast2.png)
-![screenshot](documentation/features/user/toast3.png)
-
-- **Basket Updates**
-
-    - Via toasts, users can see a summary of their basket whenever an item is added, allowing the user to quickly see the new state of their basket, without having to navigate away from the page they are currently on.
-
-![screenshot](documentation/features/user/basket-update.png)
-
-
-- **Login Dependant Navbar Links**
-
-    - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with 'My Account' links. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
-
-![screenshot](documentation/features/user/login-navbar-links1.png)
-![screenshot](documentation/features/user/login-navbar-links2.png)
-
-- **Login Redirect**
-
-    - Users who are not logged in who attempt to access an area of the site which requires login are redirected to the login page. After logging in, they are sent to the page they first intended to visit.
-
-![screenshot](documentation/features/user/login-redirect.png)
-
-- **User Profile Creation**
-
-    - User profiles are automatically created upon user registration. This assigns each user a profile which they can use to see/update their user information.
-
-![screenshot](documentation/features/user/profile-creation.png)
-
-- **User Profile Update**
-
-    - Users can update their profile information using a front-end form located on their user profile page. This allows users to update profile information or correct possible mistakes made at registration.
-
-![screenshot](documentation/features/user/profile-update.png)
-
-- **User Contact**
-
-    - Users can use a front-end form to message the site owners. The form is easy to use and pre-fills the user's email address if they are logged in. Users get confirmation that their message was sent, and a message that someone from the site will be in touch as soon as possible
-
-![screenshot](documentation/features/user/contact.png)
-
-
-- **User Email Confirmations**
-
-    - After making a purchase or subscribing to the newsletter, the site automatically sends the user a confirmation email which contains their purchase details, or in the case of newsletter subscription, a thank you message and a link to unsubscribe.
-
-![screenshot](documentation/features/user/email-confirmation1.png)
-![screenshot](documentation/features/user/email-confirmation2.png)
-
-- **Newsletter Subscribe**
-
-    - Users can use a button in the footer of all site pages to subscribe to the site newsletter. If the user is logged in, the email input field will pre-fill with the user's email. Users see a confirmation screen after subscribing, and receive a confirmation email to the address they provided.
-
-![screenshot](documentation/features/user/newsletter1.png)
-![screenshot](documentation/features/user/newsletter2.png)
-
-
-### Admin Features
-
-- **Create Products**
-
-    - Administrators can use a front-end form to create new site products. The form is simple and clean and automatically formats and displays the created product in the same manner as existing products.
-
-![screenshot](documentation/features/admin/create-product.png)
-
-- **Edit Products**
-
-    - Administrators can use a front-end form to update existing products. If the current logged-in user has superuser privileges, an edit button will appear under products which allows that user to edit the product's details.
-
-![screenshot](documentation/features/admin/update-product.png)
-
-- **Delete Products**
-
-    - Administrators can use a front-end form to delete existing products. If the current logged-in user has superuser privileges, a delete button will appear under posts which allows that user to delete that product.
-
-![screenshot](documentation/features/admin/delete-product.png)
-
-- **Webhooks**
-
-    - The site uses a secure and robust webhook system to ensure that the payment process cannot be interrupted and corrupted, either through user error or malicious intent. Webhooks are incorporated via the Stripe payment system and are handled on the Stripe website, by way of the python code in `checkout > webhook_handler.py` and `checkout > webhooks.py`
-
-![screenshot](documentation/features/admin/webhooks.png)
-
-
-- **Contact Requests**
-
-    - Admins can see a list of all of the contact messages sent by users. Messages are displayed in an easy-to-read table, with all of the salient information presented. Messages are automatically sorted with those messages which have not been responded to at the top of the list, with the oldest (the message which has gone unanswered the longest) at the top. Admins can click on the view details links to see the full contact messages, as well as respond to the message.
-
-![screenshot](documentation/features/admin/contact-requests.png)
-
-- **Contact Details**
-
-    - Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respond to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
-
-![screenshot](documentation/features/admin/contact-details.png)
-
-- **Contact Message Delete**
-
-    - Admins can delete contact messages from the database using a front end delete function inside the contact message details page.
-
-![screenshot](documentation/features/admin/contact-delete.png)
-
-- **Contact Respond**
-
-    - Admins can respond to user contact messages using an email form which appears upon clicking the 'respond to message' button on the contact details page. A text area appears with the user's name and the default email signoff link pre-populated for efficiency in the typing of the response. The 'Send Email' button sends an email response to the user's given email address with the content of the text box as the body of the email.
-
-    The contact message is then automatically marked as 'Responded' and the 'respond to message' button no longer appears on that message's details page.
-
-![screenshot](documentation/features/admin/contact-respond1.png)
-![screenshot](documentation/features/admin/contact-respond2.png)
-![screenshot](documentation/features/admin/contact-respond3.png)
-
-- **Newsletter Confirmation Emails**
-
-    - Emails are automatically sent out to all new subscribers of the site newsletter. The email contains a 'thank you' message, as well as a link to allow users to unsubscribe from the mailing list.
-
-![screenshot](documentation/features/admin/newsletter-confirmation-email.png)
+## Features  
+This section outlines the **core functionalities** of the platform.
+
+### __Home Page__  
+![Home-Page](/documentation/feat_home.png)  
+  -  A visually striking hero section welcomes users with a title and a brief message that evokes curiosity. 
+  - A "Shop Now" button is available for users to interact with from the start. **"Shop Now"** button.  
+- **Navigation Bar**: Access to Home, Gallery, Categories, Search, Cart, Wishlist, Profile, and Admin controls (if applicable).  
+
+### __Gallery__  
+![Gallery](/documentation/feat_gallery.jpeg)  
+- Displays **art pieces with images, names, prices**, and purchase options.  
+- Logged-in users can view detailed descriptions and add items to their cart or wishlist.  
+- **Admin controls**: Edit or delete art pieces.
+
+### __Art Details Page__  
+![Art-Details](/documentation/feat_art_details.png)  
+- **Comprehensive view** of artwork, including price, description, size, and color details.  
+- **Logged-in users** can add items to the cart.  
+
+### __Category & Filter-Based Browsing__   
+- Users can **browse by category** (e.g., Nature, Female, Animals).  
+- **Filters** allow sorting by **price, orientation, or new arrivals**.  
+
+### __Shopping Bag & Secure Checkout__  
+![Shopping Bag](/documentation/feat_shopping_bag.png)  
+- View selected items, adjust quantity, and see total cost dynamically.
+- when item is added to the basket, bad changes color to reflect it.   
+- **Secure payment options** including credit/debit cards and PayPal.  
+- Encrypted transactions with **HTTPS/SSL** protection.  
+
+### __Order Confirmation & Notifications__  
+![Order Confirmation](/documentation/feat_order_confirmation.png)  
+- Order confirmation with a **personalized message from the artist**.  
+- **Email notifications** with purchase details and estimated delivery.  
+
+### __Wishlist Feature__  
+![Wishlist](/documentation/feat_wishlist.png)  
+- **Logged-in users** can save and revisit their favorite art pieces.
+
+### __User Account Management__  
+- **Single access point** for **Login, Register, Logout, Add Art(admin)**.  
+- Password reset and profile updates available.  
+- Users can **track order history**.  
+
+### __Contact & FAQ__  
+- **Contact Form**: Users can reach out to the site owner (pre-filled for logged-in users).  
+- **FAQ Section**: Answers common queries about products and services.  
+
+### __Footer__  
+- **Links to social media, newsletter subscription, and copyright information.**  
+---
+
+### __Newsletter Subscription__
+- Users can subscribe to receive updates and offers.
 
 ---
 ### Features Left to Implement
@@ -479,97 +199,36 @@ This section outlines the core functionalities of the platform.
 
 ---
 
-## Responsiveness (Main Pages)
 
-### Home 
-  <details>
-  <summary>Home Page Full View</summary>
+# The Art Beneath – SEO & Marketing Strategy  
 
-  ![Home Large](/documentation/logged_in_lrg_home.jpeg)
-  ![Home Medium](/documentation/logged_in_md_home.jpeg)
-  ![Home Small](/documentation/logged_in_sm_home.jpeg)
-  </details>
+## **Business Model**  
 
-![Home Large](/documentation/home_responsive.png)
+The Art Beneath follows an **E-commerce Business to Customer (B2C) model**, offering unique art pieces directly to customers.  
+The platform allows users to **browse, purchase, and engage** with contemporary visual art while providing insights into the deeper meaning behind each creation.  
 
+A strong **social media presence** and **search engine optimization (SEO)** strategy will help build an engaged community and drive potential buyers to the site.  
 
-<!---- more examples here      -------------------------------------------------------->
 ---
 
-## Ecommerce Business Model
+## **Search Engine Optimization (SEO) Strategy**  
 
-This site sells goods to individual customers, and therefore follows a `Business to Customer` model.
-It is of the simplest **B2C** forms, as it focuses on individual transactions, and doesn't need anything
-such as monthly/annual subscriptions.
+### **1. Keyword Research & Optimization**  
 
-It is still in its early development stages, although it already has a newsletter system, and links for social media marketing.
+To improve search engine rankings and increase visibility, we focused on:  
 
-Social media can potentially build a community of users around the business, and boost site visitor numbers,
-especially when using larger platforms such a Facebook.
+- **Short-tail keywords:** "Modern Art," "Digital Art," "Gold Art"  
+- **Long-tail keywords:** "Luxury abstract wall art," "Contemporary digital paintings for home decor"  
 
-A newsletter list can be used by the business to send regular messages to site users.
-For example, what items are on special offer, new items in stock,
-updates to business hours, notifications of events, and much more!
+Example of an optimized product description:  
+🚀 *"Transform your space with this luxurious **gold and black abstract art piece** – a contemporary blend of elegance and artistic depth."*  
 
-## Search Engine Optimization (SEO) & Social Media Marketing
+![facebook](documentation/fb_1.png)
+![facebook](documentation/fb_2.png)
 
-### Keywords
 
-I've identified some appropriate keywords to align with my site, that should help users
-when searching online to find my page easily from a search engine.
-This included a series of the following keyword types
-
-- Short-tail (head terms) keywords
-- Long-tail keywords
-
-I also played around with [Word Tracker](https://www.wordtracker.com) a bit
-to check the frequency of some of my site's primary keywords (only until the free trial expired).
-
-- ![screenshot](documentation/wordtracker.png)
-
-### Sitemap
-
-I've used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a sitemap.xml file.
-This was generated using my deployed site URL: https://web-piano-academy-16cd779294ab.herokuapp.com
-
-After it finished crawling the entire site, it created a
-[sitemap.xml](sitemap.xml) which I've downloaded and included in the repository.
-
-### Robots
-
-I've created the [robots.txt](robots.txt) file at the root-level.
-Inside, I've included the default settings:
-
-```
-User-agent: *
-Disallow:
-Sitemap: https://https://the-art-beneath-289b50439a5a.herokuapp.com/sitemap.xml
-```
-
-### Social Media Marketing
-
-Creating a strong social base (with participation) and linking that to the business site can help drive sales.
-Using more popular providers with a wider user base, such as Facebook, typically maximizes site views.
-
-I've created a mockup Facebook business account using the
-[Balsamiq template](https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip)
-provided by Code Institute.
-
-![screenshot](documentation/mockup-facebook.png)
-
-### Newsletter Marketing
-
-I have incorporated a newsletter sign-up form on my application, to allow users to supply their
-email address if they are interested in learning more. 
-
-Users can also unsubscribe from the newsletter by following the link in their subscription confirmation email.
-
-## Technologies Used
-- **Frontend:** HTML, CSS, JavaScript, Bootstrap;
-- **Backend:** Django (Python), PostgreSQL
-- **Authentication:** Django Authentication System
-- **Deployment:** Heroku
-- **Image Hosting:** Cloudinary (for storing and managing art images)
+## Languages 
+- HTML, CSS, JavaScript, Bootstrap;
 
 ### Libraries and Programs Used
 
@@ -595,9 +254,9 @@ Users can also unsubscribe from the newsletter by following the link in their su
   - Used to generate the site's favicon.
 - [SQlite](https://www.sqlite.org/index.html)
   - Used when performing unit tests.
-- [PostgreSQL](https://www.postgresql.org/)
+- [PostgreSQL](https://postgresql.org/)
   - Database used through heroku.
-- [Lucidchart](https://www.lucidchart.com/)
+- [Lucidchart](https://lucidchart.com/)
   - To draw out the database schema.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
   - Used to validate HTML code.
@@ -611,7 +270,9 @@ Users can also unsubscribe from the newsletter by following the link in their su
   - Used to compress images.
 - [Heroku](https://www.heroku.com/)
   - To deploy the project.
-- [Canva](https://www.canva.com/)
+- [Stripe](https://stripe.com/)
+  - for payment integartion
+- [Canva](https://canva.com/)
   - Used for robot and  background images as well as wireframes and inspiration
 - [ChatGPT](https://chatgpt.com/)
   - Used for general queries and quick help.
@@ -626,13 +287,7 @@ Users can also unsubscribe from the newsletter by following the link in their su
 ## Testing
 Comprehensive testing has been conducted to ensure a smooth user experience.
 
-### Validator Testing
-- **HTML**: Passed through W3C Validator
-- **CSS**: Passed through W3C CSS Validator
-- **Python**: Code checked using PEP8 linter
-
-### Unfixed Bugs
-- Some minor UI inconsistencies on mobile devices (planned for future updates).
+Return back to the [TESTING.md](TESTING.md) 
 
 ---
 
@@ -808,12 +463,14 @@ You can fork this repository by using the following steps:
 ## Credits
 ### Content
 - Product descriptions written for the fictional artist James Stanislaw.
-- Color meaning interpretations sourced from art theory references.
-
-### Media
+- all images and details were modeled from [Cupido Design](https://cupidodesign.com/en)
 - Images created as part of the fictional artist’s collection.
 - Icons sourced from [Font Awesome](https://fontawesome.com/).
-
+- Code styel ,inspiration and support:
+  - [Chrono](https://organicthemes.com/demo/chrono/)
+  - [Piano Academy](https://github.com/LewisMDillon/web-piano-academy)
+  - [Everneed](https://github.com/amylour/everneed/tree/main)
+  - [Three Oaks](https://bonsai-shop.up.railway.app/accounts/login/)
 ---
 
 ### Acknowledgements
